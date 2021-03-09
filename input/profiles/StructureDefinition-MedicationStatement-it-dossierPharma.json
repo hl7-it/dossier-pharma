@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "http://hl7.it/fhir/StructureDefinition/MedicationStatement-it-dossierPharma",
+  "url": "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationStatement-it-dossierPharma",
   "version": "0.1.0",
   "name": "MedicationStatementItDossierPharma",
   "title": "MedicationStatement - Dossier Farmaceutico",

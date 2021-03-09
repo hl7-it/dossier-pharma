@@ -10,19 +10,19 @@
 # │  supported properties, see:                                                                    │
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: HL7ITFhirBase
-canonical: http://hl7.it/fhir
+id: HL7ITDossierPharma
+canonical: http://hl7.it/fhir/dossierPharma
 version: 0.1.0
-name: HL7ItaliaFHIRImplementationGuide
-title: HL7 Italia FHIR Implementation Guide
+name: HL7ITDossierPharma
+title: HL7 Italia Dossier Farmaceutico FHIR Implementation Guide
 status: active
-publisher: Giorgio Cangioli
+publisher: HL7 Italia
 description: "HL7 Italia FHIR Implementation Guide: base profiles"
 license: CC0-1.0
 fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false
-copyrightYear: 2020+
+copyrightYear: 2021+
 releaseLabel: CI Build
 
 FSHOnly: true

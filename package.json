@@ -1,16 +1,18 @@
 {
-  "name": "HL7ITFhirBase",
+  "name": "HL7ITDossierPharma",
   "version": "0.1.0",
-  "canonical": "http://hl7.it/fhir",
-  "url": "http://hl7.it/fhir",
-  "title": "HL7 Italia FHIR Implementation Guide",
-  "description": "HL7 Italia FHIR Implementation Guide: base profiles",
-  "dependencies": {
-    "hl7.fhir.r4.core": "4.0.1"
+  "canonical": "http://hl7.it/fhir/dossierPharma",
+  "url": "http://hl7.it/fhir/dossierPharma",
+  "title": "HL7 Italia Dossier Farmaceutico FHIR Implementation Guide",
+  "description": "HL7 Italia Dossier Farmaceutico FHIR Implementation Guide",
+  "dependencies": { [
+    "hl7.fhir.r4.core": "4.0.1",
+	"hl7.fhir.it.base": "dev"
+	]
   },
   "keywords": [
     "HL7 Italia",
-    "HL7 IT Base Profiles"
+    "Dossier Farmaceutico"
   ],
   "language": "it",
   "author": "Giorgio Cangioli",

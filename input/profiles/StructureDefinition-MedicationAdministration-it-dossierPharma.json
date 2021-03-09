@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "http://hl7.it/fhir/StructureDefinition/MedicationAdministration-it-dossierPharma",
+  "url": "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationAdministration-it-dossierPharma",
   "version": "0.1.0",
   "name": "MedicationAdministrationItDossierPharma",
   "title": "MedicationAdministration - Dossier Farmaceutico",

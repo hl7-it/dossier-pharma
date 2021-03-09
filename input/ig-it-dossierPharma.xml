@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-	<id value="ig-it-dossierPharma"/>
+	<id value="hl7.fhir.it.dossierpharma"/>
 	<!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
     <valueString value="resources-spreadsheet.xml"/>
   </extension>-->
-	<url value="http://hl7.it/fhir/ImplementationGuide/ig-it-dossierPharma"/>
+	<url value="http://hl7.it/fhir/dossierPharma/ImplementationGuide/hl7.fhir.it.dossierpharma"/>
 	<!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
 	<version value="0.1.1"/>
-	<name value="HL7ITFhirBase"/>
+	<name value="HL7ITDossierPharma"/>
 	<title value="HL7 Italia Dossier Farmaceutico FHIR Implementation Guide"/>
 	<status value="draft"/>
-	<experimental value="false"/>
+	<experimental value="true"/>
 	<publisher value="HL7 Italia"/>
 	<contact>
 		<telecom>
@@ -100,7 +100,7 @@
 		<!-- copyright year is a mandatory parameter -->
 		<parameter>
 			<code value="copyrightyear"/>
-			<value value="2020+"/>
+			<value value="2021+"/>
 		</parameter>
 		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
 		<parameter>
