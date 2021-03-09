@@ -1,0 +1,15 @@
+{
+ "name": "HL7ITFhirDossierPharma",
+ "version" : "0.1.0",  
+ "canonical" : "http://hl7.it/fhir",
+ "url" : "http://hl7.it/fhir",
+ "title" : "HL7 Italia FHIR Implementation Guide",
+ "description": "HL7 Italia FHIR Implementation Guide: Pharmaceutical Dossier",
+ "keywords": [
+   "HL7 Italia",
+   "HL7 IT Pharma Dossier"
+  ],
+ "language": "it",
+ "author": "Giorgio Cangioli",
+ "license": "CC0-1.0"
+}
