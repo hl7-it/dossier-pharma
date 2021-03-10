@@ -33,7 +33,7 @@
 	<dependsOn>
 		<uri value="http://hl7.it/fhir/ImplementationGuide/hl7.fhir.it.base"/> 
 		<packageId value="hl7.fhir.it.base"/>
-		<version value="dev"/>
+		<version value="current"/>
 	</dependsOn>
 	<license value="CC-BY-SA-4.0"/>
 	<!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
