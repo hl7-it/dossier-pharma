@@ -34,9 +34,39 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 //-------------------------------------------------------------------------------------------
 // * meta 1..1 MS
 * status 1..1 MS
-* intent 1..1 
-* intent = #order
+* intent 1..1 MS
+// * intent = #order
 // * category MS
+
+* medicationCodeableConcept MS
+
+
+/* =====
+* medicationCodeableConcept ^slicing.discriminator.type = #pattern
+* medicationCodeableConcept ^slicing.discriminator.path = "$this"
+* medicationCodeableConcept ^slicing.description = "Discriminated by the bound value set"
+* medicationCodeableConcept ^slicing.ordered = false
+* medicationCodeableConcept ^slicing.rules = #open
+* medicationCodeableConcept contains atc 0..1
+
+
+* medicationCodeableConcept[atc] = http://www.whocc.no/atc#12345
+
+* medicationCodeableConcept contains 
+	atc 0..1 
+	and aic 0..1 
+	and gruppoEquivalenza 0..1
+
+==== */	
+// * medicationCodeableConcept[atc] ^sliceName = "ATC"
+// * medicationCodeableConcept[aic] ^sliceName = "AIC"
+// * medicationCodeableConcept[gruppoEquivalenza] ^sliceName = "gruppoEquivalenza"
+
+// * medicationCodeableConcept[atc] from http://www.whocc.no/atc
+// * medicationCodeableConcept[aic] from urn:oid:2.16.840.1.113883.2.9.6.1.5
+// * medicationCodeableConcept[gruppoEquivalenza] from "urn:oid:2.16.840.1.113883.2.9.6.1.51" 
+
+
 * subject 1..1 MS
 * subject only Reference(PatientItBase)
 * subject.type = "Patient" // add invariant richiesto se Reference assente

@@ -10,15 +10,20 @@ Id: DossierMedicationRequest
 * extension ^min = 0
 * extension contains NRE named nre 0..*
 * extension[nre] ^min = 0
-* status = #"cancelled | completed" (exactly)
-* intent = #order (exactly)
+* status = #"cancelled | completed" (exactly) // troppo restrittivo, in molti casi è active
+* intent = #order (exactly) // do we really need to constraint to order ?
 * intent ^short = "order"
+//-------------------------
+// do we need this elment ?
 * category 1..
 * category.coding 1..1
 * category.coding.system 1..
 * category.coding.system = "https://loinc.org/" (exactly)
 * category.coding.code 1..
 * category.coding.code = #57833-6 (exactly)
+// ========
+
+// maybe better to have medication CodeableConcept
 * medication[x] only CodeableConcept
 * medication[x].coding ^slicing.discriminator.type = #value
 * medication[x].coding ^slicing.discriminator.path = "system"
