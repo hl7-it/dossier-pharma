@@ -17,7 +17,7 @@ Id: AlimentazioneDossierFarmaceutico
 * entry[sliceProvenance].request 1..
 * entry[sliceProvenance].request.method = #POST (exactly)
 * entry[sliceMedication].resource 1..
-* entry[sliceMedication].resource only DossierMedicationDispense or DossierMedicationRequest
+* entry[sliceMedication].resource only DossierMedicationDispense or MedicationRequestItDossierPharma
 * entry[sliceMedication].search ..0
 * entry[sliceMedication].request 1..
 * entry[sliceMedication].request.method = #POST (exactly)
