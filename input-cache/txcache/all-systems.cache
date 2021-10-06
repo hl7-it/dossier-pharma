@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/fhir+json"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "application/fhir+json",
+  "code" : "application/fhir+json",
+  "system" : "urn:ietf:bcp:13",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
