@@ -1,0 +1,26 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+	<h3 id="overview">Sequence Diagrams</h3>
+	<h4 id="alimentazione">Alimentazione Dossier Farmaceutico</h4>
+	<p>{% include sequence-1.svg %}</p>
+	<p>La transazione Alimentazione Dossier Farmaceutico viene utilizzata per:</p>
+	<ul>
+		<li>alimentare il dossier farmaceutico a seguito della creazione e disponibilità di un documento nel FSE che contenga informazioni sulla terapia farmacologica del paziente;</li>
+		<li>permettere l'invio dell'intero dossier farmaceutico in caso di trasferimento della regione di assistenza del paziente.</li>
+	</ul>
+	<h4>Aggiornamento Dossier Farmaceutico</h4>
+	<p>{% include sequence-2.svg %}</p>
+	<p>La transazione Aggiornamento Dossier Farmaceutico viene utilizzata per modificare informazioni su risorse FHIR presenti all'interno del dossier farmaceutico. Può essere utilizzata per :</p>
+	<ul>
+		<li>aggiornare, modificare e cancellare le risorse FHIR associate ad un documento presente nel FSE.</li>
+		<li>Può essere utilizzata se:
+			<ul>
+				<li>viene aggiornato il livello di visibilità del documento nel FSE per aggiornare la visibilità delle risorse associate;</li>
+				<li>viene svolto un replace di un documento nel FSE per aggiornare le risorse associate;</li>
+				<li>vengono cancellati i metadati del documento nel FSE da cui originano le risorse per cancellare le stesse dal dossier farmaceutico</li>
+			</ul>
+		</li>
+	</ul>
+	<h4 id="alimentazione">InterrogazioneDossierFarmaceutico</h4>
+	<p>{% include sequence-3.svg %}</p>
+	<p>La transazione InterrogazioneDossierFarmaceutico viene utilizzata per interrogare il dossier farmaceutico e ottenere in risposta un Bundle di risorse con le informazioni relative alla terapia farmacologica del paziente.</p>
+</div>

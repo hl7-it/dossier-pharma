@@ -1,0 +1,9 @@
+@startuml
+alt Query by NRE
+	"Consumer" -> "Provider" : Query per order identifier ($OperationXYZ ?) [GET/POST]
+	"Provider" --> "Consumer" : $OperationXYZ Response [GET/POST]
+else Generic Search
+	"Consumer" -> "Provider" : Search Resources [GET/POST]
+	"Provider" --> "Consumer" : Search Response [GET/POST]
+end
+@enduml

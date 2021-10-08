@@ -19,7 +19,7 @@ Id: AggiornamentoDossierFarmaceutico
 * entry[sliceProvenance].request.method ^short = "POST | PUT | DELETE"
 * entry[sliceProvenance].request.method ^definition = "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
 * entry[sliceMedication].resource 1..
-* entry[sliceMedication].resource only DossierMedicationDispense or MedicationRequestItDossierPharma
+* entry[sliceMedication].resource only MedicationDispenseItDossierPharma or MedicationRequestItDossierPharma
 * entry[sliceMedication].search ..0
 * entry[sliceMedication].request 1..
 * entry[sliceMedication].request.method ^short = "POST | PUT | DELETE"

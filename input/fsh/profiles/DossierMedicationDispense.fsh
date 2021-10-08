@@ -1,44 +1,51 @@
-Profile: DossierMedicationDispense
+Profile: MedicationDispenseItDossierPharma
 Parent: MedicationDispense
-Id: DossierMedicationDispense
+Id:       MedicationDispense-it-dossierPharma
+Title:    "MedicationDispense - Dossier Farmaceutico"
+Description: "Profilo MedicationDispense per Dossier Farmaceutico"
+//=================================================================
+
+/* === TO DO 
+- add vocabulary bindings instead of filtering per coding.system
+- 
+=== */
+
+
 * ^text.status = #additional
 * ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>Profilazione della MedicationDispense per il Dossier Farmaceutico</a></div>"
-* ^url = "http://example.org/fhir/StructureDefinition/DossierMedicationDispense"
-* ^status = #draft
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-* extension ^min = 0
-* extension contains NRE named myExtension 0..*
-* extension[myExtension] ^min = 0
-* status = #completed (exactly)
-* medication[x] only CodeableConcept
-* medication[x].coding ^slicing.discriminator.type = #value
-* medication[x].coding ^slicing.discriminator.path = "system"
-* medication[x].coding ^slicing.rules = #open
-* medication[x].coding contains  ATC 0..1 and AIC 0..1
-* medication[x].coding[ATC] ^sliceName = "ATC"
-* medication[x].coding[ATC].system 1..
-* medication[x].coding[ATC].system = "urn:oid:2.16.840.1.113883.6.73" (exactly)
-* medication[x].coding[ATC].code 1..
-* medication[x].coding[ATC].display 1..
-* medication[x].coding[AIC] ^sliceName = "AIC"
-* medication[x].coding[AIC].system 1..
-* medication[x].coding[AIC].system = "urn:oid:2.16.840.1.113883.2.9.6.1.5" (exactly)
-* medication[x].coding[AIC].code 1..
-* medication[x].coding[AIC].display 1..
-* medication[x].text 1..
-* medication[x].text ^short = "[Descrizione principio attivo del farmaco]"
-* subject 1..
-* subject.type 1..
+* status MS
+* medicationCodeableConcept
+* medicationCodeableConcept.coding ^slicing.discriminator.type = #value
+* medicationCodeableConcept.coding ^slicing.discriminator.path = "system"
+* medicationCodeableConcept.coding ^slicing.ordered = false
+* medicationCodeableConcept.coding ^slicing.rules = #open
+* medicationCodeableConcept.coding contains
+    ATC 0..1 and AIC 0..1 and
+    gruppoEquivalenza 0..1
+* medicationCodeableConcept.coding[ATC] ^sliceName = "ATC"
+* medicationCodeableConcept.coding[ATC].system 1..
+* medicationCodeableConcept.coding[ATC].system = "http://www.whocc.no/atc" (exactly)
+* medicationCodeableConcept.coding[ATC].code 1..
+* medicationCodeableConcept.coding[ATC].display 1..
+* medicationCodeableConcept.coding[AIC].system 1..
+* medicationCodeableConcept.coding[AIC].system = "urn:oid:2.16.840.1.113883.2.9.6.1.5" (exactly)
+* medicationCodeableConcept.coding[AIC].code 1..
+* medicationCodeableConcept.coding[AIC].display 1..
+* medicationCodeableConcept.coding[gruppoEquivalenza].system 1..
+* medicationCodeableConcept.coding[gruppoEquivalenza].system = "urn:oid:2.16.840.1.113883.2.9.6.1.51" (exactly)
+* medicationCodeableConcept.coding[gruppoEquivalenza].code 1..
+* medicationCodeableConcept.coding[gruppoEquivalenza].display 1..
+* medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
+* subject MS
+* subject only Reference(PatientItBase)
+* subject.type 0..
 * subject.type = "Patient" (exactly)
 * subject.identifier 1..
 * subject.identifier.system 1..
-* subject.identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2" (exactly)
+* subject.identifier.system = "http://hl7.it/sid/codiceFiscale" (exactly)
 * subject.identifier.value 1..
-* subject.identifier.value ^short = "Veicola il CF"
-* subject.display 1..
-* subject.display = "cf" (exactly)
+* subject.identifier.value ^short = "Codice Fiscale"
+* subject.display 0.. 
 * performer 1..
 * performer ^slicing.discriminator.type = #type
 * performer ^slicing.discriminator.path = "$this"

@@ -36,29 +36,28 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 ======== */
 
 // maybe better to have medication CodeableConcept
-* medication[x] MS
-* medication[x] only CodeableConcept
-* medication[x].coding ^slicing.discriminator.type = #value
-* medication[x].coding ^slicing.discriminator.path = "system"
-* medication[x].coding ^slicing.ordered = false
-* medication[x].coding ^slicing.rules = #open
-* medication[x].coding contains
+* medicationCodeableConcept
+* medicationCodeableConcept.coding ^slicing.discriminator.type = #value
+* medicationCodeableConcept.coding ^slicing.discriminator.path = "system"
+* medicationCodeableConcept.coding ^slicing.ordered = false
+* medicationCodeableConcept.coding ^slicing.rules = #open
+* medicationCodeableConcept.coding contains
     ATC 0..1 and AIC 0..1 and
     gruppoEquivalenza 0..1
-* medication[x].coding[ATC] ^sliceName = "ATC"
-* medication[x].coding[ATC].system 1..
-* medication[x].coding[ATC].system = "http://www.whocc.no/atc" (exactly)
-* medication[x].coding[ATC].code 1..
-* medication[x].coding[ATC].display 1..
-* medication[x].coding[AIC].system 1..
-* medication[x].coding[AIC].system = "urn:oid:2.16.840.1.113883.2.9.6.1.5" (exactly)
-* medication[x].coding[AIC].code 1..
-* medication[x].coding[AIC].display 1..
-* medication[x].coding[gruppoEquivalenza].system 1..
-* medication[x].coding[gruppoEquivalenza].system = "urn:oid:2.16.840.1.113883.2.9.6.1.51" (exactly)
-* medication[x].coding[gruppoEquivalenza].code 1..
-* medication[x].coding[gruppoEquivalenza].display 1..
-* medication[x].text ^short = "Descrizione testuale del farmaco"
+* medicationCodeableConcept.coding[ATC] ^sliceName = "ATC"
+* medicationCodeableConcept.coding[ATC].system 1..
+* medicationCodeableConcept.coding[ATC].system = "http://www.whocc.no/atc" (exactly)
+* medicationCodeableConcept.coding[ATC].code 1..
+* medicationCodeableConcept.coding[ATC].display 1..
+* medicationCodeableConcept.coding[AIC].system 1..
+* medicationCodeableConcept.coding[AIC].system = "urn:oid:2.16.840.1.113883.2.9.6.1.5" (exactly)
+* medicationCodeableConcept.coding[AIC].code 1..
+* medicationCodeableConcept.coding[AIC].display 1..
+* medicationCodeableConcept.coding[gruppoEquivalenza].system 1..
+* medicationCodeableConcept.coding[gruppoEquivalenza].system = "urn:oid:2.16.840.1.113883.2.9.6.1.51" (exactly)
+* medicationCodeableConcept.coding[gruppoEquivalenza].code 1..
+* medicationCodeableConcept.coding[gruppoEquivalenza].display 1..
+* medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
 * subject MS
 * subject only Reference(PatientItBase)
 * subject.type 0..

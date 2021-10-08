@@ -1,0 +1,8 @@
+@startuml
+alt Single Resource
+	"Sender" -> "Receiver" : MedicationRequest | MedicationDispense [POST]
+else Transaction
+	"Sender" -> "Receiver" : Alimentazione Dossier Farmaceutico (Bundle) [POST]
+end
+	"Receiver" --> "Sender" : POST Response
+@enduml

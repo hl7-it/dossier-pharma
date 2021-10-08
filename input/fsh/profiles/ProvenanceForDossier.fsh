@@ -4,7 +4,7 @@ Id: ProvenanceForDossier
 * ^text.status = #additional
 * ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>Profilazione della Provenance per il Dossier Farmaceutico</a></div>"
 * ^status = #draft
-// * target only MedicationRequestItDossierPharma or DossierMedicationDispense
+// * target only MedicationRequestItDossierPharma or MedicationDispenseItDossierPharma
 // * target ^fixedReference.type = "MedicationDispense"
 * agent.who.identifier 1..
 * agent.who.identifier.system 1..
