@@ -39,8 +39,8 @@ FSHOnly: false
 jurisdiction: urn:iso:std:iso:3166#IT "Italy"
  
 dependencies:
-  hl7.fhir.it.base: dev
-  # hl7.fhir.it.base: 0.1.0
+  # hl7.fhir.it.base: dev
+  hl7.fhir.it.base: 0.1.0
 
 pages:
   index.md:
@@ -83,7 +83,7 @@ menu:
     Specifiche di dettaglio: spec.html    
   Indice Artefatti: artifacts.html
   Support:
-    FHIR Spec: new-tab external http://hl7.org/fhir/R4/index.html
+    FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
     Downloads: downloads.html
  # Copyright: copyright.html 
 
