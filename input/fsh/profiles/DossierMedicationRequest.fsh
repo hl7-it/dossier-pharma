@@ -36,7 +36,8 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 ======== */
 
 // maybe better to have medication CodeableConcept
-* medicationCodeableConcept
+* medicationCodeableConcept 1..1
+* medicationCodeableConcept.coding 1..1
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #value
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "system"
 * medicationCodeableConcept.coding ^slicing.ordered = false
@@ -94,10 +95,10 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * reasonCode.coding[codiceDiagnosi].system = "http://hl7.org/fhir/sid/icd-9-cm" (exactly)
 * reasonCode.coding[codiceDiagnosi].code 1..
 * reasonCode.coding[codiceDiagnosi].display 1..
-* groupIdentifier 0.. MS // 1.. ?
-* groupIdentifier ^short = "Numero Ricetta Elettronica"
-* groupIdentifier.system MS // add system
-* groupIdentifier.value ^short = "NRE"
+* groupIdentifier 1..1 MS
+* groupIdentifier ^short = "Identificativo, ad esempio Numero Ricetta Elettronica"
+* groupIdentifier.system 1..1 //Definire un Value Set con tutti i system possibili
+* groupIdentifier.value ^short = "identificativo, ad esempio NRE"
 
 * insurance MS
 * insurance only Reference($Coverage-it-base)
@@ -120,14 +121,15 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 --- */
 
 * dispenseRequest 0.. MS
-* dispenseRequest.initialFill.quantity 1..
-* dispenseRequest.initialFill.duration 1..
+//* dispenseRequest.initialFill.quantity 1..
+//* dispenseRequest.initialFill.duration 1..
 * dispenseRequest.quantity 1..
+* dispenseRequest.numberOfRepeatsAllowed 0..1
 
 // change to allowedCodeableConcept
 
 * substitution.allowed[x] MS
-* substitution.allowed[x] only boolean 
+//* substitution.allowed[x] only boolean 
 * substitution.reason.coding 1..1
 * substitution.reason.coding.system 1..
 * substitution.reason.coding.system = "2.16.840.1.113883.2.9.6.1.52" (exactly)
