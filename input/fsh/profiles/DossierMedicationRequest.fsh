@@ -124,7 +124,7 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 //* dispenseRequest.initialFill.quantity 1..
 //* dispenseRequest.initialFill.duration 1..
 * dispenseRequest.quantity 1..
-* numberOfRepeatsAllowed 1..1
+* dispenseRequest.numberOfRepeatsAllowed 0..1
 
 // change to allowedCodeableConcept
 
