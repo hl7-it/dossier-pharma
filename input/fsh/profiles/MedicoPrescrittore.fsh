@@ -6,7 +6,7 @@ Id: MedicoPrescrittore
 * identifier.system 1..
 // * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2" 
 * identifier.value 1..
-* identifier.value ^short = "CF del Medico Tiitolare"
+* identifier.value ^short = "CF del Medico Titolare"
 * qualification ^slicing.discriminator.type = #type
 * qualification ^slicing.discriminator.path = "$this"
 * qualification ^slicing.rules = #open
@@ -17,7 +17,7 @@ Id: MedicoPrescrittore
 * qualification[CodSpecializzazione].code ^definition = "Codice specializzazione"
 * qualification[CodSpecializzazione].code.coding 1..
 * qualification[CodSpecializzazione].code.coding.system 1..
-* qualification[CodSpecializzazione].code.coding.system = "urn:oid:2.16.840.1.113883.2.9.5.1.111" (exactly)
+* qualification[CodSpecializzazione].code.coding.system = $specializ-medico (exactly)
 * qualification[CodSpecializzazione].code.coding.code 1..
 * qualification[CodSpecializzazione].issuer 1..
 * qualification[CodSpecializzazione].issuer.identifier 1..
