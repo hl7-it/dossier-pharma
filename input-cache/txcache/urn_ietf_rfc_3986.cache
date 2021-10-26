@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:rfc:3986",
+      "concept" : [{
+        "code" : "http://hl7.it/sid/mef/nre",
+        "display" : "Numero Ricetta Elettronica"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:8d4a1222-a073-47d7-a4f9-e8cd7930134d",
+    "timestamp" : "2021-10-26T21:15:21.527Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "urn:ietf:rfc:3986|n/a"
+    }],
+    "contains" : [{
+      "system" : "urn:ietf:rfc:3986",
+      "code" : "http://hl7.it/sid/mef/nre"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

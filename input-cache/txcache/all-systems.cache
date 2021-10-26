@@ -8,12 +8,10 @@
       "system" : "urn:ietf:bcp:13"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "application/fhir+json",
   "code" : "application/fhir+json",
-  "system" : "urn:ietf:bcp:13",
-  "severity" : null,
-  "error" : ""
+  "system" : "urn:ietf:bcp:13"
 }
 -------------------------------------------------------------------------------------
