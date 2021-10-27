@@ -1,9 +1,11 @@
 Extension: Recorded
 Id: Recorded
-* ^url = "https://example.org/fhir/StructureDefinition/Recorded"
+Title: "Recorded"
+Description: "Estensione per data inizio erogazione"
+
 * ^experimental = false
 * ^context[+].type = #fhirpath
-* ^context[=].expression = "MedicationRequest"
+* ^context[=].expression = "MedicationDispense"
 * . ^short = "Estensione per veicolare la data di inizio erogazione"
 * . ^definition = "Estensione per veicolare la data di inizio erogazione"
 * value[x] 1..

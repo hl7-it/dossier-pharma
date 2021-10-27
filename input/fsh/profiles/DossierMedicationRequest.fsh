@@ -28,7 +28,13 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 ======= */
 * medication[x] MS
 * medicationCodeableConcept 0..1
+
+
 * medicationCodeableConcept.coding 1.. MS
+  * system 1.. MS
+  * code 1.. MS
+  * display MS
+  
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #value
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "system"
 * medicationCodeableConcept.coding ^slicing.ordered = false
@@ -40,25 +46,26 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * medicationCodeableConcept.coding[ATC] MS
 
 * medicationCodeableConcept.coding[ATC] ^sliceName = "ATC"
-* medicationCodeableConcept.coding[ATC].system 1..
+// * medicationCodeableConcept.coding[ATC].system 1..
 * medicationCodeableConcept.coding[ATC].system = $ATC (exactly)
-* medicationCodeableConcept.coding[ATC].code 1..
-* medicationCodeableConcept.coding[ATC].display 1..
+// * medicationCodeableConcept.coding[ATC].code 1..
+// * medicationCodeableConcept.coding[ATC].display 1..
 
-* medicationCodeableConcept.coding[AIC].system 1..
+// * medicationCodeableConcept.coding[AIC].system 1..
 * medicationCodeableConcept.coding[AIC].system = $AIC (exactly)
-* medicationCodeableConcept.coding[AIC].code 1..
-* medicationCodeableConcept.coding[AIC].display 1..
+// * medicationCodeableConcept.coding[AIC].code 1..
+// * medicationCodeableConcept.coding[AIC].display 1..
 
-* medicationCodeableConcept.coding[gruppoEquivalenza].system 1..
+// * medicationCodeableConcept.coding[gruppoEquivalenza].system 1..
 * medicationCodeableConcept.coding[gruppoEquivalenza].system = $gruppo-equivalenza (exactly)
-* medicationCodeableConcept.coding[gruppoEquivalenza].code 1..
-* medicationCodeableConcept.coding[gruppoEquivalenza].display 1..
-* medicationCodeableConcept.coding[eccezioni].system 1..
+// * medicationCodeableConcept.coding[gruppoEquivalenza].code 1..
+// * medicationCodeableConcept.coding[gruppoEquivalenza].display 1..
+
+// * medicationCodeableConcept.coding[eccezioni].system 1..
 * medicationCodeableConcept.coding[eccezioni].system = $UNK (exactly)
-* medicationCodeableConcept.coding[eccezioni].code 1..
+// * medicationCodeableConcept.coding[eccezioni].code 1..
 * medicationCodeableConcept.coding[eccezioni].code = #UNK
-* medicationCodeableConcept.coding[eccezioni].display 1..
+// * medicationCodeableConcept.coding[eccezioni].display 1..
 * medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
 * subject MS
 * subject only Reference(PatientItBase)
