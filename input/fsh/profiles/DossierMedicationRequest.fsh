@@ -10,64 +10,55 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 - 
 === */
 
-* ^text.status = #additional
-* ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>Profilazione della MedicationRequest per il Dossier Farmaceutico</a></div>"
 * ^status = #draft
-/* == GC: REMOVED 
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-* extension ^min = 0
-* extension contains NRE named nre 0..*
-* extension[nre] ^min = 0
-=== */
-
 * extension contains MedicoTitolare named medicoTitolare 1..1
 * extension[medicoTitolare] ^min = 1
 
 * status 1.. MS
 * intent = #order (exactly) // do we really need to constraint to order ?
 * intent ^short = "order"
-//-------------------------
-// do we need this elment ?
-/* == GC: REMOVED 
-* category 1..
-* category.coding 1..1
-* category.coding.system 1..
-* category.coding.system = "https://loinc.org/" (exactly)
-* category.coding.code 1..
-* category.coding.code = #57833-6 (exactly)
-======== */
 
 // maybe better to have medication CodeableConcept
+
+/*=== medreqresp
 * medicationCodeableConcept 0..1
 * medicationCodeableConcept.coding 1..
 //* medicationCodeableConcept.coding ^slicing.discriminator.type = #value
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #pattern
+======= */
+* medication[x] MS
+* medicationCodeableConcept 0..1
+* medicationCodeableConcept.coding 1.. MS
+* medicationCodeableConcept.coding ^slicing.discriminator.type = #value
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "system"
 * medicationCodeableConcept.coding ^slicing.ordered = false
 * medicationCodeableConcept.coding ^slicing.rules = #open
 * medicationCodeableConcept.coding contains
     ATC 0..1 and AIC 0..1 and
-    gruppoEquivalenza 0..1  and Unknown 0..1
+    gruppoEquivalenza 0..1  and eccezioni 0..1
+
+* medicationCodeableConcept.coding[ATC] MS
+
 * medicationCodeableConcept.coding[ATC] ^sliceName = "ATC"
 * medicationCodeableConcept.coding[ATC].system 1..
 * medicationCodeableConcept.coding[ATC].system = $ATC (exactly)
 * medicationCodeableConcept.coding[ATC].code 1..
 * medicationCodeableConcept.coding[ATC].display 1..
+
 * medicationCodeableConcept.coding[AIC].system 1..
 * medicationCodeableConcept.coding[AIC].system = $AIC (exactly)
 * medicationCodeableConcept.coding[AIC].code 1..
 * medicationCodeableConcept.coding[AIC].display 1..
+
 * medicationCodeableConcept.coding[gruppoEquivalenza].system 1..
 * medicationCodeableConcept.coding[gruppoEquivalenza].system = $gruppo-equivalenza (exactly)
 * medicationCodeableConcept.coding[gruppoEquivalenza].code 1..
 * medicationCodeableConcept.coding[gruppoEquivalenza].display 1..
-* medicationCodeableConcept.coding[Unknown].system 1..
-* medicationCodeableConcept.coding[Unknown].system = $UNK (exactly)
-* medicationCodeableConcept.coding[Unknown].code 1..
-* medicationCodeableConcept.coding[Unknown].code = #UNK
-* medicationCodeableConcept.coding[Unknown].display 1..
+* medicationCodeableConcept.coding[eccezioni].system 1..
+* medicationCodeableConcept.coding[eccezioni].system = $UNK (exactly)
+* medicationCodeableConcept.coding[eccezioni].code 1..
+* medicationCodeableConcept.coding[eccezioni].code = #UNK
+* medicationCodeableConcept.coding[eccezioni].display 1..
 * medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
 * subject MS
 * subject only Reference(PatientItBase)
@@ -82,18 +73,22 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * authoredOn 0.. MS
 * requester 1.. MS
 * requester only Reference(MedicoPrescrittore)
+
 * requester.reference 0..1
 * requester.identifier 0..1
 * requester.identifier ^short = "Valorizzato con identificativo del medico titolare o sostituto"
 
-//* recorder only Reference(Practitioner)
-//* recorder.type 1..
-//* recorder.type = "Practitioner" (exactly)
-//* recorder.type ^short = "Medico Sostituto"
-//* recorder.identifier 1.. MS
-//* recorder.identifier.system 1..
-//* recorder.identifier.system = "http://hl7.it/sid/codiceFiscale" (exactly)
-//* recorder.identifier.value 1..
+/* --------
+* recorder only Reference(Practitioner)
+* recorder.type 1..
+* recorder.type = "Practitioner" (exactly)
+* recorder.type ^short = "Medico Sostituto"
+* recorder.identifier 1.. MS
+* recorder.identifier.system 1..
+* recorder.identifier.system = "http://hl7.it/sid/codiceFiscale" (exactly)
+* recorder.identifier.value 1..
+---- */
+
 * reasonCode ..1 MS
 * reasonCode.coding ^slicing.description = "Una istanza per eventuale nota AIFA, una istanza per eventuale codice diagnosi"
 * reasonCode.coding ^slicing.rules = #open
@@ -101,6 +96,7 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
     notaAIFA 0..1 and
     codiceDiagnosi 0..1
 * reasonCode.coding[notaAIFA].system 1..
+
 * reasonCode.coding[notaAIFA].system = $note-lim-AIFA (exactly)
 * reasonCode.coding[notaAIFA].code 1..
 * reasonCode.coding[notaAIFA].code ^short = "Nota AIFA"
@@ -111,10 +107,11 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * reasonCode.coding[codiceDiagnosi].display 1..
 * reasonCode.coding[codiceDiagnosi].display ^short = "Descrizione diagnosi"
 * groupIdentifier 1..1 MS
-* groupIdentifier ^short = "Identificativo, ad esempio Numero Ricetta Elettronica"
-* groupIdentifier.system 1..1 //Definire un Value Set con tutti i system possibili
-* groupIdentifier.system = $NRE
-* groupIdentifier.value ^short = "Identificativo, ad esempio NRE"
+
+  * ^short = "Identificativo, ad esempio Numero Ricetta Elettronica"
+  * system 1..1 //Definire un Value Set con tutti i system possibili
+  * system from VsGroupIdentifierUri (extensible)
+* groupIdentifier.value ^short = "identificativo, ad esempio NRE"
 
 * insurance MS
 * insurance only Reference($Coverage-it-base)
@@ -144,7 +141,7 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 
 // change to allowedCodeableConcept
 
-* substitution.allowed[x] MS
+* substitution.allowedCodeableConcept MS
 //* substitution.allowed[x] only boolean 
 //* substitution.reason.coding 1..1
 * substitution.allowedCodeableConcept 1..1
