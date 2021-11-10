@@ -10,15 +10,13 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 - 
 === */
 
-* extension contains Recorded named recorded 1..1
+* extension contains MedicationDispenseRecorded named recorded 1..1
 * extension[recorded] ^min = 1
 
 * identifier 0..1  
 * identifier.system 0..1
 * identifier.value 0..1
 
-* ^text.status = #additional
-* ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>Profilazione della MedicationDispense per il Dossier Farmaceutico</a></div>"
 * status MS
 
 * medicationCodeableConcept 0..1
@@ -55,7 +53,7 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 // * medicationCodeableConcept.coding[gruppoEquivalenza].display 1..
 
 // * medicationCodeableConcept.coding[eccezioni].system 1..
-* medicationCodeableConcept.coding[eccezioni].system = $UNK (exactly)
+* medicationCodeableConcept.coding[eccezioni].system = $v3-NullFlavor (exactly)
 // * medicationCodeableConcept.coding[eccezioni].code 1..
 * medicationCodeableConcept.coding[eccezioni].code = #UNK
 // * medicationCodeableConcept.coding[eccezioni].display 1..
@@ -97,10 +95,10 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 // * performer[CodiceStrutturaErogatore].actor.identifier.value ^short = "Codice Struttura dell'erogatore"
 // * performer[ASLErogatore].actor.identifier 1..
 // * performer[ASLErogatore].actor.identifier.system 1..
-// * performer[ASLErogatore].actor.identifier.system = $FLS11 (exactly)
+// * performer[ASLErogatore].actor.identifier.system = $minsan-fls (exactly)
 // * performer[ASLErogatore].actor.identifier.value 1..
 // * performer[ASLErogatore].actor.identifier.value ^short = "Codice FLS11 dell'erogatore"
-* location  only Reference(LocationErogazione) 
+* location  only Reference(LocationItDossierPharma) 
 * location.reference 0..1
 * quantity 1..
 * quantity.value 1..

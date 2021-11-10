@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Thu, Nov 4, 2021 05:24+0000 for FHIR v4.6.0 
+  Generated on Tue, Nov 9, 2021 19:13+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -1352,14 +1352,6 @@
           <xs:documentation xml:lang="en">CareTeam</xs:documentation>
           <xs:documentation xml:lang="es">EquipoDeCuidado</xs:documentation>
           <xs:documentation xml:lang="zh">照护团队</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="CatalogEntry">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">CatalogEntry</xs:documentation>
-          <xs:documentation xml:lang="en">CatalogEntry</xs:documentation>
-          <xs:documentation xml:lang="es">EntradaDeCatalogo</xs:documentation>
-          <xs:documentation xml:lang="zh">条目定义</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ChargeItem">
@@ -2944,7 +2936,6 @@
       <xs:element ref="CapabilityStatement2"/>
       <xs:element ref="CarePlan"/>
       <xs:element ref="CareTeam"/>
-      <xs:element ref="CatalogEntry"/>
       <xs:element ref="ChargeItem"/>
       <xs:element ref="ChargeItemDefinition"/>
       <xs:element ref="Citation"/>
@@ -11472,269 +11463,6 @@ into another (possibly the same) biological entity.</xs:documentation>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="CatalogEntry" type="CatalogEntry">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Catalog entries are wrappers that contextualize items included in a catalog.</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="CatalogEntry">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Catalog entries are wrappers that contextualize items included in a catalog.</xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="DomainResource">
-        <xs:sequence>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Business identifier uniquely assigned to the catalog entry.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="name" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The name of this catalog entry announces the item that is represented by the entry.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CatalogEntryType">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The type of resource that is represented by this catalog entry.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="status" minOccurs="0" maxOccurs="1" type="CatalogEntryStatus">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates whether this catalog entry is open to public usage (active) or not (draft or retired).</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="effectivePeriod" minOccurs="0" maxOccurs="1" type="Period">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Period of usability of the catalog entry.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="orderable" minOccurs="1" maxOccurs="1" type="boolean">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates whether or not the entry represents an item that is orderable.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="referencedItem" minOccurs="1" maxOccurs="1" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The item (resource) that this entry of the catalog represents.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="relatedEntry" type="CatalogEntry.RelatedEntry" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Used for example, to point to a substance, or to a device used to administer a medication.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="updatedBy" minOccurs="0" maxOccurs="1" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Last actor who recorded (created or updated) this catalog entry.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Notes and comments about this catalog entry.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="estimatedDuration" minOccurs="0" maxOccurs="1" type="Duration">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Estimated duration of the orderable item of this  entry of the catalog.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="billingCode" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Billing code associated to the  item in the context of this  entry of the catalog.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="billingSummary" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Billing summary attached to the  item in the context of this  entry of the catalog.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="scheduleSummary" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Schedule summary for the  item in the context of this  entry of the catalog.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="limitationSummary" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Summary of limitations for the  item in the context of this  entry of the catalog.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="regulatorySummary" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Regulatory summary for the  item in the context of this  entry of the catalog.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="CatalogEntry.RelatedEntry">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">Catalog entries are wrappers that contextualize items included in a catalog.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="relationship" minOccurs="1" maxOccurs="1" type="CatalogEntryRelationType">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The type of relationship to the related entry.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="target" minOccurs="1" maxOccurs="1" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The reference to the related entry.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="CatalogEntryRelationTypeEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="triggers">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Triggers</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="is-replaced-by">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Is replaced by</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="excludes">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Excludes</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="includes">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Includes</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="CatalogEntryRelationType">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="CatalogEntryRelationTypeEnum" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="CatalogEntryStatusEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="draft">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Draft</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="active">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Active</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="retired">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Retired</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="CatalogEntryStatus">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="CatalogEntryStatusEnum" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="CatalogEntryTypeEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="ActivityDefinition">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">ActivityDefinition</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="PlanDefinition">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">PlanDefinition</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="SpecimenDefinition">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">SpecimenDefinition</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ObservationDefinition">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">ObservationDefinition</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="DeviceDefinition">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">DeviceDefinition</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Organization">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Organization</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Practitioner">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Practitioner</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="PractitionerRole">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">PractitionerRole</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="HealthcareService">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">HealthcareService</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="MedicationKnowledge">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">MedicationKnowledge</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Medication">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Medication</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Substance">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Substance</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Location">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Location</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="CatalogEntryType">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="CatalogEntryTypeEnum" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:element name="ChargeItem" type="ChargeItem">
     <xs:annotation>
       <xs:documentation xml:lang="en">The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.</xs:documentation>
@@ -17930,7 +17658,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">How the individual is involved in the resources content that is described in the exception.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="reference" minOccurs="1" maxOccurs="1" type="Reference">
+          <xs:element name="reference" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
               <xs:documentation xml:lang="en">The resource that identifies the actor. To identify actors by type, use group to identify a set of actors by some property they share (e.g. 'admitting officers').</xs:documentation>
            </xs:annotation>
@@ -20191,6 +19919,11 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">A network address on which the device may be contacted directly.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="endpoint" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Technical endpoints providing access to services provided by the device defined at this resource.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="link" type="Device.Link" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">An associated device, attached to, used with, communicating with or linking a previous or new device model to the focal device.</xs:documentation>
@@ -20222,27 +19955,23 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="deviceIdentifier" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="deviceIdentifier" minOccurs="1" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="issuer" minOccurs="0" maxOccurs="1" type="uri">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Organization that is charged with issuing UDIs for devices.  For example, the US FDA issuers include :
-1) GS1: 
-http://hl7.org/fhir/NamingSystem/gs1-di, 
-2) HIBCC:
-http://hl7.org/fhir/NamingSystem/hibcc-dI, 
-3) ICCBBA for blood containers:
-http://hl7.org/fhir/NamingSystem/iccbba-blood-di, 
-4) ICCBA for other devices:
-http://hl7.org/fhir/NamingSystem/iccbba-other-di.</xs:documentation>
+              <xs:documentation xml:lang="en">Organization that is charged with issuing UDIs for devices. For example, the US FDA issuers include: 
+1) GS1: http://hl7.org/fhir/NamingSystem/gs1-di, 
+2) HIBCC: http://hl7.org/fhir/NamingSystem/hibcc-diI, 
+3) ICCBBA for blood containers: http://hl7.org/fhir/NamingSystem/iccbba-blood-di, 
+4) ICCBA for other devices: http://hl7.org/fhir/NamingSystem/iccbba-other-di # Informationsstelle für Arzneispezialitäten (IFA GmbH) (EU only): http://hl7.org/fhir/NamingSystem/ifa-gmbh-di.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="jurisdiction" minOccurs="0" maxOccurs="1" type="uri">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The identity of the authoritative source for UDI generation within a  jurisdiction.  All UDIs are globally unique within a single namespace with the appropriate repository uri as the system.  For example,  UDIs of devices managed in the U.S. by the FDA, the value is  http://hl7.org/fhir/NamingSystem/fda-udi.</xs:documentation>
+              <xs:documentation xml:lang="en">The identity of the authoritative source for UDI generation within a jurisdiction. All UDIs are globally unique within a single namespace with the appropriate repository uri as the system. For example, UDIs of devices managed in the U.S. by the FDA, the value is http://hl7.org/fhir/NamingSystem/us-fda-udi or in the European Union by the European Commission http://hl7.org/fhir/NamingSystem/eu-ec-udi.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="carrierAIDC" minOccurs="0" maxOccurs="1" type="base64Binary">
@@ -33169,14 +32898,6 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           <xs:documentation xml:lang="en">CareTeam</xs:documentation>
           <xs:documentation xml:lang="es">EquipoDeCuidado</xs:documentation>
           <xs:documentation xml:lang="zh">照护团队</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="CatalogEntry">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">CatalogEntry</xs:documentation>
-          <xs:documentation xml:lang="en">CatalogEntry</xs:documentation>
-          <xs:documentation xml:lang="es">EntradaDeCatalogo</xs:documentation>
-          <xs:documentation xml:lang="zh">条目定义</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ChargeItem">
@@ -50890,12 +50611,12 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
     <xs:complexContent>
       <xs:extension base="CanonicalResource">
         <xs:sequence>
-          <xs:element name="url" minOccurs="1" maxOccurs="1" type="uri">
+          <xs:element name="url" minOccurs="0" maxOccurs="1" type="uri">
             <xs:annotation>
               <xs:documentation xml:lang="en">An absolute URI that is used to identify this test script when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this test script is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the test script is stored on different servers.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">A formal identifier that is used to identify this test script when it is represented in other formats, or referenced in a specification, model, design or an instance.</xs:documentation>
            </xs:annotation>
@@ -52108,14 +51829,6 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:documentation xml:lang="en">CareTeam</xs:documentation>
           <xs:documentation xml:lang="es">EquipoDeCuidado</xs:documentation>
           <xs:documentation xml:lang="zh">照护团队</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="CatalogEntry">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">CatalogEntry</xs:documentation>
-          <xs:documentation xml:lang="en">CatalogEntry</xs:documentation>
-          <xs:documentation xml:lang="es">EntradaDeCatalogo</xs:documentation>
-          <xs:documentation xml:lang="zh">条目定义</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="ChargeItem">

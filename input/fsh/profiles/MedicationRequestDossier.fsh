@@ -11,8 +11,8 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 === */
 
 * ^status = #draft
-* extension contains MedicoTitolare named medicoTitolare 1..1
-* extension[medicoTitolare] ^min = 1
+* extension contains MedicationRequestMedicoTitolare named medicoTitolare 0..1
+* extension[medicoTitolare].valueReference  only Reference( MedicoPrescrittore )
 
 * status 1.. MS
 * intent = #order (exactly) // do we really need to constraint to order ?
@@ -62,7 +62,7 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 // * medicationCodeableConcept.coding[gruppoEquivalenza].display 1..
 
 // * medicationCodeableConcept.coding[eccezioni].system 1..
-* medicationCodeableConcept.coding[eccezioni].system = $UNK (exactly)
+* medicationCodeableConcept.coding[eccezioni].system = $v3-NullFlavor (exactly)
 // * medicationCodeableConcept.coding[eccezioni].code 1..
 * medicationCodeableConcept.coding[eccezioni].code = #UNK
 // * medicationCodeableConcept.coding[eccezioni].display 1..
