@@ -1,9 +1,9 @@
 @startuml
-alt Single Resource
-	"Sender" -> "Receiver" : MedicationRequest | MedicationDispense [PUT]
+alt Singola Risorsa
+	"Sender" -> "Receiver" : Aggiorna Singola Risorsa [PUT]
 	"Receiver" --> "Sender" : PUT Response
-else Transaction
-	"Sender" -> "Receiver" : Aggiornamento Dossier Farmaceutico (Bundle)
+else Transaction, Batch
+	"Sender" -> "Receiver" : Aggiornamento Dossier Farmaceutico (Bundle) [POST]
 	"Receiver" --> "Sender" : POST Response
 end
 @enduml

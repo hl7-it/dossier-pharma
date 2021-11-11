@@ -1,6 +1,10 @@
 Profile: MedicoPrescrittore
 Parent: Practitioner
-Id: MedicoPrescrittore
+Id: Practitioner-prescrittore-it-dossierPharma
+Title:    "Practitioner - Medico Prescrittore"
+Description: "Profilo di Practitioner usato per descrivere il Medico Prescrittore per gli scopi del Dossier Farmaceutico"
+//=================================================================
+
 * ^status = #draft
 * identifier 1..
 * identifier.system 1..
