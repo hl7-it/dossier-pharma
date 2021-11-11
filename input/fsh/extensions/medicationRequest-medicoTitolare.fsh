@@ -9,4 +9,4 @@ Description: "Estensione usata per descrivere il medico titolare in una prescriz
 * . ^short = "Medico titolare"
 * . ^definition = "Estensione usata per descrivere il medico titolare in una prescrizione"
 * value[x] 1..
-* valueReference only Reference (Practitioner or PractitionerRole)
+* value[x] only Reference (Practitioner or PractitionerRole)

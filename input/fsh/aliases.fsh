@@ -18,10 +18,12 @@ Alias: CS_tipoEntita = http://terminology.hl7.it/CodeSystem/it-tipoEntita
 
 Alias: $minsan-fls = http://terminology.hl7.it/sid/minsan-fls
 Alias: $minsan-hsp = http://terminology.hl7.it/sid/minsan-hsp
+Alias: $minsan-ria = http://terminology.hl7.it/sid/minsan-ria // https://www.salute.gov.it/portale/documentazione/p6_2_2_1.jsp?lingua=italiano&id=1053
+
 Alias: $minsan-farmacie = http://terminology.hl7.it/sid/minsan-farmacie
 Alias: $minsan-minsan-parafarmacie = http://terminology.hl7.it/sid/minsan-parafarmacie
 
-Alias: MinSanRegioni = http://terminology.hl7.it/CodeSystem/minsan-regione
+Alias: MinSanRegioni = http://terminology.hl7.it/sid/minsan-regione
 Alias: V3RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 
 

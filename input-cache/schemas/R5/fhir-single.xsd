@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Tue, Nov 9, 2021 19:13+0000 for FHIR v4.6.0 
+  Generated on Wed, Nov 10, 2021 22:33+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -8774,24 +8774,19 @@ The duration (usually in minutes) could also be provided to indicate the length 
   </xs:complexType>
   <xs:element name="BiologicallyDerivedProduct" type="BiologicallyDerivedProduct">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A material substance originating from a biological entity intended to be transplanted or infused
+      <xs:documentation xml:lang="en">This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused
 into another (possibly the same) biological entity.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="BiologicallyDerivedProduct">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A material substance originating from a biological entity intended to be transplanted or infused
+      <xs:documentation xml:lang="en">This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused
 into another (possibly the same) biological entity.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="DomainResource">
         <xs:sequence>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">This records identifiers associated with this biologically derived product instance that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="productCategory" minOccurs="0" maxOccurs="1" type="BiologicallyDerivedProductCategory">
             <xs:annotation>
               <xs:documentation xml:lang="en">Broad category of this product.</xs:documentation>
@@ -8802,9 +8797,9 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">A code that identifies the kind of this biologically derived product (SNOMED Ctcode).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="status" minOccurs="0" maxOccurs="1" type="BiologicallyDerivedProductStatus">
+          <xs:element name="parent" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Whether the product is currently available.</xs:documentation>
+              <xs:documentation xml:lang="en">Parent product (if any).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="request" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -8812,14 +8807,34 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">Procedure request to obtain this biologically derived product.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="integer">
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Number of discrete units within this product.</xs:documentation>
+              <xs:documentation xml:lang="en">This records identifiers associated with this biologically derived product instance that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="parent" minOccurs="0" maxOccurs="unbounded" type="Reference">
+          <xs:element name="sourceIdentifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Parent product (if any).</xs:documentation>
+              <xs:documentation xml:lang="en">This records source identifiers associated with this biologically derived product instance that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="processingFacility" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Processing facilities for this biologically derived product.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="division" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Description of division.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="status" minOccurs="0" maxOccurs="1" type="BiologicallyDerivedProductStatus">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Whether the product is currently available.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="expirationDate" minOccurs="0" maxOccurs="1" type="dateTime">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Date of expiration.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="collection" type="BiologicallyDerivedProduct.Collection" minOccurs="0" maxOccurs="1">
@@ -8827,19 +8842,14 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">How this product was collected.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="processing" type="BiologicallyDerivedProduct.Processing" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="storageTempRequirements" minOccurs="0" maxOccurs="1" type="Range">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Any processing of the product during collection that does not change the fundamental nature of the product. For example adding anti-coagulants during the collection of Peripheral Blood Stem Cells.</xs:documentation>
+              <xs:documentation xml:lang="en">Product storage temp requirements.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="manipulation" type="BiologicallyDerivedProduct.Manipulation" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="property" type="BiologicallyDerivedProduct.Property" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Any manipulation of product post-collection that is intended to alter the product.  For example a buffy-coat enrichment or CD8 reduction of Peripheral Blood Stem Cells to make it more suitable for infusion.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="storage" type="BiologicallyDerivedProduct.Storage" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Product storage.</xs:documentation>
+              <xs:documentation xml:lang="en">A property that is specific to this BiologicallyDerviedProduct instance.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -8848,7 +8858,7 @@ into another (possibly the same) biological entity.</xs:documentation>
   </xs:complexType>
   <xs:complexType name="BiologicallyDerivedProduct.Collection">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A material substance originating from a biological entity intended to be transplanted or infused
+      <xs:documentation xml:lang="en">This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused
 into another (possibly the same) biological entity.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -8875,97 +8885,31 @@ into another (possibly the same) biological entity.</xs:documentation>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="BiologicallyDerivedProduct.Processing">
+  <xs:complexType name="BiologicallyDerivedProduct.Property">
     <xs:annotation>
-      <xs:documentation xml:lang="en">A material substance originating from a biological entity intended to be transplanted or infused
+      <xs:documentation xml:lang="en">This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused
 into another (possibly the same) biological entity.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="type" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Description of of processing.</xs:documentation>
+              <xs:documentation xml:lang="en">Code that specifies the property.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="procedure" minOccurs="0" maxOccurs="1" type="CodeableReference">
+          <xs:choice minOccurs="1" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">The reference or code of the processing activity.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="additive" minOccurs="0" maxOccurs="1" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Substance added during processing.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:choice minOccurs="0" maxOccurs="1" >
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Time of processing.</xs:documentation>
+              <xs:documentation xml:lang="en">Property values.</xs:documentation>
             </xs:annotation>
-            <xs:element name="timeDateTime" type="dateTime"/>
-            <xs:element name="timePeriod" type="Period"/>
+            <xs:element name="valueBoolean" type="boolean"/>
+            <xs:element name="valueInteger" type="integer"/>
+            <xs:element name="valueCodeableConcept" type="CodeableConcept"/>
+            <xs:element name="valueQuantity" type="Quantity"/>
+            <xs:element name="valueRange" type="Range"/>
+            <xs:element name="valueString" type="string"/>
+            <xs:element name="valueAttachment" type="Attachment"/>
           </xs:choice>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="BiologicallyDerivedProduct.Manipulation">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">A material substance originating from a biological entity intended to be transplanted or infused
-into another (possibly the same) biological entity.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Description of manipulation.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="procedure" minOccurs="0" maxOccurs="1" type="CodeableReference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">The reference or code of the manipulation activity.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:choice minOccurs="0" maxOccurs="1" >
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Time of manipulation.</xs:documentation>
-            </xs:annotation>
-            <xs:element name="timeDateTime" type="dateTime"/>
-            <xs:element name="timePeriod" type="Period"/>
-          </xs:choice>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="BiologicallyDerivedProduct.Storage">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">A material substance originating from a biological entity intended to be transplanted or infused
-into another (possibly the same) biological entity.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="BackboneElement">
-        <xs:sequence>
-          <xs:element name="description" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Description of storage.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="temperature" minOccurs="0" maxOccurs="1" type="decimal">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Storage temperature.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="scale" minOccurs="0" maxOccurs="1" type="BiologicallyDerivedProductStorageScale">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Temperature scale used.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="duration" minOccurs="0" maxOccurs="1" type="Period">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Storage timeperiod.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -9032,36 +8976,6 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="BiologicallyDerivedProductStatusEnum" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="BiologicallyDerivedProductStorageScaleEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="farenheit">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Fahrenheit</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="celsius">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Celsius</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="kelvin">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Kelvin</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="BiologicallyDerivedProductStorageScale">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="BiologicallyDerivedProductStorageScaleEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
