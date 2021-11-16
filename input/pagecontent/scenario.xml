@@ -1,26 +1,48 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+<div xmlns="http://www.w3.org/1999/xhtml"
+   	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   	xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
 	<h3 id="overview">Sequence Diagrams</h3>
-	<h4 id="alimentazione">Alimentazione Dossier Farmaceutico</h4>
-	<p>{% include sequence-1.svg %}</p>
-	<p>La transazione Alimentazione Dossier Farmaceutico viene utilizzata per:</p>
+	<h4 id="alimentazione">Overview</h4>
+	<p>{% include sequence-0.svg %}</p>
+	<p>Il servizio proposto intende supportare il seguente scenario di uso:</p>
 	<ul>
-		<li>alimentare il dossier farmaceutico a seguito della creazione e disponibilità di un documento nel FSE che contenga informazioni sulla terapia farmacologica del paziente;</li>
-		<li>permettere l'invio dell'intero dossier farmaceutico in caso di trasferimento della regione di assistenza del paziente.</li>
-	</ul>
-	<h4>Aggiornamento Dossier Farmaceutico</h4>
-	<p>{% include sequence-2.svg %}</p>
-	<p>La transazione Aggiornamento Dossier Farmaceutico viene utilizzata per modificare informazioni su risorse FHIR presenti all'interno del dossier farmaceutico. Può essere utilizzata per :</p>
-	<ul>
-		<li>aggiornare, modificare e cancellare le risorse FHIR associate ad un documento presente nel FSE.</li>
-		<li>Può essere utilizzata se:
+		<li>Alimentazione del dossier con informazioni su prescrizioni e dispensazioni</li>
+		<li>Aggiornamento delle infromazioni inviate</li>
+		<li>Consultazione del dossier per
 			<ul>
-				<li>viene aggiornato il livello di visibilità del documento nel FSE per aggiornare la visibilità delle risorse associate;</li>
-				<li>viene svolto un replace di un documento nel FSE per aggiornare le risorse associate;</li>
-				<li>vengono cancellati i metadati del documento nel FSE da cui originano le risorse per cancellare le stesse dal dossier farmaceutico</li>
+				<li>paziente ed ID prescrizione (NRE)</li>
+				<li>paziente e farmaco</li>
+				<li>paziente e periodo</li>
+				<li>numero di lotto e farmaco</li>
 			</ul>
 		</li>
 	</ul>
-	<h4 id="alimentazione">InterrogazioneDossierFarmaceutico</h4>
+	<p>Dettagli sulle modalità di implementazione nei sequence diagram successivi</p>
+	<h4 id="alimentazione">Alimentazione del Dossier Farmaceutico</h4>
+	<p>{% include sequence-1.svg %}</p>
+	<p>Questa transazione viene utilizzata per:</p>
+	<ul>
+		<li>alimentare il dossier farmaceutico con informazioni sulla terapia farmacologica del paziente; incluso, ove applicabile, il riferimento al documento CDA da cui tali informazioni sono state estratte</li>
+		<li>trasferire l'intero dossier farmaceutico in caso di trasferimento della regione di assistenza del paziente.</li>
+	</ul>
+	<p>Le risorse inviate singolarmente saranno tipicamente MedicationRequest o MedicationDispense, anche se altre risorse come per esmepio Provenace potranno essere inviate con lo stesso meccanismo</p>
+	
+	<h4>Aggiornamento del Dossier Farmaceutico</h4>
+	<p>{% include sequence-2.svg %}</p>
+	<p>Questa transazione viene utilizzata per modificare informazioni su risorse FHIR presenti all'interno del dossier farmaceutico.</p>
+	<p>Può essere utilizzata per aggiornare, modificare e cancellare le risorse FHIR associate ad un documento presente nel FSE.</p>
+	<p>Le risorse aggiornate singolarmente saranno tipicamente MedicationRequest o MedicationDispense, anche se altre risorse FHIR potranno essere aggiornate con lo stesso meccanismo</p>
+	<h4 id="alimentazione">Consultazione del Dossier Farmaceutico</h4>
 	<p>{% include sequence-3.svg %}</p>
-	<p>La transazione InterrogazioneDossierFarmaceutico viene utilizzata per interrogare il dossier farmaceutico e ottenere in risposta un Bundle di risorse con le informazioni relative alla terapia farmacologica del paziente.</p>
+	<p>Questa transazione viene utilizzata per consultare il dossier farmaceutico per diversi scopi:</p>
+	<ul>
+		<li>recuperare le informazioni relative ad un paziente per</li>
+		<ul>
+			<li>ID prescrizione (NRE)</li>
+			<li>farmaco</li>
+			<li>periodo</li>
+			<li>numero di lotto e farmaco</li>
+		</ul>
+		<li>recuperare le informazni su prescritto od erogato per numero di lotto e codice farmaco </li>
+	</ul>
 </div>

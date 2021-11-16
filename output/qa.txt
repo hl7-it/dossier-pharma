@@ -1,0 +1,190 @@
+﻿HL7ITDossierPharma : Validation Results
+=========================================
+
+err = 12, warn = 19, info = 1
+IG Publisher Version: 1.1.84
+Generated Tue Nov 09 17:46:40 CET 2021. FHIR version 4.0.1 for hl7.fhir.it.dossierpharma#0.1.0 (canonical = http://hl7.it/fhir/dossierPharma)
+ Build Errors : 117 / 8 / 0
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\CapabilityStatement-DossierFarmaceutico-ContentArchiver : 5 / 0 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\CapabilityStatement-DossierFarmaceutico-ContentConsumer : 5 / 0 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\CapabilityStatement-DossierFarmaceutico-ContentExtractor : 0 / 0 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\CapabilityStatement-DossierFarmaceutico-ContentManager : 0 / 0 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\ImplementationGuide-hl7.fhir.it.dossierpharma : 0 / 0 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-AggiornamentoDossierFarmaceutico : 0 / 1 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-AlimentazioneDossierFarmaceutico : 0 / 1 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-LocationErogazione : 2 / 1 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-MedicationDispense-it-dossierPharma : 0 / 1 / 2
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-MedicationRef : 0 / 1 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-MedicationRequest-it-dossierPharma : 0 / 1 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-MedicoPrescrittore : 0 / 1 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-MedicoTitolare : 0 / 1 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-NRE : 0 / 1 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-ProvenanceForDossier : 0 / 1 / 1
+ C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\fsh-generated\resources\StructureDefinition-Recorded : 0 / 1 / 1
+</table>
+== n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/AggiornamentoDossierFarmaceutico.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/AlimentazioneDossierFarmaceutico.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/LocationErogazione.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/MedicoPrescrittore.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/ProvenanceForDossier.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/MedicoTitolare.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/NRE.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/Recorded.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentArchiver.change.history.html#/html/body/div/div/div/p/a at Line 264, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentArchiver.html#/html/body/div/div/div/p/a at Line 255, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentArchiver.json.html#/html/body/div/div/div/p/a at Line 388, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentArchiver.ttl.html#/html/body/div/div/div/p/a at Line 395, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentArchiver.xml.html#/html/body/div/div/div/p/a at Line 385, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentConsumer.change.history.html#/html/body/div/div/div/p/a at Line 264, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentConsumer.html#/html/body/div/div/div/p/a at Line 255, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentConsumer.json.html#/html/body/div/div/div/p/a at Line 380, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentConsumer.ttl.html#/html/body/div/div/div/p/a at Line 389, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentConsumer.xml.html#/html/body/div/div/div/p/a at Line 375, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentExtractor.change.history.html#/html/body/div/div/div/p/a at Line 264, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentExtractor.html#/html/body/div/div/div/p/a at Line 255, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentExtractor.json.html#/html/body/div/div/div/p/a at Line 298, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentExtractor.ttl.html#/html/body/div/div/div/p/a at Line 306, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentExtractor.xml.html#/html/body/div/div/div/p/a at Line 291, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentManager.change.history.html#/html/body/div/div/div/p/a at Line 264, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentManager.html#/html/body/div/div/div/p/a at Line 255, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentManager.json.html#/html/body/div/div/div/p/a at Line 302, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentManager.ttl.html#/html/body/div/div/div/p/a at Line 309, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\CapabilityStatement-DossierFarmaceutico-ContentManager.xml.html#/html/body/div/div/div/p/a at Line 296, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AggiornamentoDossierFarmaceutico-definitions.html#/html/body/div/div/div/p/a at Line 1299, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AggiornamentoDossierFarmaceutico-examples.html#/html/body/div/div/div/p/a at Line 296, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AggiornamentoDossierFarmaceutico-mappings.html#/html/body/div/div/div/p/a at Line 361, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AggiornamentoDossierFarmaceutico.html#/html/body/div/div/div/p/a at Line 996, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AggiornamentoDossierFarmaceutico.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AggiornamentoDossierFarmaceutico.profile.json.html#/html/body/div/div/div/p/a at Line 4773, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AggiornamentoDossierFarmaceutico.profile.ttl.html#/html/body/div/div/div/p/a at Line 4272, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AggiornamentoDossierFarmaceutico.profile.xml.html#/html/body/div/div/div/p/a at Line 4333, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AlimentazioneDossierFarmaceutico-definitions.html#/html/body/div/div/div/p/a at Line 1301, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AlimentazioneDossierFarmaceutico-examples.html#/html/body/div/div/div/p/a at Line 296, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AlimentazioneDossierFarmaceutico-mappings.html#/html/body/div/div/div/p/a at Line 361, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AlimentazioneDossierFarmaceutico.html#/html/body/div/div/div/p/a at Line 996, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AlimentazioneDossierFarmaceutico.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AlimentazioneDossierFarmaceutico.profile.json.html#/html/body/div/div/div/p/a at Line 4772, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AlimentazioneDossierFarmaceutico.profile.ttl.html#/html/body/div/div/div/p/a at Line 4271, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-AlimentazioneDossierFarmaceutico.profile.xml.html#/html/body/div/div/div/p/a at Line 4330, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-LocationErogazione-definitions.html#/html/body/div/div/div/p/a at Line 855, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-LocationErogazione-examples.html#/html/body/div/div/div/p/a at Line 296, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-LocationErogazione-mappings.html#/html/body/div/div/div/p/a at Line 363, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-LocationErogazione.html#/html/body/div/div/div/p/a at Line 793, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-LocationErogazione.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-LocationErogazione.profile.json.html#/html/body/div/div/div/p/a at Line 2963, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-LocationErogazione.profile.ttl.html#/html/body/div/div/div/p/a at Line 2588, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-LocationErogazione.profile.xml.html#/html/body/div/div/div/p/a at Line 2639, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationDispense-it-dossierPharma-definitions.html#/html/body/div/div/div/p/a at Line 1750, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationDispense-it-dossierPharma-examples.html#/html/body/div/div/div/p/a at Line 296, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationDispense-it-dossierPharma-mappings.html#/html/body/div/div/div/p/a at Line 575, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationDispense-it-dossierPharma.html#/html/body/div/div/div/p/a at Line 1364, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationDispense-it-dossierPharma.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationDispense-it-dossierPharma.profile.json.html#/html/body/div/div/div/p/a at Line 7807, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationDispense-it-dossierPharma.profile.ttl.html#/html/body/div/div/div/p/a at Line 6702, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationDispense-it-dossierPharma.profile.xml.html#/html/body/div/div/div/p/a at Line 6925, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRef-definitions.html#/html/body/div/div/div/p/a at Line 557, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRef-examples.html#/html/body/div/div/div/p/a at Line 296, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRef-mappings.html#/html/body/div/div/div/p/a at Line 371, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRef.html#/html/body/div/div/div/p/a at Line 650, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRef.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRef.profile.json.html#/html/body/div/div/div/p/a at Line 1646, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRef.profile.ttl.html#/html/body/div/div/div/p/a at Line 1488, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRef.profile.xml.html#/html/body/div/div/div/p/a at Line 1519, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRequest-it-dossierPharma-definitions.html#/html/body/div/div/div/p/a at Line 1856, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRequest-it-dossierPharma-examples.html#/html/body/div/div/div/p/a at Line 296, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRequest-it-dossierPharma-mappings.html#/html/body/div/div/div/p/a at Line 623, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRequest-it-dossierPharma.html#/html/body/div/div/div/p/a at Line 1413, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRequest-it-dossierPharma.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRequest-it-dossierPharma.profile.json.html#/html/body/div/div/div/p/a at Line 8293, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRequest-it-dossierPharma.profile.ttl.html#/html/body/div/div/div/p/a at Line 7060, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicationRequest-it-dossierPharma.profile.xml.html#/html/body/div/div/div/p/a at Line 7426, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoPrescrittore-definitions.html#/html/body/div/div/div/p/a at Line 1147, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoPrescrittore-examples.html#/html/body/div/div/div/p/a at Line 296, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoPrescrittore-mappings.html#/html/body/div/div/div/p/a at Line 464, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoPrescrittore.html#/html/body/div/div/div/p/a at Line 949, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoPrescrittore.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoPrescrittore.profile.json.html#/html/body/div/div/div/p/a at Line 4476, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoPrescrittore.profile.ttl.html#/html/body/div/div/div/p/a at Line 3845, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoPrescrittore.profile.xml.html#/html/body/div/div/div/p/a at Line 4018, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoTitolare-definitions.html#/html/body/div/div/div/p/a at Line 332, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoTitolare-mappings.html#/html/body/div/div/div/p/a at Line 302, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoTitolare.html#/html/body/div/div/div/p/a at Line 530, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoTitolare.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoTitolare.profile.json.html#/html/body/div/div/div/p/a at Line 577, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoTitolare.profile.ttl.html#/html/body/div/div/div/p/a at Line 554, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-MedicoTitolare.profile.xml.html#/html/body/div/div/div/p/a at Line 534, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-NRE-definitions.html#/html/body/div/div/div/p/a at Line 418, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-NRE-mappings.html#/html/body/div/div/div/p/a at Line 310, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-NRE.html#/html/body/div/div/div/p/a at Line 562, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-NRE.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-NRE.profile.json.html#/html/body/div/div/div/p/a at Line 987, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-NRE.profile.ttl.html#/html/body/div/div/div/p/a at Line 893, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-NRE.profile.xml.html#/html/body/div/div/div/p/a at Line 893, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-ProvenanceForDossier-definitions.html#/html/body/div/div/div/p/a at Line 1039, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-ProvenanceForDossier-examples.html#/html/body/div/div/div/p/a at Line 296, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-ProvenanceForDossier-mappings.html#/html/body/div/div/div/p/a at Line 421, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-ProvenanceForDossier.html#/html/body/div/div/div/p/a at Line 905, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-ProvenanceForDossier.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-ProvenanceForDossier.profile.json.html#/html/body/div/div/div/p/a at Line 3965, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-ProvenanceForDossier.profile.ttl.html#/html/body/div/div/div/p/a at Line 3449, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-ProvenanceForDossier.profile.xml.html#/html/body/div/div/div/p/a at Line 3532, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-Recorded-definitions.html#/html/body/div/div/div/p/a at Line 332, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-Recorded-mappings.html#/html/body/div/div/div/p/a at Line 302, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-Recorded.html#/html/body/div/div/div/p/a at Line 516, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-Recorded.profile.history.html#/html/body/div/div/div/p/a at Line 285, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-Recorded.profile.json.html#/html/body/div/div/div/p/a at Line 571, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-Recorded.profile.ttl.html#/html/body/div/div/div/p/a at Line 546, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\StructureDefinition-Recorded.profile.xml.html#/html/body/div/div/div/p/a at Line 526, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\artifacts.html#/html/body/div/div/div/p/a at Line 383, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\changes.html#/html/body/div/div/div/p/a at Line 211, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\design.html#/html/body/div/div/div/div/div/p/a at Line 458, column 2: The link 'StructureDefinition-Patient-it-base.html' for "Patient.identifier" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\design.html#/html/body/div/div/div/p/a at Line 515, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\downloads.html#/html/body/div/div/div/p/a at Line 247, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\index.html#/html/body/div/div/div/div/div/p/a at Line 245, column 34: The link 'copyright.html' for "Copyright" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\index.html#/html/body/div/div/div/div/div/ul/li/p/a at Line 318, column 9: The link 'copyright.html' for "Copyright" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\index.html#/html/body/div/div/div/p/a at Line 429, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\methodology.html#/html/body/div/div/div/p/a at Line 345, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\scenario.html#/html/body/div/div/div/p/a at Line 225, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\spec.html#/html/body/div/div/div/p/a at Line 217, column 28: The link '' for "" cannot be resolved
+ERROR: C:\Users\apinton_consorzioars\Desktop\FISH\dossier-pharma\output\toc.html#/html/body/div/div/div/p/a at Line 200, column 28: The link '' for "" cannot be resolved
+== fsh-generated\resources\CapabilityStatement-DossierFarmaceutico-ContentArchiver.json ==
+ERROR: CapabilityStatement/DossierFarmaceutico-ContentArchiver: CapabilityStatement.rest[0].resource[0].searchParam[2].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/MedicationDispense-code' does not resolve
+ERROR: CapabilityStatement/DossierFarmaceutico-ContentArchiver: CapabilityStatement.rest[0].resource[1].searchParam[2].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/MedicationRequest-code' does not resolve
+ERROR: CapabilityStatement/DossierFarmaceutico-ContentArchiver: CapabilityStatement.rest[0].resource[0].searchParam[0]: Type mismatch - SearchParameter 'http://hl7.org/fhir/SearchParameter/MedicationDispense-subject' type is reference, but type here is token
+ERROR: CapabilityStatement/DossierFarmaceutico-ContentArchiver: CapabilityStatement.rest[0].resource[1].searchParam[0]: Type mismatch - SearchParameter 'http://hl7.org/fhir/SearchParameter/MedicationRequest-subject' type is reference, but type here is token
+ERROR: CapabilityStatement/DossierFarmaceutico-ContentArchiver: CapabilityStatement.rest[0].resource[2].searchParam[1]: Type mismatch - SearchParameter 'http://hl7.org/fhir/SearchParameter/Provenance-entity' type is reference, but type here is token
+== fsh-generated\resources\CapabilityStatement-DossierFarmaceutico-ContentConsumer.json ==
+ERROR: CapabilityStatement/DossierFarmaceutico-ContentConsumer: CapabilityStatement.rest[0].resource[0].searchParam[2].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/MedicationDispense-code' does not resolve
+ERROR: CapabilityStatement/DossierFarmaceutico-ContentConsumer: CapabilityStatement.rest[0].resource[1].searchParam[2].definition: Canonical URL 'http://hl7.org/fhir/SearchParameter/MedicationRequest-code' does not resolve
+ERROR: CapabilityStatement/DossierFarmaceutico-ContentConsumer: CapabilityStatement.rest[0].resource[0].searchParam[0]: Type mismatch - SearchParameter 'http://hl7.org/fhir/SearchParameter/MedicationDispense-subject' type is reference, but type here is token
+ERROR: CapabilityStatement/DossierFarmaceutico-ContentConsumer: CapabilityStatement.rest[0].resource[1].searchParam[0]: Type mismatch - SearchParameter 'http://hl7.org/fhir/SearchParameter/MedicationRequest-subject' type is reference, but type here is token
+ERROR: CapabilityStatement/DossierFarmaceutico-ContentConsumer: CapabilityStatement.rest[0].resource[2].searchParam[1]: Type mismatch - SearchParameter 'http://hl7.org/fhir/SearchParameter/Provenance-entity' type is reference, but type here is token
+== fsh-generated\resources\CapabilityStatement-DossierFarmaceutico-ContentExtractor.json ==
+== fsh-generated\resources\CapabilityStatement-DossierFarmaceutico-ContentManager.json ==
+== fsh-generated\resources\ImplementationGuide-hl7.fhir.it.dossierpharma.json ==
+== fsh-generated\resources\StructureDefinition-AggiornamentoDossierFarmaceutico.json ==
+WARNING: StructureDefinition.where(url = 'https://example.org/fhir/StructureDefinition/AggiornamentoDossierFarmaceutico'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-AlimentazioneDossierFarmaceutico.json ==
+WARNING: StructureDefinition.where(url = 'https://example.org/fhir/StructureDefinition/AlimentazioneDossierFarmaceutico'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-LocationErogazione.json ==
+ERROR: StructureDefinition/LocationErogazione: StructureDefinition.snapshot.element[24].fixed.ofType(uri): OIDs must be valid
+ERROR: StructureDefinition/LocationErogazione: StructureDefinition.differential.element[6].fixed.ofType(uri): OIDs must be valid
+WARNING: StructureDefinition.where(url = 'http://hl7.it/fhir/dossierPharma/StructureDefinition/LocationErogazione'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-MedicationDispense-it-dossierPharma.json ==
+INFORMATION: StructureDefinition/MedicationDispense-it-dossierPharma: StructureDefinition.snapshot.element[112].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+WARNING: StructureDefinition.where(url = 'http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationDispense-it-dossierPharma'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-MedicationRef.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationRef'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-MedicationRequest-it-dossierPharma.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationRequest-it-dossierPharma'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-MedicoPrescrittore.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicoPrescrittore'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-MedicoTitolare.json ==
+WARNING: StructureDefinition.where(url = 'https://example.org/fhir/StructureDefinition/MedicoTitolare'): The Implementation Guide contains no examples for this extension
+== fsh-generated\resources\StructureDefinition-NRE.json ==
+WARNING: StructureDefinition.where(url = 'https://example.org/fhir/StructureDefinition/NRE'): The Implementation Guide contains no examples for this extension
+== fsh-generated\resources\StructureDefinition-ProvenanceForDossier.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.it/fhir/dossierPharma/StructureDefinition/ProvenanceForDossier'): The Implementation Guide contains no examples for this profile
+== fsh-generated\resources\StructureDefinition-Recorded.json ==
+WARNING: StructureDefinition.where(url = 'https://example.org/fhir/StructureDefinition/Recorded'): The Implementation Guide contains no examples for this extension

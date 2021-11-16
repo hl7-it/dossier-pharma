@@ -1,0 +1,13 @@
+@startuml
+	"Sender" -> "Receiver" : Alimenta Dossier
+	opt
+	    "Sender" -> "Receiver" : Aggiorna Dossier
+	end
+
+    	group Consultazione per paziente
+        	"Consumer" -> "Receiver" : Ricerca per ID prescrizione (NRE)
+        	"Consumer" -> "Receiver" : Ricerca per farmaco
+        	"Consumer" -> "Receiver" : Ricerca per periodo
+        end
+     "Consumer" -> "Receiver" : Ricerca per lotto ed AIC
+@enduml

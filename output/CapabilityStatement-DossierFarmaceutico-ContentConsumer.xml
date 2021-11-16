@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="DossierFarmaceutico-ContentConsumer"/>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><a>TESTO per dossier Farmaceutico generale</a></div>
+  </text>
+  <url value="http://example.org/fhir/CapabilityStatement/DossierFarmaceutico_ContentConsumer"/>
+  <version value="0.1.0"/>
+  <name value="DossierFarmaceutico_ContentConsumer"/>
+  <title value="Dossier Farmaceutico - Content Consumer (client)"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2021-09-03"/>
+  <description value="CapabilityStatement per il Content Consumer definito nelle specifiche del Dossier Farmaceutico"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="IT"/>
+      <display value="Italy"/>
+    </coding>
+  </jurisdiction>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="application/fhir+json"/>
+  <rest>
+    <mode value="client"/>
+    <security>
+      <cors value="false"/>
+      <description value="IUA"/>
+    </security>
+    <resource>
+      <type value="MedicationDispense"/>
+      <profile value="http://example.org/fhir/StructureDefinition/DossierMedicationDispense"/>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="subject:identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/MedicationDispense-subject"/>
+        <type value="token"/>
+        <documentation value="Permette di ricercare per identificativo del paziente"/>
+      </searchParam>
+      <searchParam>
+        <name value="whenhandedover"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/MedicationDispense-whenhandedover"/>
+        <type value="date"/>
+        <documentation value="Quando è stata erogata la ricetta"/>
+      </searchParam>
+      <searchParam>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/MedicationDispense-code"/>
+        <type value="token"/>
+        <documentation value="Permette di ricercare per il codice AIC o ATC del farmaco erogato"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="MedicationRequest"/>
+      <profile value="http://example.org/fhir/StructureDefinition/DossierMedicationRequest"/>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="subject:identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-subject"/>
+        <type value="token"/>
+        <documentation value="Permette di ricercare per identificativo del paziente"/>
+      </searchParam>
+      <searchParam>
+        <name value="authoredon"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-authoredon"/>
+        <type value="date"/>
+        <documentation value="Quando è stata compilata la ricetta"/>
+      </searchParam>
+      <searchParam>
+        <name value="code"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-code"/>
+        <type value="token"/>
+        <documentation value="Permette di ricercare per il codice AIC o ATC del farmaco erogato"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Provenance"/>
+      <profile value="http://example.org/fhir/StructureDefinition/ProvenanceForDossier"/>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="target"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Provenance-target"/>
+        <type value="reference"/>
+        <documentation value="Permette di ricercare in base alle risorse associate"/>
+      </searchParam>
+      <searchParam>
+        <name value="entity:identifier"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Provenance-entity"/>
+        <type value="token"/>
+        <documentation value="permette di ricercare in base ai metadati necessari per accedere ad un documento nel profilo XDS definito da IHE. In particolare deve veicolare il documentEntry.repositoryUniqueId ed il documentEntry.UniqueID del documento referenziato nella risorsa Provenance (e.g. entity:identifier=RepoID|DocUniqueId)"/>
+      </searchParam>
+    </resource>
+    <interaction>
+      <code value="search-system"/>
+    </interaction>
+  </rest>
+</CapabilityStatement>

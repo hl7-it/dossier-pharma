@@ -1,8 +1,9 @@
 @startuml
-alt Single Resource
-	"Sender" -> "Receiver" : MedicationRequest | MedicationDispense [POST]
-else Transaction
+alt Transaction, Batch
 	"Sender" -> "Receiver" : Alimentazione Dossier Farmaceutico (Bundle) [POST]
+
+else Singola Risorsa
+	"Sender" -> "Receiver" : Invia Singola Risorsa [POST]
 end
 	"Receiver" --> "Sender" : POST Response
 @enduml
