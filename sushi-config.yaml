@@ -52,6 +52,8 @@ pages:
     title: Principi e disegno
   methodology.md:
     title: Metodologia
+  contesto.md:
+    title: Contesto di riferimento
   spec.md:
     title: Specifiche Tecniche
   scenario.html:
@@ -76,6 +78,7 @@ menu:
   IG Home: index.html
   Table of Contents: toc.html
   Background:
+    Contesto: contesto.html
     Principi e disegno: design.html
     Metodologia: methodology.html
   Specifiche Funzionali:

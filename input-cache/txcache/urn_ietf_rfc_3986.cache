@@ -17,15 +17,15 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:94b49d35-9297-4fb6-87a1-0201d119320a",
-    "timestamp" : "2021-11-11T07:49:04.511Z",
+    "identifier" : "urn:uuid:012be222-f0bf-48d2-bc58-58188f34dc64",
+    "timestamp" : "2021-11-25T18:33:43.955Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
     },
     {
       "name" : "version",
-      "valueString" : "urn:ietf:rfc:3986|n/a"
+      "valueUri" : "urn:ietf:rfc:3986|n/a"
     }],
     "contains" : [{
       "system" : "urn:ietf:rfc:3986",
