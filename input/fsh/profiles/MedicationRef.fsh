@@ -22,3 +22,5 @@ Description: "Risorsa Medication usata per veicolare possibili carrier identifie
 //* code[gruppoEquivalenza].system = $gruppo-equivalenza (exactly)
 //* code[eccezioni].system = $v3-NullFlavor (exactly)
 //* code[eccezioni].code = #UNK
+* batch 0..1
+* batch.lotNumber 0..1
