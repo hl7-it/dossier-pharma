@@ -39,11 +39,11 @@ Alias: $Coverage-it-base = http://hl7.it/fhir/StructureDefinition/Coverage-it-ba
 Alias: $NRE =  http://hl7.it/sid/mef/nre
 Alias: $CF = http://hl7.it/sid/codiceFiscale
 
-Alias: $AIC = http://terminology.hl7.it/CodeSystem/aifa-aic
+Alias: $aic = http://terminology.hl7.it/CodeSystem/aifa-aic
 Alias: $gruppo-equivalenza = http://terminology.hl7.it/CodeSystem/aifa-ge
 
 
-Alias: $ATC = http://www.whocc.no/atc
+Alias: $atc = http://www.whocc.no/atc
 
 Alias: $ISTAT-regioni = urn:oid:2.16.840.1.113883.2.9.4.2.1
 Alias: $Diagnosi = http://hl7.org/fhir/sid/icd-9-cm

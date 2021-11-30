@@ -38,12 +38,12 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 
 * medicationCodeableConcept.coding[ATC] ^sliceName = "ATC"
 // * medicationCodeableConcept.coding[ATC].system 1..
-* medicationCodeableConcept.coding[ATC].system = $ATC (exactly)
+* medicationCodeableConcept.coding[ATC].system = $atc (exactly)
 // * medicationCodeableConcept.coding[ATC].code 1..
 // * medicationCodeableConcept.coding[ATC].display 1..
 
 // * medicationCodeableConcept.coding[AIC].system 1..
-* medicationCodeableConcept.coding[AIC].system = $AIC (exactly)
+* medicationCodeableConcept.coding[AIC].system = $aic (exactly)
 // * medicationCodeableConcept.coding[AIC].code 1..
 // * medicationCodeableConcept.coding[AIC].display 1..
 

@@ -47,9 +47,9 @@ pages:
   index.md:
     title: Dossier Farmaceutico - Home Page                
  # toc.html:
-  #  title: Sommario  
-  design.md:
-    title: Principi e disegno
+  # title: Sommario  
+#  design.md:
+ #   title: Principi e disegno
   methodology.md:
     title: Metodologia
   contesto.md:
@@ -76,15 +76,16 @@ pages:
 # # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   IG Home: index.html
-  Table of Contents: toc.html
-  Background:
+  Sommario: toc.html
+  Contesto:
     Contesto: contesto.html
-    Principi e disegno: design.html
+  #  Principi e disegno: design.html
     Metodologia: methodology.html
-  Specifiche Funzionali:
-    Scenari: scenario.html
+#  Specifiche Funzionali:
+ #   Scenari: scenario.html
   Specifiche:
-    Specifiche di dettaglio: spec.html    
+    Scenari: scenario.html
+    Specifiche Tecniche: spec.html    
   Indice Artefatti: artifacts.html
   Support:
     FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
