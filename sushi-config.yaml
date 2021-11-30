@@ -54,7 +54,7 @@ pages:
     title: Metodologia
   contesto.md:
     title: Contesto di riferimento
-  spec.md:
+  specifiche.md:
     title: Specifiche Tecniche
   scenario.html:
     title: Scenari
@@ -85,7 +85,7 @@ menu:
  #   Scenari: scenario.html
   Specifiche:
     Scenari: scenario.html
-    Specifiche Tecniche: spec.html    
+    Specifiche Tecniche: specifiche.html    
   Indice Artefatti: artifacts.html
   Support:
     FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html

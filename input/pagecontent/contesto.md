@@ -1,3 +1,5 @@
+### Contesto di riferimento
+
 Coerentemente con quanto stabilito nel DPCM n.178/2015, il “dossier
 farmaceutico” rappresenta la parte specifica del FSE (Fascicolo
 Sanitario Elettronico) istituita per favorire la qualità, il
@@ -41,6 +43,8 @@ Gli enti componenti del GdL n.3 sono:
 
   - Federazione Nazionale degli Ordini dei Medici Chirurghi e degli
     Odontoiatri
+
+### Infrastruttura
 
 Il dossier farmaceutico, essendo parte integrante del FSE, eredita le
 policy di retention dei dati e di sicurezza definite per il FSE stesso.
@@ -93,18 +97,18 @@ delle stesse.
 Le informazioni utilizzate dal dossier farmaceutico verranno gestite
 dalle seguenti risorse definite dallo standard FHIR v.4 di HL7:
 
-● MedicatioRequest: per le informazioni inerenti le prescrizioni
+● **MedicatioRequest:** per le informazioni inerenti le prescrizioni
 farmaceutiche;
 
-● MedicationDispense: per le informazioni inerenti le erogazioni
+● **MedicationDispense:** per le informazioni inerenti le erogazioni
 farmaceutiche;
 
-● MedicationAdministration: per le informazioni relative le
+● **MedicationAdministration:** per le informazioni relative le
 somministrazioni farmaceutiche;
 
-● CarePlan: per i piani terapautici;
+● **CarePlan:** per i piani terapautici;
 
-● AdverseEvent: per le informazioni relative le reazioni avverse.
+● **AdverseEvent:** per le informazioni relative le reazioni avverse.
 
 Nello specifico, in base alle fasi di implementazione del dossier
 farmaceutico, saranno disponibili le seguenti risorse:
@@ -118,6 +122,8 @@ di tipo MedicationAdministration e CarePlan;
 
 ● Fase 3: oltre alle risorse disponibili nelle fasi precedenti, saranno
 disponibili anche le risorse AdverseEvent.
+
+### Implementazione
 
 Nella figura sottostante viene rappresentata l’infrastruttura per la
 gestione dei documenti nel FSE e delle informazioni necessarie al
