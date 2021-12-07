@@ -1,77 +1,32 @@
 ### Scopo
 
-Raccogliere i profili [HL7 FHIR](http://hl7.org/fhir) base sviluppati da
-[HL7 Italia](http://hl7.it) e le principali risorse (e.g. modelli
-logici, value set, code system) da usarsi trasversalmente in vari
-scenari di uso.
+Questa guida ha lo scopo di definire il dossier farmaceutico, che appartiene al nucleo minimo dei documenti del Fascicolo Sanitario Elettronico.
+La guida raccoglie i profili [HL7 FHIR](http://hl7.org/fhir) base e le principali risorse da utilizzare per l'implementazione del dossier farmaceutico.
 
-### Introduzione
+### Definizione del Dossier Farmaceutico
 
-Questa guida raccoglie i profili [HL7 FHIR](http://hl7.org/fhir) base
-sviluppati da [HL7 Italia](http://hl7.it), identificati come ***Profili
-FHIR IT Base***, e le principali risorse (e.g. modelli logici, value
-set, code system) da usarsi trasversalmente in vari scenari di uso.
+Nel DPCM n.178 del 2015 il dossier farmaceutico è definito come “la parte specifica del FSE istituita per favorire la qualità, il monitoraggio, l'appropriatezza nella dispensazione dei medicinali e l'aderenza alla terapia ai fini della sicurezza del paziente, aggiornato a cura della farmacia che effettua la dispensazione.”
 
-I profili proposti sono stati sviluppati a partire da una serie di
-***Modelli Logici***, rappresentati come HL7 FHIR logical model, inclusi
-in questa guida che fungeranno da guida per altre possibili
-rappresentazioni non FHIR.
+In linea con gli scopi definiti dal DPCM sopra riportato, il dossier farmaceutico ha funzioni esclusivamente cliniche, e in particolare per la valutazione dell'appropriatezza nella dispensazione dei medicinali e dell'aderenza alla terapia ai fini della sicurezza del paziente, è necessario che il dossier rappresenti l’insieme delle informazioni farmaceutiche sul singolo paziente, relativamente sia alle terapie SSN, prescritte, somministrate ed erogate, che alle terapie non convenzionali (omeopatia, fitoterapia, integratori…) e alle terapie non SSN (farmaci) acquistate direttamente dal paziente.
 
-Una esplicita mappatura fra gli elementi dei modelli logici e la loro
-rappresentazione in FHIR è fornita in questa guida nel tab *Mapping*.
+Per garantire i fini sopra descritti, è necessario prevedere che il dossier farmaceutico venga aggiornato e sia consultabile, nel rispetto della privacy secondo quanto previsto dal DPCM n. 178 del 2015, da tutti gli attori che sono coinvolti nella terapia seguita dal paziente convenzionale e non, oltre al solo farmacista, in deroga a quanto indicato nel DPCM stesso.
 
-### Caveat
+### Funzionalità del Dossier Farmaceutico
 
-I *Profili FHIR IT base* presenti in questa guida hanno come loro
-principale scopo quello di facilitare una rappresentazione comune di
-informazioni tipicamente usate nel contesto italiano. In questo senso:
+La funzionalità principale del dossier farmaceutico, per evitare che diventi un contenitore di dati poco fruibili per le finalità cliniche ad esso associato, dovrà restituire tramite una funzionalità definita “on demand”, denominata “Medication List”, il riassunto delle informazioni principali inserite all’interno del dossier farmaceutico in un certo arco temporale. L’alimentazione dei contenuti all’interno del dossier farmaceutico e la loro visualizzazione è vincolata alle fasi di implementazione precedentemente descritte.
 
-  - non pretendono di rappresentare ogni possibile informazione
-    associabile alle classi rappresentate e potenzialmente di interesse
-    in specifici scenari d’uso (e.g. colore dei capelli della persona);
+Il “Medication List” non sarà un documento in quanto, per sua natura non è possibile definire un titolare unico delle informazioni mostrate tramite questa funzionalità “on demand”.
 
-  - né di definire un set minimo comune di dati.
+Le funzionalità aggiuntive esemplificative che potranno essere implementate sono:
+  - verificare l’appropriatezza d’uso dei farmaci in base alle terapie prescritte, erogate, somministrate al paziente;
 
-Future guide definiranno ulteriori vincoli da applicarsi a questi
-profili per specifici casi d'uso (e.g. Patient Summary; accesso del
-Paziente alle proprie informazioni).
+  - verificare l’aderenza alla terapia, sia in termini di prescritto/erogato che di giorni di esposizione ad uno specifico trattamento in un dato periodo di osservazione. L’aderenza inoltre è supportata dalle informazioni che le singole Regioni possono autonomamente gestire in merito alla compilazione di questionari e di algoritmi per valutare l’aderenza della terapia;
+  - dare informazioni sull’interazione tra farmaci: questa funzionalità permette di segnalare eventuali interazioni fra i farmaci prescritti e erogati sia in fase di prescrizione che di erogazione;
+  - ricordare l’assunzione dei farmaci con la possibilità da parte dell’utente anche di contrassegnare che l’assunzione/somministrazione sia avvenuta;
+  - favorire la ricognizione/riconciliazione terapeutica. Questo processo è fondamentale nel passaggio ad un diverso care setting del paziente per garantire la sicurezza della terapia;
+  - dare supporto a progetti Regionali ai fini del dossier farmaceutico.  
 
-Le terminologie (i.e. i code system) di terze parti (e.g. tabelle ISTAT,
-codici ministeriali) incluse in questa versione della guida sono fornite
-per fini esplicativi, non costituiscono un riferimento ufficiale per le
-terminologie in oggetto. Le condizioni di uso per le terminologie
-esterne usate sono descritte in [Copyright](copyright.html).
-
-### Contenuti della guida
-
-<table>
-<tbody>
-<tr class="odd">
-<td><p><img src="index-1.png" style="width:5.17551in;height:2.70307in" /></p>
-<p>Figura 1 – Contenuti dell’Implementation Guide HL7 FHIR IT Base</p></td>
-<td><p>Questa guida include principalmente tre tipologie di artefatti:</p>
-<ol type="1">
-<li><p>I <strong>Modelli Logici</strong>: che descrivono il contenuto atteso per le diverse classi informative (e.g. Paziente), indipendentemente dalla loro rappresentazione fisica. I modelli sono formalizzati come modelli logici FHIR, ma la loro implementazione potrebbe non essere realizzata necessariamente in FHIR</p></li>
-<li><p>I <strong>Profili</strong>: che descrivono come rappresentare in HL7 FHIR le informazioni incluse nei modelli logici</p></li>
-<li><p>Le <strong>Terminologie</strong> che includono sistemi di codifica (<a href="https://www.hl7.org/fhir/codesystem.html"><em>Code System</em></a>); liste di valori (<a href="https://www.hl7.org/fhir/terminologies-valuesets.html"><em>Value Set</em></a>) e mappe concettuali (<a href="https://www.hl7.org/fhir/terminologies-conceptmaps.html"><em>Concept Map</em></a>).</p></li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-
-I *modelli logici* documentano anche come i singoli elementi dei modelli
-siano mappati nei diversi *profili FHIR* (**Model** **Mapping**).
-
-Con *Profili* si intendono in questa guida:
-
-1.  risorse FHIR profilate
-
-2.  Estensioni e loro specializzazioni
-
-3.  Datatype profilati
-
-I profili tipicamente descrivono quali artefatti terminologici usare e
-come (**Vocabulary Binding**)
+Le funzionalità eventualmente implementate dalle singole Regioni saranno disponibili solo all'interno delle stesse fintanto ché non verranno stabilite le caratteristiche tecniche per consentirne la fruibilità a livello nazionale.
 
 ### Struttura della guida
 
@@ -79,25 +34,24 @@ Le principali sezioni di questa guida sono:
 
   - [Questa pagina](index.html) – definisce il contesto di questa guida
 
-  - Background - fornisce le informazioni che gli implementatori
-    dovrebbero conoscere prima di leggere il resto dell'IG. Include due
-    pagine:
+  - [Background](design.html) - fornisce le informazioni che gli implementatori dovrebbero conoscere prima di leggere il resto dell’IG. Include la pagina:
     
-      - [Metodologia](methodology.html) – descrive l’approccio
-        metodologico seguito.
-    
-      - [Principi e disegno](design.html) - definisce alcuni principi di
-        disegno e come interpretare correttamente alcuni elementi usati
-        nei profili (e.g. mustSupport, slicing)
+      - [Infrastruttura del Dossier farmaceutico](design.html) – fornisce le informazioni sull'implementazione e sull'infrastruttura del dossier farmaceutico
 
-  - [Indice Artefatti](artifacts.html) – lista tutti gli artefatti FHIR
-    inclusi in questa guida
+  - [Specifiche Funzionali](scenario.html) – descrizione pagina. Include la pagina:
+  
+      - [Scenari](spec.htm) – descrizione pagina.
+      
+  - [Specifiche Tecniche](spec.html) – descrizione pagina. Include la pagina:
+  
+      - [Specifiche di dettaglio](scenario.htm) – descrizione pagina.
+      
+  - [Indice Artefatti](artifacts.html) – lista tutti gli artefatti FHIR inclusi in questa guida
 
-  - [Downloads](downloads.html) - consente di scaricare una copia di
-    questa guida ed altre informazioni utili
-
-  - [Copyright](copyright.html) – specifica le condizioni d’uso di
-    questa guida e di alcune terminologie referenziate
+  - [Support](downloads.html) - fornisce informazioni di supporto. Include le pagine:
+  
+      - [FHIR Spec](http://hl7.org/fhir/R4/index.html) - specifiche FHIR
+      - [Downloads](downloads.html) - pagina da cui è possibile scaricare l'intera guida
 
 ### Autori e Contributori
 
@@ -115,7 +69,7 @@ Le principali sezioni di questa guida sono:
 <td>Autore</td>
 <td>Giorgio Cangioli</td>
 <td>Consulente</td>
-<td>giorgio.cangioli_at_gmail.com</td>
+<td>giorgio.cangioli@gmail.com</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -125,57 +79,75 @@ Le principali sezioni di questa guida sono:
 </tr>
 <tr class="odd">
 <td>Contributore</td>
-<td>Elena Vio</td>
+<td>Gregorio Canal</td>
 <td>Arsenàl.IT</td>
-<td>evio_at_consorzioarsenal.it</td>
+<td>gcanal@consorzioarsenal.it</td>
 </tr>
 <tr class="even">
 <td>Contributore</td>
-<td>Ivano Christian Tomainu</td>
-<td>Insiel S.p.A.</td>
-<td>ivano.tomainu_at_insiel.it</td>
+<td>Isabella Sgro</td>
+<td>Arsenàl.IT</td>
+<td>isgro@consorzioarsenal.it</td>
 </tr>
 <tr class="odd">
 <td>Contributore</td>
-<td>Paola Lupieri</td>
-<td>Insiel S.p.A.</td>
-<td>paola.lupieri_at_insiel.it</td>
+<td>Angela Montesu</td>
+<td>Arsenàl.IT</td>
+<td>amontesu@consorzioarsenal.it</td>
 </tr>
 <tr class="even">
 <td>Contributore</td>
-<td>Stefano Terreni</td>
-<td>Insiel S.p.A.</td>
-<td>stefano.terreni_at_insiel.it</td>
+<td>Samantha De Biasio</td>
+<td>Arsenàl.IT</td>
+<td>sdebiasio@consorzioarsenal.it</td>
 </tr>
 <tr class="odd">
 <td>Contributore</td>
-<td>Flavio Mucchiut</td>
-<td>Insiel S.p.A.</td>
-<td>flavio.mucchiut_at_insiel.it</td>
+<td>Alessandro Pinton</td>
+<td>Arsenàl.IT</td>
+<td>apinton@consorzioarsenal.it</td>
 </tr>
 <tr class="even">
 <td>Contributore</td>
-<td>Luca Del Col</td>
-<td>IN. VA. S.p.A.</td>
-<td>ldelcol_at_invallee.it</td>
+<td>Alberto Dessena</td>
+<td>Agid</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>Contributore</td>
-<td>Davide Corallo</td>
-<td>CSI Piemonte</td>
-<td>davide.corallo_at_csi.it</td>
+<td>Leonardo Alcaro</td>
+<td>Agid</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>Contributore</td>
-<td>Luigi Enrico Maccolini</td>
-<td>Umbria Digitale</td>
-<td>luigi.maccolini[at]umbriadigitale.it</td>
+<td>Emanuele Bianchi Janetti</td>
+<td>Individuale</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>Contributore</td>
 <td>Mario Ciampi</td>
 <td>CNR ICAR</td>
-<td>mario.ciampi_at_icar.cnr.it</td>
+<td>mario.ciampi@icar.cnr.it</td>
+</tr>
+<tr class="even">
+<td>Contributore</td>
+<td>Mario Sicuranza</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Contributore</td>
+<td>Stefano Dalmiani</td>
+<td>FTGM</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Contributore</td>
+<td>Matteo Damiani</td>
+<td>NBS</td>
+<td></td>
 </tr>
 </tbody>
 </table>
