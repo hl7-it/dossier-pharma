@@ -1,7 +1,7 @@
 @startuml
 alt Singola Risorsa
-	"Sender" -> "Receiver" : Aggiorna Singola Risorsa [PUT]
-	"Receiver" --> "Sender" : PUT Response
+	"Sender" -> "Receiver" : Aggiorna Singola Risorsa [PUT/DELETE]
+	"Receiver" --> "Sender" : PUT/DELETE Response
 else Transaction, Batch
 	"Sender" -> "Receiver" : Aggiornamento Dossier Farmaceutico (Bundle) [POST]
 	"Receiver" --> "Sender" : POST Response
