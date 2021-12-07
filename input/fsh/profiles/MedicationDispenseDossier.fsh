@@ -63,7 +63,7 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 
 
 * medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
-* medicationReference only Reference(MedicationRef)
+* medicationReference only Reference(MedicationItDossierPharma)
 * medicationReference.reference 0..
 * medicationReference ^short = "Veicola carrier identifier"
 * subject MS

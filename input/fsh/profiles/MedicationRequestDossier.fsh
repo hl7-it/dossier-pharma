@@ -114,31 +114,14 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * reasonCode.coding[codiceDiagnosi].display 1..
 * reasonCode.coding[codiceDiagnosi].display ^short = "Descrizione diagnosi"
 * groupIdentifier 1..1 MS
-
-  * ^short = "Identificativo, ad esempio Numero Ricetta Elettronica"
+  * ^short = "Identificativo della prescrizione (e.g. NRE)"
   * system 1..1 //Definire un Value Set con tutti i system possibili
   * system from VsGroupIdentifierUri (extensible)
-* groupIdentifier.value ^short = "identificativo, ad esempio NRE"
+* groupIdentifier.value ^short = "Identificativo della prescrizione (e.g. NRE)"
 
 * insurance MS
 * insurance only Reference($Coverage-it-base)
 
-/* -- commented 
-* insurance ^slicing.discriminator.type = #value
-* insurance ^slicing.discriminator.path = "identifier.system"
-* insurance ^slicing.rules = #open
-* insurance contains
-    esenzioneNazionale 0..* and
-    esenzioneRegionale 0..*
-* insurance[esenzioneNazionale].identifier 1..
-* insurance[esenzioneNazionale].identifier.system 1..
-* insurance[esenzioneNazionale].identifier.system = "urn:oid:2.16.840.1.113883.2.9.6.1.22" (exactly)
-* insurance[esenzioneNazionale].identifier.value 1..
-* insurance[esenzioneRegionale].identifier 1..
-* insurance[esenzioneRegionale].identifier.system 1..
-* insurance[esenzioneRegionale].identifier.system ^short = "Deve essere valorizzato con urn:oid:2.16.840.1.113883.2.9.2.[REGIONE].6.22"
-* insurance[esenzioneRegionale].identifier.value 1..
---- */
 
 * dispenseRequest 0.. MS
 //* dispenseRequest.initialFill.quantity 1..

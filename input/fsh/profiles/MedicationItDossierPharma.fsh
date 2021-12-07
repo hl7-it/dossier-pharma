@@ -1,7 +1,7 @@
-Profile: MedicationRef
+Profile: MedicationItDossierPharma
 Parent: Medication
 Id: Medication-it-dossierPharma
-Title: "Medication (code and identifier)"
+Title: "Medication - Dossier Farmaceutico"
 Description: "Risorsa Medication usata per veicolare possibili carrier identifier"
 * ^status = #draft
 * identifier 0..1 MS //era obbligatorio
@@ -25,3 +25,4 @@ Description: "Risorsa Medication usata per veicolare possibili carrier identifie
 
 * batch 0..1
 * batch.lotNumber 0..1
+  * ^short = "Numero di lotto"
