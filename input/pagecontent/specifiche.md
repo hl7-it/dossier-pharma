@@ -11,12 +11,12 @@ Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinitio
 [MedicationDispense - Dossier
 Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationDispense-it-dossierPharma.html)
 e
-[ProvenanceForDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-ProvenanceForDossier.html).
+[ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-ProvenanceDossier.html).
 In particolare, le risorse di tipo *MedicationRequest - Dossier
 Farmaceutico* (per rappresentare informazioni inerenti alle
 prescrizioni) e le risorse d tipo *MedicationDispense - Dossier
 Farmaceutico* (per rappresentare informazioni inerenti agli erogati)
-devono essere sempre legate ad una risorsa *ProvenanceForDossier*.
+devono essere sempre legate ad una risorsa *ProvenanceDossier*.
 
 L’alimentazione può essere effettuata secondo due approcci alternativi:
 1. Invio di più risorse FHIR nella stessa interazione o 2. Invio di una
@@ -93,13 +93,13 @@ della risorsa *Bundle*, valorizzata come specificato per lo scenario
 *Alimentazione del Dossier Farmaceutico*:
 
   - Una risorsa
-    [ProvenanceForDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-ProvenanceForDossier.html)
+    [ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-ProvenanceDossier.html)
     e una o più risorse [MedicationRequest - Dossier
     Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationRequest-it-dossierPharma.html)
     in caso di prescrizioni;
 
   - Una risorsa
-    [ProvenanceForDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-ProvenanceForDossier.html)
+    [ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-ProvenanceDossier.html)
     e una o più risorse [MedicationDispense - Dossier
     Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationDispense-it-dossierPharma.html)
     in caso di erogati.

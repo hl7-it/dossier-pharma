@@ -33,6 +33,7 @@ Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
 Alias: $v3-Confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
+Alias: $istat-unitaAmministrativeTerritoriali = http://terminology.hl7.it/sid/istat-unitaAmministrativeTerritoriali
 
 Alias: $Coverage-it-base = http://hl7.it/fhir/StructureDefinition/Coverage-it-base
 
@@ -45,7 +46,6 @@ Alias: $gruppo-equivalenza = http://terminology.hl7.it/CodeSystem/aifa-ge
 
 Alias: $atc = http://www.whocc.no/atc
 
-Alias: $ISTAT-regioni = urn:oid:2.16.840.1.113883.2.9.4.2.1
 Alias: $Diagnosi = http://hl7.org/fhir/sid/icd-9-cm
 Alias: $non-sostituibilità = urn:oid:2.16.840.1.113883.2.9.6.1.52
 Alias: $note-lim-AIFA = http://terminology.hl7.it/CodeSystem/aifa-nota
@@ -54,4 +54,6 @@ Alias: $specializ-medico = urn:oid:2.16.840.1.113883.2.9.5.1.111
 Alias: $no-esenzione = urn:oid:2.16.840.1.113883.2.9.5.2.2
 Alias: $esenzion-naz = urn:oid:2.16.840.1.113883.2.9.6.1.22
 Alias: $esenzion-reg = urn:oid:2.16.840.1.113883.2.9.2.[REGIONE].6.22
+
+Alias: $Organization-it-base = http://hl7.it/fhir/StructureDefinition/Organization-it-base
 

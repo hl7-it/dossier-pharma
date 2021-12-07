@@ -1,9 +1,11 @@
-Instance: DossierFarmaceutico-ContentArchiver
+// Instance: DossierFarmaceutico-ContentArchiver
+Instance: CapabilityStatementReceiverItDossierPharma
 InstanceOf: CapabilityStatement
+Title: "CapabilityStatement Receiver"
 Usage: #definition
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>TESTO per dossier Farmaceutico generale</a></div>"
-* url = "http://example.org/fhir/CapabilityStatement/DossierFarmaceutico_ContentArchiver"
+// * text.status = #additional
+// * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>TESTO per dossier Farmaceutico generale</a></div>"
+// * url = "http://example.org/fhir/CapabilityStatement/DossierFarmaceutico_ContentArchiver"
 * name = "DossierFarmaceutico_ContentArchiver"
 * title = "Dossier Farmaceutico - Content Archiver (server)"
 * status = #draft
@@ -47,7 +49,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare per il codice AIC o ATC del farmaco erogato"
 * rest.resource[+].type = #Provenance
-* rest.resource[=].profile = "http://example.org/fhir/StructureDefinition/ProvenanceForDossier"
+* rest.resource[=].profile = "http://example.org/fhir/StructureDefinition/ProvenanceDossier"
 * rest.resource[=].interaction.code = #search-type
 * rest.resource[=].searchParam[0].name = "target"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Provenance-target"

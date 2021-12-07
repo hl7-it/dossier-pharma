@@ -47,7 +47,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare per il codice AIC o ATC del farmaco erogato"
 * rest.resource[+].type = #Provenance
-* rest.resource[=].profile = "http://example.org/fhir/StructureDefinition/ProvenanceForDossier"
+* rest.resource[=].profile = "http://example.org/fhir/StructureDefinition/ProvenanceDossier"
 * rest.resource[=].interaction.code = #search-type
 * rest.resource[=].searchParam[0].name = "target"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Provenance-target"

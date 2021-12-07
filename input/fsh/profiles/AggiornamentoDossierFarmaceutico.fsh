@@ -13,7 +13,7 @@ Id: AggiornamentoDossierFarmaceutico
     sliceProvenance 1..* and
     sliceMedication 1..*
 * entry[sliceProvenance].resource 1..
-* entry[sliceProvenance].resource only ProvenanceForDossier
+* entry[sliceProvenance].resource only ProvenanceDossier
 * entry[sliceProvenance].search ..0
 * entry[sliceProvenance].request 1..
 * entry[sliceProvenance].request.method ^short = "POST | PUT | DELETE"
