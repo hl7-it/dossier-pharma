@@ -42,9 +42,14 @@ Alias: $CF = http://hl7.it/sid/codiceFiscale
 
 Alias: $aic = http://terminology.hl7.it/CodeSystem/aifa-aic
 Alias: $gruppo-equivalenza = http://terminology.hl7.it/CodeSystem/aifa-ge
-
-
 Alias: $atc = http://www.whocc.no/atc
+
+Alias: $vs-aic = http://terminology.hl7.it/ValueSet/aifa-aic
+Alias: $vs-gruppo-equivalenza = http://terminology.hl7.it/ValueSet/aifa-ge
+Alias: $vs-atc = http://terminology.hl7.it/ValueSet/who-atc
+
+
+
 
 Alias: $Diagnosi = http://hl7.org/fhir/sid/icd-9-cm
 Alias: $non-sostituibilità = urn:oid:2.16.840.1.113883.2.9.6.1.52

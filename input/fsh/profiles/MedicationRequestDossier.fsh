@@ -20,12 +20,6 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 
 // maybe better to have medication CodeableConcept
 
-/*=== medreqresp
-* medicationCodeableConcept 0..1
-* medicationCodeableConcept.coding 1..
-//* medicationCodeableConcept.coding ^slicing.discriminator.type = #value
-* medicationCodeableConcept.coding ^slicing.discriminator.type = #pattern
-======= */
 * medication[x] MS
 * medicationCodeableConcept 0..1
 
@@ -35,8 +29,8 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
   * code 1.. MS
   * display MS
   
-* medicationCodeableConcept.coding ^slicing.discriminator.type = #value
-* medicationCodeableConcept.coding ^slicing.discriminator.path = "system"
+* medicationCodeableConcept.coding ^slicing.discriminator.type = #pattern
+* medicationCodeableConcept.coding ^slicing.discriminator.path = "$this"
 * medicationCodeableConcept.coding ^slicing.ordered = false
 * medicationCodeableConcept.coding ^slicing.rules = #open
 * medicationCodeableConcept.coding contains
@@ -44,29 +38,14 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
     gruppoEquivalenza 0..1  and eccezioni 0..1
 
 * medicationCodeableConcept.coding[ATC] MS
-
 * medicationCodeableConcept.coding[ATC] ^sliceName = "ATC"
-// * medicationCodeableConcept.coding[ATC].system 1..
-* medicationCodeableConcept.coding[ATC].system = $atc (exactly)
-// * medicationCodeableConcept.coding[ATC].code 1..
-// * medicationCodeableConcept.coding[ATC].display 1..
-
-// * medicationCodeableConcept.coding[AIC].system 1..
-* medicationCodeableConcept.coding[AIC].system = $aic (exactly)
-// * medicationCodeableConcept.coding[AIC].code 1..
-// * medicationCodeableConcept.coding[AIC].display 1..
-
-// * medicationCodeableConcept.coding[gruppoEquivalenza].system 1..
-* medicationCodeableConcept.coding[gruppoEquivalenza].system = $gruppo-equivalenza (exactly)
-// * medicationCodeableConcept.coding[gruppoEquivalenza].code 1..
-// * medicationCodeableConcept.coding[gruppoEquivalenza].display 1..
-
-// * medicationCodeableConcept.coding[eccezioni].system 1..
-* medicationCodeableConcept.coding[eccezioni].system = $v3-NullFlavor (exactly)
-// * medicationCodeableConcept.coding[eccezioni].code 1..
-* medicationCodeableConcept.coding[eccezioni].code = #UNK
-// * medicationCodeableConcept.coding[eccezioni].display 1..
+* medicationCodeableConcept.coding[ATC] from $vs-atc
+* medicationCodeableConcept.coding[AIC] from $vs-aic
+* medicationCodeableConcept.coding[gruppoEquivalenza] from  $vs-gruppo-equivalenza
+* medicationCodeableConcept.coding[eccezioni] = $v3-NullFlavor#UNK
 * medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
+
+
 * subject MS
 * subject only Reference(PatientItBase)
 * subject.type 0..
@@ -85,17 +64,6 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * requester.identifier 0..1
 * requester.identifier ^short = "Valorizzato con identificativo del medico titolare o sostituto"
 
-/* --------
-* recorder only Reference(Practitioner)
-* recorder.type 1..
-* recorder.type = "Practitioner" (exactly)
-* recorder.type ^short = "Medico Sostituto"
-* recorder.identifier 1.. MS
-* recorder.identifier.system 1..
-* recorder.identifier.system = "http://hl7.it/sid/codiceFiscale" (exactly)
-* recorder.identifier.value 1..
----- */
-
 * reasonCode ..1 MS
 * reasonCode.coding ^slicing.description = "Una istanza per eventuale nota AIFA, una istanza per eventuale codice diagnosi"
 * reasonCode.coding ^slicing.rules = #open
@@ -113,6 +81,8 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * reasonCode.coding[codiceDiagnosi].code ^short = "Codice diagnosi"
 * reasonCode.coding[codiceDiagnosi].display 1..
 * reasonCode.coding[codiceDiagnosi].display ^short = "Descrizione diagnosi"
+
+
 * groupIdentifier 1..1 MS
   * ^short = "Identificativo della prescrizione (e.g. NRE)"
   * system 1..1 //Definire un Value Set con tutti i system possibili
@@ -124,8 +94,6 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 
 
 * dispenseRequest 0.. MS
-//* dispenseRequest.initialFill.quantity 1..
-//* dispenseRequest.initialFill.duration 1..
 * dispenseRequest.quantity 1..
 * dispenseRequest.numberOfRepeatsAllowed 0..1
 
@@ -136,10 +104,6 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 //* substitution.reason.coding 1..1
 * substitution.allowedCodeableConcept 1..1
 * substitution.allowedCodeableConcept.coding 1..1
-//* substitution.reason.coding.system 1..
-//* substitution.reason.coding.system = "2.16.840.1.113883.2.9.6.1.52" (exactly)
-//* substitution.reason.coding.code 1..
-
 * substitution.allowedCodeableConcept.coding.system 1..
 * substitution.allowedCodeableConcept.coding.system = $non-sostituibilità (exactly)
 * substitution.allowedCodeableConcept.coding.code 1..
