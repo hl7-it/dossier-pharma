@@ -72,6 +72,9 @@ fallimento.
 
 {% include sequence-2.svg %}
 
+
+####  Aggiornamento del Dossier Farmaceutico
+
 L’attore *Sender* aggiorna il contenuto del Dossier Farmaceutico
 trasmettendo all’attore *Receiver* un insieme di informazioni
 rappresentate in risorse FHIR.
@@ -93,13 +96,51 @@ della risorsa *Bundle*, valorizzata come specificato per lo scenario
 *Alimentazione del Dossier Farmaceutico*:
 
   - Una risorsa
-    [ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-ProvenanceDossier.html)
+    [ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-Provenance-it-dossierPharma.html)
     e una o più risorse [MedicationRequest - Dossier
     Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationRequest-it-dossierPharma.html)
     in caso di prescrizioni;
 
   - Una risorsa
-    [ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-ProvenanceDossier.html)
+    [ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-Provenance-it-dossierPharma.html)
+    e una o più risorse [MedicationDispense - Dossier
+    Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationDispense-it-dossierPharma.html)
+    in caso di erogati.
+
+Anche in questo caso è possibile utilizzare i metodi di interazione
+*transaction* o *batch*. Dopo l’elaborazione della richiesta, il
+*Receiver* fornisce un messaggio di risposta al *Sender*.
+
+####  Cancellazione del Dossier Farmaceutico
+
+L’attore *Sender* cancella il contenuto del Dossier Farmaceutico
+trasmettendo all’attore *Receiver* un insieme di informazioni
+rappresentate in risorse FHIR.
+
+La Cancellazione può essere effettuato secondo due approcci alternativi:
+
+1.  *Cancellazione di una singola risorsa FHIR*
+
+In questo scenario, il *Sender* cancella la risorsa e la pone
+nel corpo del messaggio di richiesta da trasmettere al *Receiver* con
+metodo DELETE. Il *Receiver* processa la richiesta e fornisce un messaggio
+di risposta.
+
+2.  *Cancellazione di più risorse FHIR nella stessa interazione*
+
+In questo scenario, il *Sender* cancella il Dossier Farmaceutico
+trasmettendo, attraverso il metodo DELETE, le seguenti risorse all’interno
+della risorsa *Bundle*, valorizzata come specificato per lo scenario
+*Alimentazione del Dossier Farmaceutico*:
+
+  - Una risorsa
+    [ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-Provenance-it-dossierPharma.html)
+    e una o più risorse [MedicationRequest - Dossier
+    Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationRequest-it-dossierPharma.html)
+    in caso di prescrizioni;
+
+  - Una risorsa
+    [ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-Provenance-it-dossierPharma.html)
     e una o più risorse [MedicationDispense - Dossier
     Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationDispense-it-dossierPharma.html)
     in caso di erogati.
