@@ -134,8 +134,8 @@ Le principali sezioni di questa guida sono:
 <tr class="even">
 <td>Contributore</td>
 <td>Mario Sicuranza</td>
-<td></td>
-<td></td>
+<td>CNR ICAR</td>
+<td>mario.sicuranza@icar.cnr.it</td>
 </tr>
 <tr class="odd">
 <td>Contributore</td>
