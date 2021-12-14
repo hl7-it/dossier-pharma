@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
-  "id": "CapabilityStatementReceiverItDossierPharma",
-  "url": "http://hl7.it/fhir/dossierPharma/CapabilityStatement/CapabilityStatementReceiverItDossierPharma",
+  "id": "CapabilityStatementReceiverDossierPharmaIt",
+  "url": "http://hl7.it/fhir/dossierPharma/CapabilityStatement/CapabilityStatementReceiverDossierPharmaIt",
   "name": "DossierFarmaceutico_Receiver",
   "title": "Dossier Farmaceutico - Receiver (server)",
   "status": "draft",

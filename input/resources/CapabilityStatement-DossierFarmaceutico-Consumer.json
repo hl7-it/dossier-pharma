@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
-  "id": "CapabilityStatementConsumerItDossierPharma",
-  "url": "http://hl7.it/fhir/dossierPharma/CapabilityStatement/CapabilityStatementConsumerItDossierPharma",
+  "id": "CapabilityStatementConsumerDossierPharmaIt",
+  "url": "http://hl7.it/fhir/dossierPharma/CapabilityStatement/CapabilityStatementConsumerDossierPharmaIt",
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>TESTO per dossier Farmaceutico generale</a></div>"

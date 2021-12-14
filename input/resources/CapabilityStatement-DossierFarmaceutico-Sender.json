@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
-  "id": "CapabilityStatementSenderItDossierPharma",
-  "url": "http://example.org/fhir/CapabilityStatement/CapabilityStatementSenderItDossierPharma",
+  "id": "CapabilityStatementSenderDossierPharmaIt",
+  "url": "http://hl7.it/fhir/dossierPharma/CapabilityStatement/CapabilityStatementSenderDossierPharmaIt",
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>TESTO per dossier Farmaceutico generale</a></div>"
