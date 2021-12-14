@@ -1,0 +1,349 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MedicationDispense-it-dossierPharma",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Medications"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationDispense-it-dossierPharma",
+  "version": "0.1.0",
+  "name": "MedicationDispenseItDossierPharma",
+  "title": "MedicationDispense - Dossier Farmaceutico",
+  "status": "active",
+  "description": "Profilo MedicationDispense per Dossier Farmaceutico",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "rx-dispense-rmim",
+      "uri": "http://www.hl7.org/v3/PORX_RM020070UV",
+      "name": "V3 Pharmacy Dispense RMIM"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationDispense",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationDispense.extension",
+        "path": "MedicationDispense.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.extension:recorded",
+        "path": "MedicationDispense.extension",
+        "sliceName": "recorded",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.it/fhir/dossierPharma/StructureDefinition/medicationDispense-recorded"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.identifier",
+        "path": "MedicationDispense.identifier",
+        "max": "1"
+      },
+      {
+        "id": "MedicationDispense.status",
+        "path": "MedicationDispense.status",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.medicationCodeableConcept",
+        "path": "MedicationDispense.medicationCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.medicationCodeableConcept.coding",
+        "path": "MedicationDispense.medicationCodeableConcept.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.medicationCodeableConcept.coding.system",
+        "path": "MedicationDispense.medicationCodeableConcept.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.medicationCodeableConcept.coding.code",
+        "path": "MedicationDispense.medicationCodeableConcept.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.medicationCodeableConcept.coding.display",
+        "path": "MedicationDispense.medicationCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.medicationCodeableConcept.coding:ATC",
+        "path": "MedicationDispense.medicationCodeableConcept.coding",
+        "sliceName": "ATC",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.it/ValueSet/who-atc"
+        }
+      },
+      {
+        "id": "MedicationDispense.medicationCodeableConcept.coding:AIC",
+        "path": "MedicationDispense.medicationCodeableConcept.coding",
+        "sliceName": "AIC",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.it/ValueSet/aifa-aic"
+        }
+      },
+      {
+        "id": "MedicationDispense.medicationCodeableConcept.coding:gruppoEquivalenza",
+        "path": "MedicationDispense.medicationCodeableConcept.coding",
+        "sliceName": "gruppoEquivalenza",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://terminology.hl7.it/ValueSet/aifa-ge"
+        }
+      },
+      {
+        "id": "MedicationDispense.medicationCodeableConcept.coding:eccezioni",
+        "path": "MedicationDispense.medicationCodeableConcept.coding",
+        "sliceName": "eccezioni",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "UNK",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+        }
+      },
+      {
+        "id": "MedicationDispense.medicationCodeableConcept.text",
+        "path": "MedicationDispense.medicationCodeableConcept.text",
+        "short": "Descrizione testuale del farmaco"
+      },
+      {
+        "id": "MedicationDispense.medicationReference",
+        "path": "MedicationDispense.medicationReference",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.it/fhir/dossierPharma/StructureDefinition/Medication-it-dossierPharma"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.subject",
+        "path": "MedicationDispense.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.it/fhir/StructureDefinition/Patient-it-base"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationDispense.subject.type",
+        "path": "MedicationDispense.subject.type",
+        "fixedUri": "Patient"
+      },
+      {
+        "id": "MedicationDispense.subject.identifier",
+        "path": "MedicationDispense.subject.identifier",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.subject.identifier.system",
+        "path": "MedicationDispense.subject.identifier.system",
+        "min": 1,
+        "fixedUri": "http://hl7.it/sid/codiceFiscale"
+      },
+      {
+        "id": "MedicationDispense.subject.identifier.value",
+        "path": "MedicationDispense.subject.identifier.value",
+        "short": "Codice Fiscale",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.performer",
+        "path": "MedicationDispense.performer",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.performer:CFErogatore",
+        "path": "MedicationDispense.performer",
+        "sliceName": "CFErogatore",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationDispense.performer:CFErogatore.actor.identifier",
+        "path": "MedicationDispense.performer.actor.identifier",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.performer:CFErogatore.actor.identifier.system",
+        "path": "MedicationDispense.performer.actor.identifier.system",
+        "min": 1,
+        "fixedUri": "http://hl7.it/sid/codiceFiscale"
+      },
+      {
+        "id": "MedicationDispense.performer:CFErogatore.actor.identifier.value",
+        "path": "MedicationDispense.performer.actor.identifier.value",
+        "short": "CF dell'erogatore",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.location",
+        "path": "MedicationDispense.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.it/fhir/dossierPharma/StructureDefinition/Location-it-dossierPharma"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationDispense.quantity",
+        "path": "MedicationDispense.quantity",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.quantity.value",
+        "path": "MedicationDispense.quantity.value",
+        "short": "Numero confezioni erogate",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.whenHandedOver",
+        "path": "MedicationDispense.whenHandedOver",
+        "short": "Data erogazione ricetta",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.substitution.type",
+        "path": "MedicationDispense.substitution.type",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.substitution.type.coding",
+        "path": "MedicationDispense.substitution.type.coding",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.substitution.type.coding.system",
+        "path": "MedicationDispense.substitution.type.coding.system",
+        "min": 1,
+        "fixedUri": "urn:oid:2.16.840.1.113883.2.9.6.1.53"
+      },
+      {
+        "id": "MedicationDispense.substitution.type.coding.code",
+        "path": "MedicationDispense.substitution.type.coding.code",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.substitution.reason",
+        "path": "MedicationDispense.substitution.reason",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.substitution.reason.coding",
+        "path": "MedicationDispense.substitution.reason.coding",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.substitution.reason.coding.system",
+        "path": "MedicationDispense.substitution.reason.coding.system",
+        "short": "OID flagErog",
+        "min": 1
+      },
+      {
+        "id": "MedicationDispense.substitution.reason.coding.code",
+        "path": "MedicationDispense.substitution.reason.coding.code",
+        "min": 1
+      }
+    ]
+  }
+}

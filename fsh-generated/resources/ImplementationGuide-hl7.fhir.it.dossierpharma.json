@@ -1,0 +1,234 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.it.dossierpharma",
+  "url": "http://hl7.it/fhir/dossierPharma/ImplementationGuide/hl7.fhir.it.dossierpharma",
+  "version": "0.1.0",
+  "name": "HL7ITDossierPharma",
+  "title": "HL7 Italia Dossier Farmaceutico FHIR Implementation Guide",
+  "status": "active",
+  "description": "HL7 Italia Dossier Farmaceutico FHIR Implementation Guide, specifica come utilizzare lo standard HL7 FHIR per l'alimentazione e la consultazione del dossier farmaceutico",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "IT",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Italy"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.fhir.it.dossierpharma",
+  "license": "CC-BY-SA-4.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.it.base",
+      "version": "current",
+      "uri": "http://hl7.it/fhir/ImplementationGuide/hl7.fhir.it.base",
+      "id": "hl7_fhir_it_base"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/AlimentazioneDossierFarmaceutico"
+        },
+        "name": "AlimentazioneDossierFarmaceutico - Dossier Farmaceutico",
+        "description": "Profilo AlimentazioneDossierFarmaceutico per Dossier Farmaceutico",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Location-it-dossierPharma"
+        },
+        "name": "Location - Dossier Farmaceutico",
+        "description": "Profilo Location per Dossier Farmaceutico. Usato per identificare il luogo dove è avvenuta l'erogazione del farmaco",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MedicationDispense-it-dossierPharma"
+        },
+        "name": "MedicationDispense - Dossier Farmaceutico",
+        "description": "Profilo MedicationDispense per Dossier Farmaceutico",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Medication-it-dossierPharma"
+        },
+        "name": "Medication - Dossier Farmaceutico",
+        "description": "Risorsa Medication usata per veicolare possibili carrier identifier",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MedicationRequest-it-dossierPharma"
+        },
+        "name": "MedicationRequest - Dossier Farmaceutico",
+        "description": "Profilo MedicationRequest per Dossier Farmaceutico",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PractitionerRole-prescrittore-it-dossierPharma"
+        },
+        "name": "PractitionerRole - Medico Prescrittore",
+        "description": "Profilo di PractitionerRole usato per descrivere il Medico Prescrittore per gli scopi del Dossier Farmaceutico",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/Provenance-it-dossierPharma"
+        },
+        "name": "Provenance - Dossier Farmaceutico",
+        "description": "Profilo Provenance per Dossier Farmaceutico",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/medicationDispense-recorded"
+        },
+        "name": "Data Inizio Erogazione (MedicationDispense)",
+        "description": "Estensione per data inizio erogazione",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/medicationRequest-medicoTitolare"
+        },
+        "name": "Medico Titolare (MedicationRequest)",
+        "description": "Estensione usata per descrivere il medico titolare in una prescrizione",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/groupIdentifierUri"
+        },
+        "name": "Sistemi di identificazione per prescrizioni",
+        "description": "Sistemi di identificazione per prescrizioni",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ruoloPrescrittore"
+        },
+        "name": "Ruolo Prescrittore",
+        "description": "Ruolo del prescrittore Basato su 'Estensione del Vocabolario HL7 V3 RoleCode'",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/CapabilityStatementReceiverItDossierPharma"
+        },
+        "name": "CapabilityStatement Receiver",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/DossierFarmaceutico-ContentConsumer"
+        },
+        "name": "DossierFarmaceutico-ContentConsumer",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/DossierFarmaceutico-ContentExtractor"
+        },
+        "name": "DossierFarmaceutico-ContentExtractor",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/DossierFarmaceutico-ContentManager"
+        },
+        "name": "DossierFarmaceutico-ContentManager",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Dossier Farmaceutico - Home Page",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "methodology.html",
+          "title": "Metodologia",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "contesto.html",
+          "title": "Contesto di riferimento",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "specifiche.html",
+          "title": "Specifiche Tecniche",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "scenario.html",
+          "title": "Scenari",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Download utili",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "IG Change History",
+          "generation": "html"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2021+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      },
+      {
+        "code": "find-other-resources",
+        "value": "true"
+      },
+      {
+        "code": "apply-jurisdiction",
+        "value": "true"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "true"
+      },
+      {
+        "code": "special-url",
+        "value": "http://terminology.hl7.it/CodeSystem/minsan-esenzioni"
+      },
+      {
+        "code": "special-url",
+        "value": "http://terminology.hl7.it/CodeSystem/istat-professioni"
+      },
+      {
+        "code": "autoload-resources",
+        "value": "true"
+      }
+    ]
+  }
+}

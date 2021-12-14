@@ -1,0 +1,298 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AlimentazioneDossierFarmaceutico",
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>Profilazione del Bundle per l'esecuzione della transazione AlimentazioneDossierFarmaceutico</a></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Foundation.Other"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "not-classified"
+    }
+  ],
+  "url": "https://example.org/fhir/StructureDefinition/AlimentazioneDossierFarmaceutico",
+  "version": "0.1.0",
+  "name": "AlimentazioneDossierFarmaceutico",
+  "title": "AlimentazioneDossierFarmaceutico - Dossier Farmaceutico",
+  "status": "draft",
+  "description": "Profilo AlimentazioneDossierFarmaceutico per Dossier Farmaceutico",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "fixedCode": "transaction"
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "resource"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:sliceProvenance",
+        "path": "Bundle.entry",
+        "sliceName": "sliceProvenance",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:sliceProvenance.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Provenance",
+            "profile": [
+              "http://hl7.it/fhir/dossierPharma/StructureDefinition/Provenance-it-dossierPharma"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:sliceProvenance.search",
+        "path": "Bundle.entry.search",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:sliceProvenance.request",
+        "path": "Bundle.entry.request",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:sliceProvenance.request.method",
+        "path": "Bundle.entry.request.method",
+        "short": "POST | PUT | DELETE",
+        "definition": "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
+      },
+      {
+        "id": "Bundle.entry:sliceMedication",
+        "path": "Bundle.entry",
+        "sliceName": "sliceMedication",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:sliceMedication.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "MedicationDispense",
+            "profile": [
+              "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationDispense-it-dossierPharma"
+            ]
+          },
+          {
+            "code": "MedicationRequest",
+            "profile": [
+              "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationRequest-it-dossierPharma"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:sliceMedication.search",
+        "path": "Bundle.entry.search",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:sliceMedication.request",
+        "path": "Bundle.entry.request",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:sliceMedication.request.method",
+        "path": "Bundle.entry.request.method",
+        "short": "POST | PUT | DELETE",
+        "definition": "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
+      },
+      {
+        "id": "Bundle.entry:slicePractitionerRole",
+        "path": "Bundle.entry",
+        "sliceName": "slicePractitionerRole",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:slicePractitionerRole.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "PractitionerRole",
+            "profile": [
+              "http://hl7.it/fhir/dossierPharma/StructureDefinition/PractitionerRole-prescrittore-it-dossierPharma"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:slicePractitionerRole.search",
+        "path": "Bundle.entry.search",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:slicePractitionerRole.request",
+        "path": "Bundle.entry.request",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:slicePractitionerRole.request.method",
+        "path": "Bundle.entry.request.method",
+        "short": "POST | PUT | DELETE",
+        "definition": "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
+      },
+      {
+        "id": "Bundle.entry:sliceLocation",
+        "path": "Bundle.entry",
+        "sliceName": "sliceLocation",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:sliceLocation.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Location",
+            "profile": [
+              "http://hl7.it/fhir/dossierPharma/StructureDefinition/Location-it-dossierPharma"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:sliceLocation.search",
+        "path": "Bundle.entry.search",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:sliceLocation.request",
+        "path": "Bundle.entry.request",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:sliceLocation.request.method",
+        "path": "Bundle.entry.request.method",
+        "short": "POST | PUT | DELETE",
+        "definition": "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
+      },
+      {
+        "id": "Bundle.entry:slicePatient",
+        "path": "Bundle.entry",
+        "sliceName": "slicePatient",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:slicePatient.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Patient",
+            "profile": [
+              "http://hl7.it/fhir/StructureDefinition/Patient-it-base"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:slicePatient.search",
+        "path": "Bundle.entry.search",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:slicePatient.request",
+        "path": "Bundle.entry.request",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:slicePatient.request.method",
+        "path": "Bundle.entry.request.method",
+        "short": "POST | PUT | DELETE",
+        "definition": "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
+      },
+      {
+        "id": "Bundle.entry:slicePractitioner",
+        "path": "Bundle.entry",
+        "sliceName": "slicePractitioner",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Bundle.entry:slicePractitioner.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "Practitioner",
+            "profile": [
+              "http://hl7.it/fhir/StructureDefinition/Practitioner-it-base"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry:slicePractitioner.search",
+        "path": "Bundle.entry.search",
+        "max": "0"
+      },
+      {
+        "id": "Bundle.entry:slicePractitioner.request",
+        "path": "Bundle.entry.request",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:slicePractitioner.request.method",
+        "path": "Bundle.entry.request.method",
+        "short": "POST | PUT | DELETE",
+        "definition": "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
+      }
+    ]
+  }
+}

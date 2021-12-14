@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VsGroupIdentifierUri",
+  "id": "groupIdentifierUri",
+  "title": "Sistemi di identificazione per prescrizioni",
+  "description": "Sistemi di identificazione per prescrizioni",
+  "version": "0.1.0",
+  "url": "http://hl7.it/fhir/dossierPharma/ValueSet/groupIdentifierUri",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:ietf:rfc:3986",
+        "concept": [
+          {
+            "code": "http://hl7.it/sid/mef/nre",
+            "display": "Numero Ricetta Elettronica"
+          }
+        ]
+      }
+    ]
+  }
+}
