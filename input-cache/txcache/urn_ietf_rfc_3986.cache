@@ -17,8 +17,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:012be222-f0bf-48d2-bc58-58188f34dc64",
-    "timestamp" : "2021-11-25T18:33:43.955Z",
+    "identifier" : "urn:uuid:76bbb9b2-5e79-4d4d-a1ac-42246cecc16b",
+    "timestamp" : "2021-12-15T15:00:37.496Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -29,7 +29,8 @@ e: {
     }],
     "contains" : [{
       "system" : "urn:ietf:rfc:3986",
-      "code" : "http://hl7.it/sid/mef/nre"
+      "code" : "http://hl7.it/sid/mef/nre",
+      "display" : "Numero Ricetta Elettronica"
     }]
   }
 },
