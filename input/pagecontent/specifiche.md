@@ -5,13 +5,9 @@
 L’attore *Sender* alimenta il Dossier Farmaceutico trasmettendo
 all’attore *Receiver*, attraverso il metodo POST, un insieme di
 informazioni rappresentate in risorse FHIR. Le risorse FHIR profilate
-nella presente guida che è possibile trasmettere sono [MedicationRequest
-- Dossier
-Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationRequest-it-dossierPharma.html),
-[MedicationDispense - Dossier
-Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationDispense-it-dossierPharma.html)
-e
-[ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-ProvenanceDossier.html).
+nella presente guida che è possibile trasmettere sono [MedicationRequest - Dossier Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationRequest-it-dossierPharma.html),
+[MedicationDispense - Dossier Farmaceutico](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-MedicationDispense-it-dossierPharma.html)
+e [ProvenanceDossier](https://build.fhir.org/ig/hl7-it/dossier-pharma/StructureDefinition-ProvenanceDossier.html).
 In particolare, le risorse di tipo *MedicationRequest - Dossier
 Farmaceutico* (per rappresentare informazioni inerenti alle
 prescrizioni) e le risorse d tipo *MedicationDispense - Dossier
@@ -19,8 +15,8 @@ Farmaceutico* (per rappresentare informazioni inerenti agli erogati)
 devono essere sempre legate ad una risorsa *ProvenanceDossier*.
 
 L’alimentazione può essere effettuata secondo due approcci alternativi:
-1. Invio di più risorse FHIR nella stessa interazione o 2. Invio di una
-singola risorsa FHIR.
+1. Invio di più risorse FHIR nella stessa interazione;
+2. Invio di una singola risorsa FHIR.
 
 1.  *Invio di più risorse FHIR nella stessa interazione*
 
@@ -57,7 +53,7 @@ Ulteriori dettagli sulle tipologie di interazione *transaction* e
 *batch* previste dallo standard FHIR sono illustrati
 [qui](https://www.hl7.org/fhir/http.html#transaction).
 
-2.  *Invio singola risorsa FHIR*
+2. *Invio singola risorsa FHIR*
 
 In questo scenario, il *Sender* invia un’unica risorsa al *Receiver*
 rispettando i vincoli posti dai profili illustrati nella presente guida.
