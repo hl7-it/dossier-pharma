@@ -1,21 +1,24 @@
-Instance: CapabilityStatementConsumerDossierPharmaIt
+Instance: CapabilityStatementReceiverDossierPharmaIt
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://hl7.it/fhir/dossierPharma/CapabilityStatement/CapabilityStatementConsumerDossierPharmaIt"
-* name = "DossierFarmaceutico_Consumer"
-* title = "Dossier Farmaceutico - Consumer (client)"
+* url = "http://hl7.it/fhir/dossierPharma/CapabilityStatement/CapabilityStatementReceiverDossierPharmaIt"
+* name = "DossierFarmaceutico_Receiver"
+* title = "Dossier Farmaceutico - Receiver (server)"
 * status = #draft
 * experimental = false
 * date = "2021-12-13"
-* description = "CapabilityStatement per il Consumer definito nelle specifiche del Dossier Farmaceutico"
+* description = "CapabilityStatement per il Receiver definito nelle specifiche del Dossier Farmaceutico"
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format = #application/fhir+json
-* rest.mode = #client
+* rest.mode = #server
 * rest.resource[0].type = #MedicationDispense
 * rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationDispenseItDossierPharma"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].searchParam[0].name = "subject:identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationDispense-subject"
 * rest.resource[=].searchParam[=].type = #token
@@ -32,6 +35,9 @@ Usage: #definition
 * rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationRequestItDossierPharma"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].searchParam[0].name = "subject:identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationRequest-subject"
 * rest.resource[=].searchParam[=].type = #token
@@ -48,6 +54,9 @@ Usage: #definition
 * rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/ProvenanceDossier"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].searchParam[0].name = "target"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Provenance-target"
 * rest.resource[=].searchParam[=].type = #reference
@@ -60,6 +69,9 @@ Usage: #definition
 * rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicoPrescrittore"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].searchParam.name = "identifier"
 * rest.resource[=].searchParam.definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
 * rest.resource[=].searchParam.type = #token
@@ -68,6 +80,9 @@ Usage: #definition
 * rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/LocationItDossierPharma"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].searchParam.name = "identifier"
 * rest.resource[=].searchParam.definition = "http://hl7.org/fhir/SearchParameter/Location-identifier"
 * rest.resource[=].searchParam.type = #token
@@ -76,6 +91,9 @@ Usage: #definition
 * rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationItDossierPharma"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].searchParam[0].name = "identifier"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Medication-identifier"
 * rest.resource[=].searchParam[=].type = #token
@@ -88,6 +106,9 @@ Usage: #definition
 * rest.resource[=].profile = "http://hl7.it/fhir/StructureDefinition/Patient-it-base"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].searchParam[0].name = "birthdate"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/individual-birthdate"
 * rest.resource[=].searchParam[=].type = #date
@@ -184,6 +205,9 @@ Usage: #definition
 * rest.resource[=].profile = "http://hl7.it/fhir/StructureDefinition/Practitioner-it-base"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #create
+* rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].searchParam[0].name = "address-state"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/individual-address-state"
 * rest.resource[=].searchParam[=].type = #string
@@ -256,4 +280,6 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/individual-family"
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Multiple Resources: \r\n\r\n* [Patient](patient.html): A portion of the family name of the patient\r\n* [Practitioner](practitioner.html): A portion of the family name\r\n"
-* rest.interaction.code = #search-system
+* rest.interaction[0].code = #search-system
+* rest.interaction[+].code = #transaction
+* rest.interaction.documentation = "http://hl7.org/fhir/StructureDefinition/AlimentazioneDossierFarmaceutico"
