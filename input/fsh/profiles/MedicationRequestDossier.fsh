@@ -21,6 +21,7 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 // maybe better to have medication CodeableConcept
 
 * medication[x] MS
+* medicationReference only Reference ( MedicationItDossierPharma )
 * medicationCodeableConcept 0..1
 
 
@@ -64,23 +65,26 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * requester.identifier 0..1
 * requester.identifier ^short = "Valorizzato con identificativo del medico titolare o sostituto"
 
-* reasonCode ..1 MS
-* reasonCode.coding ^slicing.description = "Una istanza per eventuale nota AIFA, una istanza per eventuale codice diagnosi"
+* reasonCode.text ^short = "Descrizione diagnosi"
+* reasonCode.coding MS
+  * system 1.. MS
+  * code 1.. MS
+  * display MS
+  
+ 
+* reasonCode.coding ^slicing.discriminator.type = #pattern
+* reasonCode.coding ^slicing.discriminator.path = "$this"
+* reasonCode.coding ^slicing.ordered = false
 * reasonCode.coding ^slicing.rules = #open
+
 * reasonCode.coding contains
     notaAIFA 0..1 and
     codiceDiagnosi 0..1
-* reasonCode.coding[notaAIFA].system 1..
 
-* reasonCode.coding[notaAIFA].system = $note-lim-AIFA (exactly)
-* reasonCode.coding[notaAIFA].code 1..
-* reasonCode.coding[notaAIFA].code ^short = "Nota AIFA"
-* reasonCode.coding[codiceDiagnosi].system 1..
-* reasonCode.coding[codiceDiagnosi].system = $Diagnosi (exactly)
-* reasonCode.coding[codiceDiagnosi].code 1..
-* reasonCode.coding[codiceDiagnosi].code ^short = "Codice diagnosi"
-* reasonCode.coding[codiceDiagnosi].display 1..
-* reasonCode.coding[codiceDiagnosi].display ^short = "Descrizione diagnosi"
+* reasonCode.coding[notaAIFA] ^short = "Nota AIFA"
+* reasonCode.coding[notaAIFA] from $vs-aifa-nota
+* reasonCode.coding[codiceDiagnosi] ^short = "Codice diagnosi"
+* reasonCode.coding[codiceDiagnosi] from $vs-icd9cm
 
 
 * groupIdentifier 1..1 MS
@@ -99,11 +103,13 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 
 // change to allowedCodeableConcept
 
-* substitution.allowedCodeableConcept MS
-//* substitution.allowed[x] only boolean 
-//* substitution.reason.coding 1..1
-* substitution.allowedCodeableConcept 1..1
+* substitution ^meaningWhenMissing = "In assenza dell'elemento substitution, il farmaco indicato nella prescrizione è da intendersi come 'sostituibile'"
+* substitution.allowedCodeableConcept 1..1 MS
+* substitution.allowedCodeableConcept from VsSubstitutionDossierPharma
+
+/*--
 * substitution.allowedCodeableConcept.coding 1..1
 * substitution.allowedCodeableConcept.coding.system 1..
 * substitution.allowedCodeableConcept.coding.system = $non-sostituibilità (exactly)
 * substitution.allowedCodeableConcept.coding.code 1..
+---*/
