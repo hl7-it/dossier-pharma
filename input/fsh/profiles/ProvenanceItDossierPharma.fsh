@@ -18,11 +18,12 @@ Description: "Profilo Provenance per Dossier Farmaceutico"
 // * agent.who.identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.2.1" (exactly)
 // * agent.who.identifier.value 1..
 // * agent.who.identifier.value ^short = "Da valorizzare con il codice delle regione secondo codifica ISTAT"
+* agent.onBehalfOf ^short = "Da valorizzare con il codice della regione di assistenza secondo codifica Ministero della Salute"
 * agent.onBehalfOf 0..
 * agent.onBehalfOf only Reference ($Organization-it-base) 
 * agent.onBehalfOf.identifier 1..
 * agent.onBehalfOf.identifier.system 1..
-* agent.onBehalfOf.identifier.system = $istat-unitaAmministrativeTerritoriali
+* agent.onBehalfOf.identifier.system = $minsan-regione
 * agent.onBehalfOf.identifier.value 1..
 * entity 1..
 * entity.role = #derivation (exactly)
