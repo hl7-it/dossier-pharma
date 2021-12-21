@@ -481,19 +481,7 @@
       ],
       "interaction": [
         {
-          "code": "search-type"
-        },
-        {
-          "code": "read"
-        },
-        {
-          "code": "update"
-        },
-        {
-          "code": "create"
-        },
-        {
-          "code": "delete"
+          "code": "search-system"
         },
         {
           "code": "transaction",
