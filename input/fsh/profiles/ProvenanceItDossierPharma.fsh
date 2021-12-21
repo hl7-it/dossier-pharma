@@ -30,8 +30,8 @@ Description: "Profilo Provenance per Dossier Farmaceutico"
 * entity.what only Reference (DocumentManifest)
 * entity.what.identifier 0.. MS
 * entity.what.identifier.system 1..
-* entity.what.identifier.system ^short = "[DocumentEntry.repositoryUniqueId]"
+* entity.what.identifier.system ^short = "Da valorizzare con il metadato che indica in modo univoco a livello nazionale il Repository che custodisce il documento"
 * entity.what.identifier.system ^definition = "Veicola il riferimento al DocumentEntry.RepositoryUniqueId in cui è presente il documento CDA R2 da cui è stata estratta la risorsa"
 * entity.what.identifier.value 1..
-* entity.what.identifier.value ^short = "[DocumentEntry.documentUniqueId]"
+* entity.what.identifier.value ^short = "Da valorizzare con il metadato che indica in modo univoco a livello nazionale il documento indicizzato"
 * entity.what.identifier.value ^definition = "Veicola il riferimento al DocumentEntry.documentUniqueId del documento CDA R2 da cui è stata estratta la risorsa pubblicato sul FSE"
