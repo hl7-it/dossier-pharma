@@ -103,7 +103,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare in base al codice relativo alla Medication"
 * rest.resource[+].type = #Patient
-* rest.resource[=].profile = "http://hl7.it/fhir/StructureDefinition/Patient-it-base"
+* rest.resource[=].profile = "$Patient-it-base"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].interaction[+].code = #update

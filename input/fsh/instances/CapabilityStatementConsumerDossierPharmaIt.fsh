@@ -11,69 +11,87 @@ Usage: #definition
 * kind = #requirements
 * fhirVersion = #4.0.1
 * format = #application/fhir+json
+* format[+] = #application/fhir+xml
+
 * rest.mode = #client
+
+// --------------------------
+// MedicationDispense
+// --------------------------
 * rest.resource[0].type = #MedicationDispense
-* rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationDispenseItDossierPharma"
+* rest.resource[=].profile = Canonical(MedicationDispenseItDossierPharma)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-* rest.resource[=].searchParam[0].name = "subject:identifier"
+// * rest.resource[=].searchParam[0].name = "subject:identifier"
+* rest.resource[=].searchParam[0].name = "subject"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationDispense-subject"
-* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare per identificativo del paziente"
 * rest.resource[=].searchParam[+].name = "whenhandedover"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationDispense-whenhandedover"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Quando è stata erogata la ricetta"
 * rest.resource[=].searchParam[+].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationDispense-code"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare per il codice AIC o ATC del farmaco erogato"
+
+// --------------------------
+// MedicationRequest
+// --------------------------
 * rest.resource[+].type = #MedicationRequest
-* rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationRequestItDossierPharma"
+* rest.resource[=].profile = Canonical(MedicationRequestItDossierPharma)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-* rest.resource[=].searchParam[0].name = "subject:identifier"
+* rest.resource[=].searchParam[0].name = "subject"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationRequest-subject"
-* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare per identificativo del paziente"
 * rest.resource[=].searchParam[+].name = "authoredon"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationRequest-authoredon"
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Quando è stata compilata la ricetta"
 * rest.resource[=].searchParam[+].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationRequest-code"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare per il codice AIC o ATC del farmaco erogato"
+
+// --------------------------
+// Provenance
+// --------------------------
 * rest.resource[+].type = #Provenance
-* rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/ProvenanceDossier"
+* rest.resource[=].profile = Canonical (ProvenanceDossier)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[0].name = "target"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Provenance-target"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare in base alle risorse associate"
-* rest.resource[=].searchParam[+].name = "entity:identifier"
+// * rest.resource[=].searchParam[+].name = "entity:identifier"
+* rest.resource[=].searchParam[+].name = "entity"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Provenance-entity"
-* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "permette di ricercare in base ai metadati necessari per accedere ad un documento nel profilo XDS definito da IHE. In particolare deve veicolare il documentEntry.repositoryUniqueId ed il documentEntry.UniqueID del documento referenziato nella risorsa Provenance (e.g. entity:identifier=RepoID|DocUniqueId)"
 * rest.resource[+].type = #PractitionerRole
-* rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicoPrescrittore"
+* rest.resource[=].profile = Canonical( MedicoPrescrittore )
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam.name = "identifier"
 * rest.resource[=].searchParam.definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
 * rest.resource[=].searchParam.type = #token
 * rest.resource[=].searchParam.documentation = "Permette di ricercare in base all'identifier del PractitionerRole"
+
 * rest.resource[+].type = #Location
-* rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/LocationItDossierPharma"
+* rest.resource[=].profile = Canonical( LocationItDossierPharma )
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam.name = "identifier"
 * rest.resource[=].searchParam.definition = "http://hl7.org/fhir/SearchParameter/Location-identifier"
 * rest.resource[=].searchParam.type = #token
 * rest.resource[=].searchParam.documentation = "Permette di ricercare in base all'identifier della Location"
+
 * rest.resource[+].type = #Medication
-* rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationItDossierPharma"
+* rest.resource[=].profile = Canonical( MedicationItDossierPharma )
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[0].name = "identifier"
@@ -81,11 +99,12 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare in base all'identifier della Medication"
 * rest.resource[=].searchParam[+].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Medication-code"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-code"		
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare in base al codice relativo alla Medication"
+
 * rest.resource[+].type = #Patient
-* rest.resource[=].profile = "http://hl7.it/fhir/StructureDefinition/Patient-it-base"
+* rest.resource[=].profile = $Patient-it-base
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].searchParam[0].name = "birthdate"

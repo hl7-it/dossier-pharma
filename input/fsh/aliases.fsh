@@ -36,6 +36,7 @@ Alias: $v3-Confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidenti
 Alias: $istat-unitaAmministrativeTerritoriali = http://terminology.hl7.it/sid/istat-unitaAmministrativeTerritoriali
 
 Alias: $Coverage-it-base = http://hl7.it/fhir/StructureDefinition/Coverage-it-base
+Alias: $Patient-it-base = http://hl7.it/fhir/StructureDefinition/Patient-it-base
 
 Alias: $NRE =  http://hl7.it/sid/mef/nre
 Alias: $CF = http://hl7.it/sid/codiceFiscale

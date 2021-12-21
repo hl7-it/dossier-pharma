@@ -17,7 +17,7 @@ Alias: Translation = http://hl7.org/fhir/StructureDefinition/translation
 Alias: ISO_SC_coding = http://hl7.org/fhir/StructureDefinition/iso21090-SC-coding
 
 
-Alias: PatientItBase = http://hl7.it/fhir/StructureDefinition/Patient-it-base
+Alias: PatientItBase = $Patient-it-base
 Alias: OrganizationItBase = http://hl7.it/fhir/StructureDefinition/Organization-it-base
 Alias: PractitionerItBase = http://hl7.it/fhir/StructureDefinition/Practitioner-it-base
 Alias: PractitionerRoleItBase = http://hl7.it/fhir/StructureDefinition/PractitionerRole-it-base
