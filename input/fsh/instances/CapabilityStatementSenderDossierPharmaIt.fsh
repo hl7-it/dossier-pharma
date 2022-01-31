@@ -10,7 +10,8 @@ Usage: #definition
 * description = "CapabilityStatement per il Sender definito nelle specifiche del Dossier Farmaceutico"
 * kind = #requirements
 * fhirVersion = #4.0.1
-* format = #application/fhir+json
+* format[0] = #application/fhir+json
+* format[+] = #application/fhir+xml
 * rest.mode = #client
 * rest.resource[0].type = #MedicationDispense
 * rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationDispenseItDossierPharma"
@@ -273,4 +274,5 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchParam[=].documentation = "Multiple Resources: \r\n\r\n* [Patient](patient.html): A portion of the family name of the patient\r\n* [Practitioner](practitioner.html): A portion of the family name\r\n"
 * rest.interaction.code = #transaction
+* rest.interaction[+].code = #history-system
 * rest.interaction.documentation = "http://example.org/fhir/StructureDefinition/AlimentazioneDossierFarmaceutico"
