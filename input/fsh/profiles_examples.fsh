@@ -4,7 +4,7 @@ Alias: V3ActStatus = http://terminology.hl7.org/CodeSystem/v3-ActStatus
 Alias: V3NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: AbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: dataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
-Alias: CS_V3ItRoles = http://terminology.hl7.it/CodeSystem/it-$v3-RoleCode
+Alias: CS_V3ItRoles = http://terminology.hl7.it/CodeSystem/it-v3RoleCode
 Alias: StatoEsenzioneCoverage = http://hl7.it/fhir/StructureDefinition/coverage-exceptionStatus
 // Alias: PractitionerMMG = http://hl7.it/fhir/StructureDefinition/Practitioner-mmg-it
 
