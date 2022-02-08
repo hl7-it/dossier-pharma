@@ -7,14 +7,10 @@ Title: "Prescrizione farmaceutica per AIC"
 * status = #completed
 * intent = #order
 * medicationCodeableConcept = $aic#023086150 "ZIMOX*1G 12 CPR"
-* subject.identifier
-  * system = $CF
-  * value = "VRDMRC67T20I257E"
+* subject.identifier.system = CF#LCRLRD80A03C352E
 * authoredOn = "2022-02-08T15:22:22.387Z"
 * medicationReference.valueReference = "Medication/Medication001"
 * requester.reference = "MedicoPrescrittore/MedicoPrescrittore001"
-* groupIdentifier
-  * system = $NRE
-  * value = "160B84000002848"
+* groupIdentifier.system = NRE#160B84000002848
 * dispenseRequest.quantity.value = 1
 * substitution.allowedCodeableConcept = $v3-substanceAdminSubstitution#EC "Pharmaceutical equivalent:AMOXICILLINA 1.000MG 12 UNITA  USO ORALE"
