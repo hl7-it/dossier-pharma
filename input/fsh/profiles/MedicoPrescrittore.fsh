@@ -11,9 +11,3 @@ Description: "Profilo di PractitionerRole usato per descrivere il Medico Prescri
 * . ^short = "Medico Prescrittore"
 * code from VsRuoloPrerscrittore (preferred)
 *  specialty ^short = "Specialità"
-
-Instance: MedicoPrescrittore001
-InstanceOf: MedicoPrescrittore
-Description: "Example of MedicoPrescrittore"
-* code = CS_V3ItRoles#MMG "Medico Medicina Generale"
-* specialty.coding = SCT#394579002 "Cardiology"
