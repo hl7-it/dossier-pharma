@@ -23,7 +23,6 @@ Usage: #definition
 * rest.resource[=].profile = Canonical(MedicationDispenseItDossierPharma)
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
-// * rest.resource[=].searchParam[0].name = "subject:identifier"
 * rest.resource[=].searchParam[0].name = "subject"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationDispense-subject"
 * rest.resource[=].searchParam[=].type = #reference

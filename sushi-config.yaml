@@ -16,7 +16,14 @@ version: 0.1.0
 name: HL7ITDossierPharma
 title: HL7 Italia Dossier Farmaceutico FHIR Implementation Guide
 status: active
-publisher: HL7 Italia
+publisher:
+  - name: HL7 Italia
+    url: https://hl7.it
+contact:
+  - name: HL7 Italia
+    telecom:
+      - system: url
+        value: https://hl7.it
 description: "HL7 Italia Dossier Farmaceutico FHIR Implementation Guide, specifica come utilizzare lo standard HL7 FHIR per l'alimentazione e la consultazione del dossier farmaceutico"
 # description: "This guide describes a set of FHIR of profiles to be used for the Regional Pharma Dossiers in Italy"
 license: CC-BY-SA-4.0

@@ -27,7 +27,6 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[+].code = #create
 * rest.resource[=].interaction[+].code = #delete
-//* rest.resource[=].searchParam[0].name = "subject:identifier"
 * rest.resource[=].searchParam[0].name = "subject"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationDispense-subject"
 * rest.resource[=].searchParam[=].type = #reference
@@ -37,7 +36,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Quando è stata erogata la ricetta"
 * rest.resource[=].searchParam[+].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationDispense-code"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare per il codice AIC o ATC del farmaco erogato"
 
@@ -60,7 +59,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[=].documentation = "Quando è stata compilata la ricetta"
 * rest.resource[=].searchParam[+].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationRequest-code"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare per il codice AIC o ATC del farmaco erogato"
 
@@ -78,10 +77,9 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Provenance-target"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare in base alle risorse associate"
-//* rest.resource[=].searchParam[+].name = "entity:identifier"
 * rest.resource[=].searchParam[+].name = "entity"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Provenance-entity"
-* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "permette di ricercare in base ai metadati necessari per accedere ad un documento nel profilo XDS definito da IHE. In particolare deve veicolare il documentEntry.repositoryUniqueId ed il documentEntry.UniqueID del documento referenziato nella risorsa Provenance (e.g. entity:identifier=RepoID|DocUniqueId)"
 
 * rest.resource[+].type = #PractitionerRole
@@ -120,12 +118,12 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare in base all'identifier della Medication"
 * rest.resource[=].searchParam[+].name = "code"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Medication-code"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Permette di ricercare in base al codice relativo alla Medication"
 
 * rest.resource[+].type = #Patient
-* rest.resource[=].profile = "$Patient-it-base"
+* rest.resource[=].profile = $Patient-it-base
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].interaction[+].code = #update
