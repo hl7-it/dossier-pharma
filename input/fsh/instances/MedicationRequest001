@@ -1,0 +1,16 @@
+Instance: MedicationRequest001
+InstanceOf: MedicationRequestItDossierPharma
+Description: "Example of MedicationRequestItDossierPharma"
+* status = #draft
+* extension[medicoTitolare].valueReference = "MedicoPrescrittore/MedicoPrescrittore001"
+* intent = #order
+* medicationReference.valueReference = "Medication/Medication001"
+* medicationCodeableConcept.valueCodeableConcept = atc#M01AX17 "Nimesulide"
+* subject.reference = "PatientItBase/Patient001"    //se è un reference perchè chiediamo di valorizzare anche altro?
+* subject.type = "Patient"
+* subject.identifier.system = CF#SCRMRA83S07F839L
+* requester.reference = "MedicoPrescrittore/MedicoPrescrittore001"  //probabilmente se è lo stesso del titolare può essere omesso.
+* reasonCode.text = "Mal di testa"
+//* reasonCode.coding = ICD-9#784.0  //ICD non è presente come alias
+* groupIdentifier.system = http://hl7.it/sid/mef/nre //manca l'alias?
+* groupIdentifier.value = "NREDELLAPRESCRIZIONE001" //perchè non è mandatorio?
