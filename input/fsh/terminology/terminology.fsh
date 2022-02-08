@@ -16,7 +16,7 @@ Title: "Ruolo Prescrittore"
 Description: "Ruolo del prescrittore Basato su 'Estensione del Vocabolario HL7 V3 RoleCode'"
 //-------------------------------------------------------------------------------------------
 
-* codes from system http://terminology.hl7.it/CodeSystem/it-$v3-RoleCode
+* codes from system $it-v3RoleCode
 
 //======================================================
 ValueSet: VsSubstitutionDossierPharma

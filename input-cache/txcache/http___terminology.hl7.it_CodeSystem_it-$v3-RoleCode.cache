@@ -11,3 +11,8 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.it/CodeSystem/it-$v3-RoleCode"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.it/fhir/dossierPharma/ValueSet/ruoloPrescrittore-it-dossierPharma", "version": "0.1.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.it/CodeSystem/it-$v3-RoleCode"
+}
+-------------------------------------------------------------------------------------

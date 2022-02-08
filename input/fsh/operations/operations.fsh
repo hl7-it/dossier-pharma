@@ -2,7 +2,7 @@ Instance: getDataByOrder
 InstanceOf: OperationDefinition
 Usage: #definition
 * url = "http://hl7.it/fhir/dossierPharma/OperationDefinition/getDataByOrder"
-* name = "getDataByOrder"
+* name = "GetDataByOrder"
 * title = "Dati per ordine"
 * status = #draft
 * kind = #operation
@@ -16,7 +16,7 @@ Usage: #definition
 // * useContext.valueCodeableConcept = $v3-ActCode#IMP "inpatient encounter"
 // * jurisdiction = urn:iso:std:iso:3166#GB "United Kingdom of Great Britain and Northern Ireland (the)"
 * code = #getDataByOrder
-* comment = "Questa operazione permette di recuperare le risorse associate ad uno sppecifico ordine"
+* comment = "Questa operazione permette di recuperare le risorse associate ad uno specifico ordine"
 * system = true
 * type = false
 * instance = false

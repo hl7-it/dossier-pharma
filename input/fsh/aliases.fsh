@@ -5,6 +5,7 @@ Alias: $uri = urn:ietf:rfc:3986
 Alias: $oid = urn:ietf:rfc:1155
 
 Alias: $iso3166 = urn:iso:std:iso:3166
+Alias: $sct = http://snomed.info/sct
 
 Alias: CS_unitaTerritoriali = http://terminology.hl7.it/sid/istat-unitaAmministrativeTerritoriali
 Alias: CS_Estero = http://terminology.hl7.it/sid/istat-unitaAmministrativeTerritorialiEstere
@@ -25,6 +26,7 @@ Alias: $minsan-minsan-parafarmacie = http://terminology.hl7.it/sid/minsan-parafa
 
 Alias: $minsan-regione = http://terminology.hl7.it/sid/minsan-regione
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: $it-v3RoleCode = http://terminology.hl7.it/CodeSystem/it-v3RoleCode
 
 
 Alias: $minsan-esenzioni = http://terminology.hl7.it/CodeSystem/minsan-esenzioni
