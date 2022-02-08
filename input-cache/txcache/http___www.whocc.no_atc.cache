@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.whocc.no/atc",
+  "code" : "A02BC02"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "pantoprazole",
+  "code" : "A02BC02",
+  "system" : "http://www.whocc.no/atc"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.whocc.no/atc",
+  "code" : "A02BC02"
+}, "url": "http://terminology.hl7.it/ValueSet/who-atc", "version": "0.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "pantoprazole",
+  "code" : "A02BC02",
+  "system" : "http://www.whocc.no/atc"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.whocc.no/atc",
+  "code" : "A02BC02"
+}, "url": "http://terminology.hl7.it/ValueSet/who-atc--0", "version": "0.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "pantoprazole",
+  "code" : "A02BC02",
+  "system" : "http://www.whocc.no/atc"
+}
+-------------------------------------------------------------------------------------

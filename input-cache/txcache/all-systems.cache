@@ -60,3 +60,21 @@ v: {
   "system" : "urn:ietf:bcp:13"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.whocc.no/atc",
+  "code" : "A02BC02"
+}, "url": "http://terminology.hl7.it/ValueSet/aifa-aic", "version": "0.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code provided (http://www.whocc.no/atc#A02BC02) is not valid in the value set 'VsAic' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.whocc.no/atc",
+  "code" : "A02BC02"
+}, "url": "http://terminology.hl7.it/ValueSet/aifa-ge", "version": "0.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code provided (http://www.whocc.no/atc#A02BC02) is not valid in the value set 'VsGruppoEquivalenza' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
