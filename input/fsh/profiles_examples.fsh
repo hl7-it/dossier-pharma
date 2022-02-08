@@ -7,6 +7,7 @@ Alias: dataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-re
 Alias: CS_V3ItRoles = http://terminology.hl7.it/CodeSystem/it-$v3-RoleCode
 Alias: StatoEsenzioneCoverage = http://hl7.it/fhir/StructureDefinition/coverage-exceptionStatus
 // Alias: PractitionerMMG = http://hl7.it/fhir/StructureDefinition/Practitioner-mmg-it
+Alias: SCT = http://snomed.info/sct  //AGID CNR
 
 
 Alias: CS_professioni = http://terminology.hl7.it/CodeSystem/istat-professioni
