@@ -1,7 +1,6 @@
 ### Scopo
 
-Questa guida ha lo scopo di definire il dossier farmaceutico, che appartiene al nucleo minimo dei documenti del Fascicolo Sanitario Elettronico.
-La guida raccoglie i profili [HL7 FHIR](http://hl7.org/fhir) base e le principali risorse da utilizzare per l'implementazione del dossier farmaceutico.
+Questa guida ha lo scopo di definire i profili [HL7 FHIR](http://hl7.org/fhir) da utilizzare per l'implementazione del dossier farmaceutico. Il dossier farmaceutico, che appartiene al nucleo minimo dei documenti del Fascicolo Sanitario Elettronico.
 
 ### Definizione del Dossier Farmaceutico
 
@@ -28,30 +27,6 @@ Le funzionalità aggiuntive esemplificative che potranno essere implementate son
 
 Le funzionalità eventualmente implementate dalle singole Regioni saranno disponibili solo all'interno delle stesse fintanto ché non verranno stabilite le caratteristiche tecniche per consentirne la fruibilità a livello nazionale.
 
-### Struttura della guida
-
-Le principali sezioni di questa guida sono:
-
-  - [Questa pagina](index.html) – definisce il contesto di questa guida
-
-  - [Background](design.html) - fornisce le informazioni che gli implementatori dovrebbero conoscere prima di leggere il resto dell’IG. Include la pagina:
-    
-      - [Infrastruttura del Dossier farmaceutico](design.html) – fornisce le informazioni sull'implementazione e sull'infrastruttura del dossier farmaceutico
-
-  - [Specifiche Funzionali](scenario.html) – descrizione pagina. Include la pagina:
-  
-      - [Scenari](spec.htm) – descrizione pagina.
-      
-  - [Specifiche Tecniche](spec.html) – descrizione pagina. Include la pagina:
-  
-      - [Specifiche di dettaglio](scenario.htm) – descrizione pagina.
-      
-  - [Indice Artefatti](artifacts.html) – lista tutti gli artefatti FHIR inclusi in questa guida
-
-  - [Support](downloads.html) - fornisce informazioni di supporto. Include le pagine:
-  
-      - [FHIR Spec](http://hl7.org/fhir/R4/index.html) - specifiche FHIR
-      - [Downloads](downloads.html) - pagina da cui è possibile scaricare l'intera guida
 
 ### Autori e Contributori
 

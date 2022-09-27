@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Tue, Feb 8, 2022 17:55+0000 for FHIR v4.6.0 
+  Generated on Tue, Feb 8, 2022 23:18+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -2484,6 +2484,12 @@
           <xs:documentation xml:lang="zh">测试报告</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="Transport">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Transport</xs:documentation>
+          <xs:documentation xml:lang="en">Transport</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="VerificationResult">
         <xs:annotation>
           <xs:documentation xml:lang="en">VerificationResult</xs:documentation>
@@ -3074,6 +3080,7 @@
       <xs:element ref="TerminologyCapabilities"/>
       <xs:element ref="TestReport"/>
       <xs:element ref="TestScript"/>
+      <xs:element ref="Transport"/>
       <xs:element ref="ValueSet"/>
       <xs:element ref="VerificationResult"/>
       <xs:element ref="VisionPrescription"/>
@@ -34201,6 +34208,12 @@ RegisteredName | UserFriendlyName | PatientReportedName.</xs:documentation>
           <xs:documentation xml:lang="zh">测试报告</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="Transport">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Transport</xs:documentation>
+          <xs:documentation xml:lang="en">Transport</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="VerificationResult">
         <xs:annotation>
           <xs:documentation xml:lang="en">VerificationResult</xs:documentation>
@@ -48001,12 +48014,12 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="manufacturer" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A company that makes this substance. This is a set of potential manufacturers but is not necessarily comprehensive.</xs:documentation>
+              <xs:documentation xml:lang="en">The entity that creates, makes, produces or fabricates the substance. This is a set of potential manufacturers but is not necessarily comprehensive.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="supplier" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A company that makes this substance available. This involves, for example, supply chain and marketing, rather than necessarily making the substance, and so covers distributers and re-sellers.</xs:documentation>
+              <xs:documentation xml:lang="en">An entity that is the source for the substance. It may be different from the manufacturer. Supplier is synonymous to a distributor.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="moiety" type="SubstanceDefinition.Moiety" minOccurs="0" maxOccurs="unbounded">
@@ -53307,6 +53320,12 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:documentation xml:lang="zh">测试报告</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="Transport">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Transport</xs:documentation>
+          <xs:documentation xml:lang="en">Transport</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="VerificationResult">
         <xs:annotation>
           <xs:documentation xml:lang="en">VerificationResult</xs:documentation>
@@ -53560,6 +53579,139 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="TestScriptRequestMethodCodeEnum" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Transport" type="Transport">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Record of transport of item.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="Transport">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Record of transport of item.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="DomainResource">
+        <xs:sequence>
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Identifier for the transport event that is used to identify it across multiple disparate systems.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">BasedOn refers to a higher-level authorization that triggered the creation of the transport.  It references a &quot;request&quot; resource such as a ServiceRequest or Task, which is distinct from the &quot;request&quot; resource the Transport is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a transport is created to fulfill a procedureRequest ( = FocusOn ) to transport a specimen to the lab.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="partOf" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A larger event of which this particular event is a component or step.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="status" minOccurs="0" maxOccurs="1" type="TransportStatus">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A code specifying the state of the dispense event.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="patient" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A link to a resource representing the person whom the delivered item is for.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the type of dispensing event that is performed. Examples include: Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="suppliedItem" type="Transport.SuppliedItem" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The item that is being delivered or has been supplied.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1" >
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The date or time(s) the activity occurred.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="occurrenceDateTime" type="dateTime"/>
+            <xs:element name="occurrencePeriod" type="Period"/>
+            <xs:element name="occurrenceTiming" type="Timing"/>
+          </xs:choice>
+          <xs:element name="supplier" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The individual responsible for dispensing the medication, supplier or device.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="destination" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Identification of the facility/location where the Supply was shipped to, as part of the dispense event.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="receiver" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Identifies the person who picked up the Supply.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Transport.SuppliedItem">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Record of transport of item.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The amount of supply that has been dispensed. Includes unit of measure.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1" >
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Identifies the medication, substance or device being dispensed. This is either a link to a resource representing the details of the item or a code that identifies the item from a known list.</xs:documentation>
+            </xs:annotation>
+            <xs:element name="itemCodeableConcept" type="CodeableConcept"/>
+            <xs:element name="itemReference" type="Reference"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="TransportStatusEnum">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="in-progress">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">In Progress</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="completed">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Delivered</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="abandoned">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Abandoned</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="entered-in-error">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Entered In Error</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TransportStatus">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="TransportStatusEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
