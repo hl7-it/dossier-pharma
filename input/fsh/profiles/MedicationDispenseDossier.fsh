@@ -17,14 +17,15 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 * identifier.system 0..1
 * identifier.value 0..1
 
-* status MS
+* status 
 
+* medicationReference only Reference ( MedicationItDossierPharma )
 * medicationCodeableConcept 0..1
 
-* medicationCodeableConcept.coding 1.. MS
-  * system 1.. MS
-  * code 1.. MS
-  * display MS
+* medicationCodeableConcept.coding 1.. 
+  * system 1.. 
+  * code 1.. 
+  * display 
   
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #pattern
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "$this"
@@ -34,7 +35,7 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
     ATC 0..1 and AIC 0..1 and
     gruppoEquivalenza 0..1  and eccezioni 0..1
 
-* medicationCodeableConcept.coding[ATC] MS
+* medicationCodeableConcept.coding[ATC] 
 * medicationCodeableConcept.coding[ATC] ^sliceName = "ATC"
 * medicationCodeableConcept.coding[ATC] from $vs-atc
 * medicationCodeableConcept.coding[AIC] from $vs-aic
@@ -46,7 +47,7 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 * medicationReference only Reference(MedicationItDossierPharma)
 * medicationReference.reference 0..
 
-* subject MS
+* subject 
 * subject only Reference(PatientItBase)
 * subject.type 0..
 * subject.type = "Patient" (exactly)
@@ -79,11 +80,16 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 * whenHandedOver ^short = "Data erogazione ricetta"
 * substitution.type 1..
 * substitution.type.coding 1..
+* substitution.type.coding from vs-codice-sostituzione-sostanza
 * substitution.type.coding.system 1..
 * substitution.type.coding.system = $DIZ_Sostituzione (exactly)
 * substitution.type.coding.code 1..
 * substitution.reason 1..
 * substitution.reason.coding 1..
+* substitution.reason.coding from vs-motivo-sostituzone
 * substitution.reason.coding.system 1..
 * substitution.reason.coding.system ^short = "OID flagErog"
 * substitution.reason.coding.code 1..
+* authorizingPrescription ^short = "Prescrizione dei farmaci che autorizza l'erogazione"
+* authorizingPrescription only Reference(MedicationRequestItDossierPharma)
+

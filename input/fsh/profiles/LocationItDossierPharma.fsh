@@ -5,10 +5,10 @@ Title:    "Location - Dossier Farmaceutico"
 Description: "Profilo Location per Dossier Farmaceutico. Usato per identificare il luogo dove è avvenuta l'erogazione del farmaco"
 
 * . ^short = "Luogo di erogazione del farmaco"
-* identifier 1.. MS
+* identifier 1.. 
   * ^short = "Identificativo delle struttura (luogo) di erogazione del farmaco"
-  * system 1..  MS
-  * value  1.. MS
+  * system 1..  
+  * value  1.. 
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.ordered = false
