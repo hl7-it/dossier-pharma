@@ -4,7 +4,7 @@ Id: Medication-it-dossierPharma
 Title: "Medication - Dossier Farmaceutico"
 Description: "Risorsa Medication usata per veicolare possibili carrier identifier"
 * ^status = #draft
-* identifier 0..1 MS //era obbligatorio
+* identifier 0..1  //era obbligatorio
 * code 1..1
 
 
@@ -16,7 +16,7 @@ Description: "Risorsa Medication usata per veicolare possibili carrier identifie
 
 * code.coding contains atc 0..1 and aic 0..1
   and gruppoEquivalenza 0..1  and eccezioni 0..1  
-* code.coding[atc] MS
+* code.coding[atc] 
 * code.coding[atc] ^sliceName = "atc"
 * code.coding[atc] from $vs-atc
 * code.coding[aic] from $vs-aic

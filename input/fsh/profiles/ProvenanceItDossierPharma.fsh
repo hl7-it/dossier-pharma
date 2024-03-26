@@ -28,7 +28,7 @@ Description: "Profilo Provenance per Dossier Farmaceutico"
 * entity 1..
 * entity.role = #derivation (exactly)
 * entity.what only Reference (DocumentManifest)
-* entity.what.identifier 0.. MS
+* entity.what.identifier 0.. 
 * entity.what.identifier.system 1..
 * entity.what.identifier.system ^short = "[DocumentEntry.repositoryUniqueId]"
 * entity.what.identifier.system ^definition = "Veicola il riferimento al DocumentEntry.RepositoryUniqueId in cui è presente il documento CDA R2 da cui è stata estratta la risorsa"

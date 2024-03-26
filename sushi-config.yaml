@@ -34,7 +34,6 @@ parameters:
   apply-jurisdiction: true
   apply-publisher: true
   special-url: !!seq
-  - "http://terminology.hl7.it/CodeSystem/minsan-esenzioni"
   - "http://terminology.hl7.it/CodeSystem/istat-professioni"  
   autoload-resources: true
 

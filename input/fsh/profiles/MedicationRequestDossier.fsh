@@ -14,21 +14,21 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * extension contains MedicationRequestMedicoTitolare named medicoTitolare 0..1
 * extension[medicoTitolare].valueReference  only Reference( MedicoPrescrittore )
 
-* status 1.. MS
+* status 1.. 
 * intent = #order (exactly) // do we really need to constraint to order ?
 * intent ^short = "order"
 
 // maybe better to have medication CodeableConcept
 
-* medication[x] MS
+* medication[x] 
 * medicationReference only Reference ( MedicationItDossierPharma )
 * medicationCodeableConcept 0..1
 
 
-* medicationCodeableConcept.coding 1.. MS
-  * system 1.. MS
-  * code 1.. MS
-  * display MS
+* medicationCodeableConcept.coding 1.. 
+  * system 1.. 
+  * code 1.. 
+  * display 
   
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #pattern
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "$this"
@@ -38,7 +38,7 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
     ATC 0..1 and AIC 0..1 and
     gruppoEquivalenza 0..1  and eccezioni 0..1
 
-* medicationCodeableConcept.coding[ATC] MS
+* medicationCodeableConcept.coding[ATC] 
 * medicationCodeableConcept.coding[ATC] ^sliceName = "ATC"
 * medicationCodeableConcept.coding[ATC] from $vs-atc
 * medicationCodeableConcept.coding[AIC] from $vs-aic
@@ -47,7 +47,7 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
 
 
-* subject MS
+* subject 
 * subject only Reference(PatientItBase)
 * subject.type 0..
 * subject.type = "Patient" (exactly)
@@ -57,8 +57,8 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * subject.identifier.value 1..
 * subject.identifier.value ^short = "Codice Fiscale"
 * subject.display 0.. 
-* authoredOn 0.. MS
-* requester 1.. MS
+* authoredOn 0.. 
+* requester 1.. 
 * requester only Reference(MedicoPrescrittore)
 
 * requester.reference 0..1
@@ -66,10 +66,10 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * requester.identifier ^short = "Valorizzato con identificativo del medico titolare o sostituto"
 
 * reasonCode.text ^short = "Descrizione diagnosi"
-* reasonCode.coding MS
-  * system 1.. MS
-  * code 1.. MS
-  * display MS
+* reasonCode.coding 
+  * system 1.. 
+  * code 1.. 
+  * display 
   
  
 * reasonCode.coding ^slicing.discriminator.type = #pattern
@@ -86,27 +86,43 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * reasonCode.coding[codiceDiagnosi] ^short = "Codice diagnosi"
 * reasonCode.coding[codiceDiagnosi] from $vs-icd9cm
 
+* note ^short = "Informazioni circa la prescrizione"
 
-* groupIdentifier 1..1 MS
+* groupIdentifier 1..1 
   * ^short = "Identificativo della prescrizione (e.g. NRE)"
   * system 1..1 //Definire un Value Set con tutti i system possibili
   * system from VsGroupIdentifierUri (extensible)
 * groupIdentifier.value ^short = "Identificativo della prescrizione (e.g. NRE)"
 
-* insurance MS
+* insurance 
 * insurance only Reference($Coverage-it-base)
 
 
-* dispenseRequest 0.. MS
+* dispenseRequest 1.. 
 * dispenseRequest.quantity 1..
 * dispenseRequest.numberOfRepeatsAllowed 0..1
 
 // change to allowedCodeableConcept
 
 * substitution ^meaningWhenMissing = "In assenza dell'elemento substitution, il farmaco indicato nella prescrizione è da intendersi come 'sostituibile'"
-* substitution.allowedCodeableConcept 1..1 MS
+* substitution.allowedCodeableConcept 1..1 
 * substitution.allowedCodeableConcept from VsSubstitutionDossierPharma
 
+* substitution.reason from VsMotivazioniNonSost (preferred) //TODO: should be added also the substitution reason?
+* substitution.reason ^short = "Motivo di non sostituibilità del farmaco"
+
+* reasonReference ^short = "Condizioni cliniche ed osservazioni che motivano la prescrizione (parametri vitali)" //TODO: only parametri vitali? 
+* dispenseRequest.validityPeriod ^short = "Periodo di tempo per il quale è autorizzata la fornitura"
+
+// * dosageInstruction.timing.repeat.boundsPeriod ^short = "Durata temporale della terapia farmacologica"
+// * dosageInstruction.timing.repeat.boundsPeriod 1..1
+// * dosageInstruction.timing.repeat.boundsPeriod.start 1..1
+* dosageInstruction ^short = "Modalità di assunzione del farmaco"
+* dosageInstruction.timing.repeat.frequency ^short = "Frequenza di assunzione/infusione del farmaco"
+* dosageInstruction.timing.repeat.period ^short = "Periodo di tempo durante il quale viene assunto/infuso il farmaco"
+* dosageInstruction.timing.repeat.periodUnit ^short = "Unità temporale (es.ora,giorno,mese) di assunzione/infusione del farmaco"
+
+// inserire la frequenza di assunzione dosageInstruction.dosage.timing.repeat (non rendere obbligatorio nulla)
 /*--
 * substitution.allowedCodeableConcept.coding 1..1
 * substitution.allowedCodeableConcept.coding.system 1..

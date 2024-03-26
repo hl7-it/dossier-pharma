@@ -2,6 +2,8 @@
 
 //============== ALIAS ===============
 Alias: $uri = urn:ietf:rfc:3986
+// Alias: $uriCodiceSostituzone = https://develop.art-decor.org/fhir/ValueSet/2.16.840.1.113883.2.9.6.1.53
+// Alias: $uriMotivoSostituzione = https://hl7itig.art-decor.pub/fhir/ValueSet/2.16.840.1.113883.3.1937.777.63.11.16
 Alias: $oid = urn:ietf:rfc:1155
 
 Alias: $iso3166 = urn:iso:std:iso:3166
@@ -27,9 +29,9 @@ Alias: $minsan-minsan-parafarmacie = http://terminology.hl7.it/sid/minsan-parafa
 Alias: $minsan-regione = http://terminology.hl7.it/sid/minsan-regione
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $it-v3RoleCode = http://terminology.hl7.it/CodeSystem/it-v3RoleCode
+Alias: $coverage-exceptionStatus = http://hl7.it/fhir/StructureDefinition/coverage-exceptionStatus
 
-
-Alias: $minsan-esenzioni = http://terminology.hl7.it/CodeSystem/minsan-esenzioni
+Alias: $minsan-esenzioni = http://hl7.it/fhir/dossierPharma/CodeSystem/minsan-esenzioni // TODO: bring it to teminology!!
 Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
