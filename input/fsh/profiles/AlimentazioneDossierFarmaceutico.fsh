@@ -12,7 +12,7 @@ Description: "Profilo AlimentazioneDossierFarmaceutico per Dossier Farmaceutico"
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry contains
-    sliceProvenance 0..* MS and
+    sliceProvenance 0..*  and
     sliceMedication 1..* and
     slicePractitionerRole 0..* and 
     sliceLocation 0..* and
