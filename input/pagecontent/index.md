@@ -40,17 +40,47 @@ Le funzionalità eventualmente implementate dalle singole Regioni saranno dispon
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>Autore</td>
-<td>Giorgio Cangioli</td>
-<td>Consulente</td>
-<td>giorgio.cangioli@gmail.com</td>
-</tr>
 <tr class="even">
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+</tr>
+<tr class="odd">
+<td>Autore</td>
+<td>Leonardo Alcaro</td>
+<td>HL7 Italia</td>
+<td>leonardo.alcaro@teamdigitale.governo.it</td>
+</tr>
+<tr class="even">
+<td>Autore</td>
+<td>Mario Sicuranza</td>
+<td>HL7 Italia</td>
+<td>mario.sicuranza@icar.cnr.it</td>
+</tr>
+<tr class="odd">
+<td>Autore</td>
+<td>Davide Spanu</td>
+<td>EY Advisory S.p.A.</td>
+<td>davide.spanu@it.ey.com</td>
+</tr>
+<tr class="odd">
+<td>Autore</td>
+<td>Valeria Cesarò</td>
+<td>EY Advisory S.p.A.</td>
+<td>valeria.cesaro@it.ey.com</td>
+</tr>
+<tr class="even">
+<td>Autore</td>
+<td>Maria Giovanna Antida Preziosi</td>
+<td>SOGEI</td>
+<td>mpreziosi@sogei.it</td>
+</tr>
+<tr class="odd">
+<td>Autore</td>
+<td>Giorgio Cangioli</td>
+<td>HL7 Italia</td>
+<td>giorgio.cangioli@gmail.com</td>
 </tr>
 <tr class="odd">
 <td>Contributore</td>
@@ -85,12 +115,6 @@ Le funzionalità eventualmente implementate dalle singole Regioni saranno dispon
 <tr class="even">
 <td>Contributore</td>
 <td>Alberto Dessena</td>
-<td>Agid</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Contributore</td>
-<td>Leonardo Alcaro</td>
 <td>Agid</td>
 <td></td>
 </tr>
