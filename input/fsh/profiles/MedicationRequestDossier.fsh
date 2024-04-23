@@ -118,9 +118,6 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 // * dosageInstruction.timing.repeat.boundsPeriod 1..1
 // * dosageInstruction.timing.repeat.boundsPeriod.start 1..1
 * dosageInstruction ^short = "Modalità di assunzione del farmaco"
-* dosageInstruction.timing.repeat.frequency ^short = "Frequenza di assunzione/infusione del farmaco"
-* dosageInstruction.timing.repeat.period ^short = "Periodo di tempo durante il quale viene assunto/infuso il farmaco"
-* dosageInstruction.timing.repeat.periodUnit ^short = "Unità temporale (es.ora,giorno,mese) di assunzione/infusione del farmaco"
 
 // inserire la frequenza di assunzione dosageInstruction.dosage.timing.repeat (non rendere obbligatorio nulla)
 /*--
