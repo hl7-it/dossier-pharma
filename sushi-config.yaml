@@ -60,6 +60,8 @@ pages:
     title: Metodologia
   contesto.md:
     title: Contesto di riferimento
+  contestoAttuale.md:
+    title: Contesto Attuale
   specifiche.md:
     title: Specifiche Tecniche
   scenario.html:
@@ -84,7 +86,8 @@ menu:
   IG Home: index.html
   Sommario: toc.html
   Contesto:
-    Contesto: contesto.html
+    Contesto Iniziale: contesto.html
+    Contesto Attuale: contestoAttuale.html
   #  Principi e disegno: design.html
     Metodologia: methodology.html
 #  Specifiche Funzionali:
