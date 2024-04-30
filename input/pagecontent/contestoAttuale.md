@@ -46,4 +46,4 @@ HL7 FHIR rappresenta la soluzione migliore per la standardizzazione dei dati, in
 - L’interoperabilità sintattica, che fornisce la struttura e il significato delle informazioni;
 - L’interoperabilità semantica, che definsisce il significato “semantico” delle informazioni, normalmente attraverso sistemi di codifica;
 
-![Architettura FSE 2.0](contestoAttualeFSE.jpg "Architettura FSE 2.0")
+![Architettura FSE 2.0](.contestoAttualeFSE.jpg "Architettura FSE 2.0")

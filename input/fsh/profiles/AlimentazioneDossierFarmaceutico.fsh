@@ -5,7 +5,7 @@ Title:    "AlimentazioneDossierFarmaceutico - Dossier Farmaceutico"
 Description: "Profilo AlimentazioneDossierFarmaceutico per Dossier Farmaceutico"
 * ^text.status = #additional
 * ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>Profilazione del Bundle per l'esecuzione della transazione AlimentazioneDossierFarmaceutico</a></div>"
-* ^url = "https://example.org/fhir/StructureDefinition/AlimentazioneDossierFarmaceutico"
+//* ^url = "https://example.org/fhir/StructureDefinition/AlimentazioneDossierFarmaceutico"
 * ^status = #draft
 * type = #transaction (exactly)
 * entry ^slicing.discriminator.type = #type

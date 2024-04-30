@@ -6,7 +6,7 @@ Usage: #example
 * id = "MedicationRequest-it-dossierPharma-ex001"
 * status = #completed
 * intent = #order
-* medicationCodeableConcept = $aic#031981069 "PANTORC - 28CPR GASTR 20MG"
+* medicationCodeableConcept = $aic#031981069 "PANTORC - 28CPR GASTR 20MG" //TODO: add the content of CodeSystem in Terminology
 * subject.identifier
   * system = $CF
   * value = "RSSMRT57D12D612R"
@@ -17,7 +17,7 @@ Usage: #example
   * system = $NRE
   * value = "030A05714294324"
 * dispenseRequest.quantity.value = 2
-* substitution.allowedCodeableConcept = $v3-substanceAdminSubstitution#N
+//* substitution.allowedCodeableConcept = $v3-substanceAdminSubstitution#N 
 
 
 Instance: MedicationRequestDossierExample002
