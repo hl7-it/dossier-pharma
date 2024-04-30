@@ -12,5 +12,5 @@ Characteristics: #can-be-target
 * quantitaErogata 1..1 Quantity "Numero di confezioni erogate."
 * dataErogazione 1..1 dateTime "Data e ora dell'erogazione."
 * sostituzioneFarmaco 0..1 string "Motivo della sostituzuone del farmaco."
-* delegato 0..1 string "Persona delegata a ritirare il farmaco " 
+* delegato 0..1 string "Persona delegata a ritirare il farmaco" 
 * regimeDiErogazione 0..1 code "Informazioni associate al regime di erogazione"  
