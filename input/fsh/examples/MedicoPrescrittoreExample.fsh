@@ -8,5 +8,5 @@ Usage: #example
 * identifier[0].value =  "PLLDSR80E47A462P"
 * practitioner = Reference(Practitioner/PractitionerExample)
 * organization = Reference(Organization/asl-020101)
-* code = $it-v3RoleCode#MO "medico ospedaliero"
+* code = CsItRoleCode#MO "medico ospedaliero"
 * specialty.coding = $sct#419192003 	"Internal medicine"

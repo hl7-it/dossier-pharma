@@ -10,13 +10,13 @@ Description: "Sistemi di identificazione per prescrizioni"
 
 
 //======================================================
-ValueSet: VsRuoloPrerscrittore
+ValueSet: VsRuoloPrescrittore
 Id: ruoloPrescrittore-it-dossierPharma
 Title: "Ruolo Prescrittore"
 Description: "Ruolo del prescrittore Basato su 'Estensione del Vocabolario HL7 V3 RoleCode'"
 //-------------------------------------------------------------------------------------------
 * ^experimental = false
-* codes from system $it-v3RoleCode
+* codes from system CsItRoleCode
 
 
 //======================================================

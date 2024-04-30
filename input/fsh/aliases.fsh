@@ -27,8 +27,8 @@ Alias: $minsan-farmacie = http://terminology.hl7.it/sid/minsan-farmacie
 Alias: $minsan-minsan-parafarmacie = http://terminology.hl7.it/sid/minsan-parafarmacie
 
 Alias: $minsan-regione = http://terminology.hl7.it/sid/minsan-regione
-Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-Alias: $it-v3RoleCode = http://terminology.hl7.it/CodeSystem/it-v3RoleCode
+//Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+//Alias: $it-v3RoleCode = http://terminology.hl7.it/CodeSystem/it-v3RoleCode
 Alias: $coverage-exceptionStatus = http://hl7.it/fhir/StructureDefinition/coverage-exceptionStatus
 
 Alias: $minsan-esenzioni = http://hl7.it/fhir/dossierPharma/CodeSystem/minsan-esenzioni // TODO: bring it to teminology!!

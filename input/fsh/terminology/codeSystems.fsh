@@ -47,3 +47,26 @@ Description: "AIFA - Indicazioni terapeutiche per le quali un determinato farmac
 * ^caseSensitive = true 
 * #001
 //-------------------------------------------------------------------------------------------
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+CodeSystem: CsItRoleCode
+Id: it-V3RoleCode
+Title: "HL7 Italia - HL7 V3 RoleCode (estensione)"
+Description: "Estensione del Vocabolario HL7 V3 RoleCode"
+//-------------------------------------------------------------------------------------------
+* ^experimental = false
+* ^caseSensitive = true 
+* #MMG  "Medico Medicina Generale"
+* #PLS  "pediatra di libera scelta"
+* #MSD  "medico del servizio/struttura del distretto/azienda" 
+* #MCA  "medico continuità assistenziale" 
+* #MO  "medico ospedaliero" 
+* #MSA  "medico specialista ambulatoriale" 
+* #MAU  "medico di azienda ospedaliero-universitaria" 
+* #GMT  "guardia medica turistica" 
+* #SPA  "specialista di struttura privata accreditata" 
+* #MI  "medico INAIL" 
+* #MC  "medico consulente" 
+* #AS "altra specializzazione" 
+* #AA "altro (tirocinanti, specializzandi, etc)"
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
