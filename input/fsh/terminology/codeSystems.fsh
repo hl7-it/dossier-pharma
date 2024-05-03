@@ -56,7 +56,7 @@ Description: "Estensione del Vocabolario HL7 V3 RoleCode"
 //-------------------------------------------------------------------------------------------
 * ^experimental = false
 * ^caseSensitive = true 
-* #MMG  "Medico Medicina Generale"
+* #MMG  "medico medicina generale"
 * #PLS  "pediatra di libera scelta"
 * #MSD  "medico del servizio/struttura del distretto/azienda" 
 * #MCA  "medico continuità assistenziale" 

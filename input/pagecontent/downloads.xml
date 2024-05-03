@@ -43,6 +43,10 @@
 				</td>
 {% endunless %}
 			</tr>
+
+	<div>
+		{% include globals-table.xhtml %}
+	</div>
 		</tbody>
 	</table>
 </div>

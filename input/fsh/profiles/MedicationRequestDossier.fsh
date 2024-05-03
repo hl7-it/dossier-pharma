@@ -104,7 +104,10 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 
 // change to allowedCodeableConcept
 
-* substitution ^meaningWhenMissing = "In assenza dell'elemento substitution, il farmaco indicato nella prescrizione è da intendersi come 'sostituibile'"
+//* substitution
+//  * ^meaningWhenMissing = "In assenza dell'elemento substitution, il farmaco indicato nella prescrizione è da intendersi come 'sostituibile'"
+
+//* substitution.meaningWhenMissing = "In assenza dell'elemento substitution, il farmaco indicato nella prescrizione è da intendersi come 'sostituibile'"
 * substitution.allowedCodeableConcept 1..1 
 * substitution.allowedCodeableConcept from VsSubstitutionDossierPharma
 
