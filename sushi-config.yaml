@@ -77,7 +77,7 @@ pages:
 # ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
 # │  To use a provided ig-data/ig.ini file, delete the "template" property below.                  │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# template: #it-template
+# template: it-template
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
