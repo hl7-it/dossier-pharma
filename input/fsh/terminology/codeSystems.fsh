@@ -35,6 +35,7 @@ Description: "AIFA - Autorizzazione Immissione in Commercio."
 * #031981069 "PANTORC - 28CPR GASTR 20MG"
 * #033736075 "AIRCORT NEBUL20FL 2ML 0,5MG/ML"
 * #027860042 "ZITROMAX 3CPR RIV 500MG"
+* #020609083 "80 MG COMPRESSE RIVESTITE CON FILM"
 //-------------------------------------------------------------------------------------------
 
 //======================================================

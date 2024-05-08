@@ -81,3 +81,23 @@ Usage: #example
   * system = $NRE
   * value = "050A05714294322"
 * dispenseRequest.quantity.value = 1
+
+Instance: MedicationRequestDossierExample005
+InstanceOf: MedicationRequestItDossierPharma
+Title: "Prescrizione farmaceutica per AIC, con nota, non sostituibile, erogata"
+Usage: #example
+
+* id = "MedicationRequest-it-dossierPharma-ex005"
+* status = #completed
+* intent = #order
+* medicationCodeableConcept = $aic#020609083 "80 MG COMPRESSE RIVESTITE CON FILM" //TODO: add the content of CodeSystem in Terminology
+* subject.identifier
+  * system = $CF
+  * value = "RSSMRT57D12D612R"
+* authoredOn = "2022-01-31T14:31:22.387Z"
+* requester = Reference(MedicoPrescrittoreExample01)
+* reasonCode = $aifa-nota#001
+* groupIdentifier
+  * system = $NRE
+  * value = "030A05714294325"
+* dispenseRequest.quantity.value = 2

@@ -30,6 +30,7 @@ Alias: $minsan-regione = http://terminology.hl7.it/sid/minsan-regione
 //Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 //Alias: $it-v3RoleCode = http://terminology.hl7.it/CodeSystem/it-v3RoleCode
 Alias: $coverage-exceptionStatus = http://hl7.it/fhir/StructureDefinition/coverage-exceptionStatus
+Alias: $dataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 
 Alias: $minsan-esenzioni = http://hl7.it/fhir/dossierPharma/CodeSystem/minsan-esenzioni // TODO: bring it to teminology!!
 Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
@@ -52,7 +53,7 @@ Alias: $atc = http://www.whocc.no/atc
 Alias: $v3-substanceAdminSubstitution = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
 
 
-
+Alias: COV_TYP = http://terminology.hl7.org/CodeSystem/v3-ActCode
 //Alias: $vs-aic = http://terminology.hl7.it/ValueSet/aifa-aic 
 Alias: $vs-aic = http://hl7.it/fhir/dossierPharma/ValueSet/aifa-aic 
 Alias: $vs-gruppo-equivalenza = http://hl7.it/fhir/dossierPharma/ValueSet/aifa-ge
