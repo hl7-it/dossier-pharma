@@ -21,7 +21,7 @@ Description: "Ruolo del prescrittore Basato su 'Estensione del Vocabolario HL7 V
 
 //======================================================
 ValueSet: VsSubstitutionDossierPharma
-Id: substitution--it-dossierPharma
+Id: substitution-it-dossierPharma
 Title: "Regole di sostituzione"
 Description: "Regole di sostituzione permesse per le prescrizioni inviate al dossier farmaceutico"
 //-------------------------------------------------------------------------------------------

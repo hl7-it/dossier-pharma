@@ -1,6 +1,7 @@
 Instance: MedicationRequestDossierExample001
 InstanceOf: MedicationRequestItDossierPharma
-Title: "Prescrizione farmaceutica per AIC, con nota, non sostituibile, erogata"
+Title: "Esempio Prescrizione farmaceutica 1"
+Description: "Prescrizione farmaceutica per AIC, con nota, non sostituibile, erogata"
 Usage: #example
 
 * id = "MedicationRequest-it-dossierPharma-ex001"
@@ -12,7 +13,7 @@ Usage: #example
   * value = "RSSMRT57D12D612R"
 * authoredOn = "2022-01-31T14:31:22.387Z"
 * requester = Reference(MedicoPrescrittoreExample01)
-* reasonCode = $aifa-nota#001
+* reasonCode = $aifa-nota#01
 * groupIdentifier
   * system = $NRE
   * value = "030A05714294324"
@@ -22,7 +23,8 @@ Usage: #example
 
 Instance: MedicationRequestDossierExample002
 InstanceOf: MedicationRequestItDossierPharma
-Title: "Prescrizione farmaceutica per ATC"
+Title: "Esempio Prescrizione farmaceutica 2"
+Description: "Prescrizione farmaceutica per ATC"
 Usage: #example
 
 * id = "MedicationRequest-it-dossierPharma-ex002"
@@ -35,7 +37,7 @@ Usage: #example
   * value = "RSSMRT57D12D612R"
 * authoredOn = "2022-01-31T14:31:22.387Z"
 * requester = Reference(MedicoPrescrittoreExample01)
-* reasonCode = $aifa-nota#001
+* reasonCode = $aifa-nota#01
 * groupIdentifier
   * system = $NRE
   * value = "030A05714294324"
@@ -44,7 +46,8 @@ Usage: #example
 
 Instance: MedicationRequestDossierExample003
 InstanceOf: MedicationRequestItDossierPharma
-Title: "Prescrizione farmaceutica per AIC, farmaco 1 di 2 su NRE"
+Title: "Esempio Prescrizione farmaceutica 3"
+Description: "Prescrizione farmaceutica per AIC, farmaco 1 di 2 su NRE"
 Usage: #example
 
 * id = "MedicationRequest-it-dossierPharma-ex003"
@@ -64,7 +67,8 @@ Usage: #example
 
 Instance: MedicationRequestDossierExample004
 InstanceOf: MedicationRequestItDossierPharma
-Title: "Prescrizione farmaceutica per AIC, farmaco 2 di 2 su NRE"
+Title: "Esempio Prescrizione farmaceutica 3"
+Description: "Prescrizione farmaceutica per AIC, farmaco 2 di 2 su NRE"
 Usage: #example
 
 * id = "MedicationRequest-it-dossierPharma-ex004"
@@ -84,19 +88,20 @@ Usage: #example
 
 Instance: MedicationRequestDossierExample005
 InstanceOf: MedicationRequestItDossierPharma
-Title: "Prescrizione farmaceutica per AIC, con nota, non sostituibile, erogata"
+Title: "Esempio di Prescrizione farmaceutica"
+Description: "Esempio di Prescrizione Farmaceutica per AIC"
 Usage: #example
 
-* id = "MedicationRequest-it-dossierPharma-ex005"
-* status = #completed
+* id = "22571f37-4ac6-4025-a6b7-afa05c2f5f3b"
+* status = #active
 * intent = #order
-* medicationCodeableConcept = $aic#020609083 "80 MG COMPRESSE RIVESTITE CON FILM" //TODO: add the content of CodeSystem in Terminology
-* subject.identifier
-  * system = $CF
-  * value = "RSSMRT57D12D612R"
+* medicationCodeableConcept = $aic#020609083 "ISOPTIN*30 cpr riv 80 mg" //TODO: add the content of CodeSystem in Terminology
+* subject = Reference(Patient/Patient-Dossier-Esempio)
+* subject.identifier.system = $CF
+* subject.identifier.value = "VRDMRA89D43F979Y"
 * authoredOn = "2022-01-31T14:31:22.387Z"
 * requester = Reference(MedicoPrescrittoreExample01)
-* reasonCode = $aifa-nota#001
+//* reasonCode = $aifa-nota#001
 * groupIdentifier
   * system = $NRE
   * value = "030A05714294325"

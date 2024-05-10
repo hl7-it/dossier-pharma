@@ -1,14 +1,10 @@
-/* 000000000000000000 00000000000000 */
-Instance: EsempioEsenzione
+Instance: Coverage-Dossier-Esempio
 // InstanceOf: CoverageItBase
 InstanceOf: Coverage
+Title : "Esempio di Esenzione"
 Description: "Esempio Esenzione"
 * status = 	#active
+* id = "161a49c3-693e-49b5-8fd2-b8f78cb3d369"
 * type = COV_TYP#PUBLICPOL
-* beneficiary = Reference(Patient/esempio-CF-residenza)
-* payor = Reference(Organization/asl-020101)
-* costToBeneficiary.valueMoney.extension[0].url = $dataAbsentReason
-* costToBeneficiary.valueMoney.extension[0].valueCode = #not-applicable
-* costToBeneficiary.exception.extension[0].url = $coverage-exceptionStatus
-* costToBeneficiary.exception.extension[0].valueCodeableConcept = V3ActStatus#active
-* costToBeneficiary.exception.type = http://terminology.hl7.it/CodeSystem/minsan-esenzioni#E01
+* beneficiary = Reference(Patient/Patient-Dossier-Esempio)
+* payor = Reference(Organization/Organization-Dossier-Esempio)

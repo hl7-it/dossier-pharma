@@ -77,3 +77,13 @@ Alias: $esenzion-reg = urn:oid:2.16.840.1.113883.2.9.2.[REGIONE].6.22
 
 Alias: $Organization-it-base = http://hl7.it/fhir/StructureDefinition/Organization-it-base
 
+
+//  Example
+
+Alias: $v3-ActReason = http://hl7.it/fhir/dossierPharma/CodeSystem/motivo-sostituzone
+Alias: $reason-medication-given = http://terminology.hl7.org/CodeSystem/reason-medication-given
+Alias: $sct = http://snomed.info/sct
+Alias: $ndc = http://hl7.org/fhir/sid/ndc
+Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+
+

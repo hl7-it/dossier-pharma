@@ -1,6 +1,7 @@
 // //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Instance: asl-020101
+Instance: Organization-Dossier-Esempio
 InstanceOf: Organization
+Title: "Esempio Azienda Sanitaria"
 Description: "Organization: esempio Azienda Sanitaria"
 // 2020	
 //-------------------------------------------------------------------------------------------
