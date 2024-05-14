@@ -1,9 +1,5 @@
-Alias: $mef-ae-comuni = http://terminology.hl7.it/CodeSystem/mef-ae-comuni
-Alias: $it-tipoEntita = http://terminology.hl7.it/CodeSystem/it-tipoEntita
-Alias: $dug = http://registry.geodati.gov.it/dug
-
 Instance: Patient-Dossier-Esempio
-InstanceOf: Patient
+InstanceOf: Patient-it-base
 Title: "Esempio di Paziente"
 Usage: #example
 Description: "Esempio di Paziente iscritto al SSN"
@@ -23,8 +19,9 @@ Description: "Esempio di Paziente iscritto al SSN"
 * address[=].use = #home
 * address[=].type = #postal
 * address[=].text = "Via Nazionale, Roma - 00100 - Italia"
+* address[=].line = "Viale della Repubblica 12, scala 2"
 * address[=].city = "Roma"
-* address[=].postalCode = "00100"
+* address[=].postalCode = "23839"
 * address[=].country = "Italia"
 * contact.telecom.system = #phone
 * contact.telecom.value = "7342643738"

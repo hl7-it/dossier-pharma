@@ -61,7 +61,7 @@ Alias: $vs-gruppo-equivalenza = http://hl7.it/fhir/dossierPharma/ValueSet/aifa-g
 // for fixing the error i define it in this guide
 Alias: $vs-atc = http://terminology.hl7.it/ValueSet/who-atc
 Alias: $vs-icd9cm = http://terminology.hl7.it/ValueSet/who-icd9cm
-//Alias: $vs-aifa-nota = http://terminology.hl7.it/ValueSet/aifa-nota TODO:
+//Alias: $vs-aifa-nota = http://terminology.hl7.it/ValueSet/aifa-nota TODO: insert into terminology, there is in in dossier-pharma
 Alias: $vs-aifa-nota = http://hl7.it/fhir/dossierPharma/ValueSet/vs-aifa-nota
 
 
@@ -86,4 +86,5 @@ Alias: $sct = http://snomed.info/sct
 Alias: $ndc = http://hl7.org/fhir/sid/ndc
 Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 
-
+Alias: $mef-ae-comuni = http://terminology.hl7.it/CodeSystem/mef-ae-comuni
+Alias: $dug = http://registry.geodati.gov.it/dug
