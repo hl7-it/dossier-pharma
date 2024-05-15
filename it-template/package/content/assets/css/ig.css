@@ -1,8 +1,11 @@
 #segment-footer > .container {
-  background-color: #004494;
+  background-color: #707070;
+}
+#segment-footer {
+  color: #808080;
 }
 .navbar-inverse {
-  background-color: #004494;
+  background-color: #505050;
 }
 #hl7-nav {
   line-height: 50px;
@@ -39,7 +42,7 @@
 #ig-status {
   line-height: 20px;
   margin-top: 10px;
-  color: #004494;
+  color: maroon;
   text-align: center;
   height: 50px;
 }

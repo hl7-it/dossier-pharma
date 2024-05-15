@@ -82,7 +82,7 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 * substitution.type.coding 1..
 * substitution.type.coding from vs-codice-sostituzione-sostanza
 * substitution.type.coding.system 1..
-* substitution.type.coding.system = $DIZ_Sostituzione (exactly)
+//* substitution.type.coding.system = $DIZ_Sostituzione (exactly)
 * substitution.type.coding.code 1..
 * substitution.reason 1..
 * substitution.reason.coding 1..

@@ -3,11 +3,9 @@ Parent: Medication
 Id: Medication-it-dossierPharma
 Title: "Medication - Dossier Farmaceutico"
 Description: "Risorsa Medication usata per veicolare possibili carrier identifier"
-* ^status = #draft
+* ^status = #active
 * identifier 0..1  //era obbligatorio
 * code 1..1
-
-
 
 * code.coding ^slicing.discriminator.type = #pattern
 * code.coding ^slicing.discriminator.path = "$this"

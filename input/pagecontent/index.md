@@ -27,6 +27,13 @@ Le funzionalità aggiuntive esemplificative che potranno essere implementate son
 
 Le funzionalità eventualmente implementate dalle singole Regioni saranno disponibili solo all'interno delle stesse fintanto ché non verranno stabilite le caratteristiche tecniche per consentirne la fruibilità a livello nazionale.
 
+### Dipendenze
+{% include dependency-table.xhtml %}
+
+### Details
+#### Cross-Version Analysis
+{% include cross-version-analysis.xhtml %}
+
 
 ### Autori e Contributori
 
@@ -150,3 +157,6 @@ Le funzionalità eventualmente implementate dalle singole Regioni saranno dispon
 </tr>
 </tbody>
 </table>
+
+### Intellectual Property Statements
+{% include ip-statements.xhtml %}

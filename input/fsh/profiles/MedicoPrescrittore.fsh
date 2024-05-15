@@ -9,5 +9,5 @@ Description: "Profilo di PractitionerRole usato per descrivere il Medico Prescri
 // e per specialità
 
 * . ^short = "Medico Prescrittore"
-* code from VsRuoloPrerscrittore (preferred)
+* code from VsRuoloPrescrittore (preferred)
 *  specialty ^short = "Specialità"

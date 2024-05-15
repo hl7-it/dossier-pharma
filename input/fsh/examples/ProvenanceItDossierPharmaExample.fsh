@@ -1,6 +1,7 @@
 Instance: ProvenanceDossierExample001
 InstanceOf: ProvenanceDossier
-Title: "Esempio ProvenanceDossier da NRE - Risorse prodotte direttamente dai sistemi regionali"
+Title: "Esempio ProvenanceDossier da NRE"
+Description: "Esempio ProvenanceDossier da NRE - Risorse prodotte direttamente dai sistemi regionali"
 Usage: #example
 
 * id = "Provenance-it-dossierPharma-ex001"
