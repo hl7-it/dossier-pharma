@@ -11,9 +11,9 @@ Usage: #example
 * subject.identifier
   * system = $CF
   * value = "RSSMRT57D12D612R"
-* context = Reference(Encounter/f001) "encounter who leads to this prescription"
+* context = Reference(Encounter-Dossier-Esempio) 
 * effectivePeriod.start = "2015-01-15T14:30:00+01:00"
-* performer.actor = Reference(Practitioner/PractitionerExample)
+* performer.actor = Reference(PractitionerExample)
 * reasonCode = $reason-medication-given#b "Given as Ordered"
 * request = Reference(MedicationRequestDossierExample005)
 * dosage.text = "Isoptin 80 mg (1cpx3DIE) 8,16,24h"

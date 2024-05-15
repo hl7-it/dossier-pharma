@@ -14,8 +14,9 @@ Usage: #example
 * authorizingPrescription = Reference(MedicationRequestDossierExample005)
 * quantity.value = 1.0
 * whenHandedOver = "2024-05-09T17:13:00+05:00"
-* substitution.type.coding.code = $v3-substanceAdminSubstitution#EC "Composizione equivalente"
-* substitution.type.coding.system = $DIZ_Sostituzione
+* substitution.type = codice-sostituzione-sostanza#A "Il codice inserito nel campo si riferisce ad un codice AIC, riferito allo stesso farmaco prescritto dal medico, ma che il farmacista ritiene più aggiornato come codice" //"Composizione equivalente"
+//* substitution.type.coding.system = $DIZ_Sostituzione
+//* substitution.type.coding.system = "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
 * substitution.reason.coding.code = $v3-ActReason#2 "Sostituzione generico con altro generico"
 * substitution.reason.coding.system = $v3-ActReason
 * substitution.wasSubstituted = true

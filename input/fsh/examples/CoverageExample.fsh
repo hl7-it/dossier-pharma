@@ -1,6 +1,6 @@
 Instance: Coverage-Dossier-Esempio
-// InstanceOf: CoverageItBase
-InstanceOf: Coverage
+InstanceOf: CoverageItBase
+//InstanceOf: Coverage
 Title : "Esempio di Esenzione"
 Description: "Esempio Esenzione"
 * status = 	#active

@@ -9,3 +9,4 @@ The link 'StructureDefinition-Indirizzo.sch' for "Schematron" cannot be resolved
 The link 'StructureDefinition-MedicoCurante.sch' for "Schematron" cannot be resolved
 The link 'StructureDefinition-Paziente.sch' for "Schematron" cannot be resolved
 
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/reason-medication-given|1.0.0

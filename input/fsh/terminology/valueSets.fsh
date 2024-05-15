@@ -26,8 +26,9 @@ Title: "Regole di sostituzione"
 Description: "Regole di sostituzione permesse per le prescrizioni inviate al dossier farmaceutico"
 //-------------------------------------------------------------------------------------------
 * ^experimental = false
-* $v3-substanceAdminSubstitution#N "Nessuna sostituzione"
-* $v3-substanceAdminSubstitution#EC "Composizione equivalente"
+// * $v3-substanceAdminSubstitution#N "Nessuna sostituzione"
+// * $v3-substanceAdminSubstitution#EC "equivalent composition"
+* codes from system $v3-substanceAdminSubstitution
 
 
 //======================================================
