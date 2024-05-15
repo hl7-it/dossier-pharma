@@ -10,3 +10,7 @@ The link 'StructureDefinition-MedicoCurante.sch' for "Schematron" cannot be reso
 The link 'StructureDefinition-Paziente.sch' for "Schematron" cannot be resolved
 
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/reason-medication-given|1.0.0
+
+A definition for CodeSystem 'http://terminology.hl7.it/CodeSystem/it-tipoEntita' could not be found, so the code cannot be validated (from http://tx.fhir.org/r4)
+A definition for CodeSystem 'http://terminology.hl7.it/CodeSystem/mef-ae-comuni' could not be found, so the code cannot be validated
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.it/CodeSystem/aifa-ge
