@@ -14,7 +14,7 @@ Description: "Organization: esempio Azienda Sanitaria"
 * identifier[3].system = "http://hl7.it/sid/codiceFiscale" 
 * identifier[3].value = "91001750073"
 * active = 	true
-* type = http://terminology.hl7.it/CodeSystem/it-tipoEntita#asl "Azienda Sanitaria Locale"
+* type = https://terminology.hl7.it/site/CodeSystem/it-tipoEntita#asl "Azienda Sanitaria Locale"
 * name = "AZIENDA U.S.L. VALLE D'AOSTA"
 
 * telecom[0].system = #phone

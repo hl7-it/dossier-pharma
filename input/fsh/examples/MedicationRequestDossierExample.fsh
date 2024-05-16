@@ -106,3 +106,4 @@ Usage: #example
   * system = $NRE
   * value = "030A05714294325"
 * dispenseRequest.quantity.value = 2
+* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)

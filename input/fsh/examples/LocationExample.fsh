@@ -5,7 +5,7 @@ Description: "Esempio di location: struttura ospedaliera di Milano."
 
 * id = "f148e54a-2046-4534-b9e9-54e7e9632224"
 * identifier[strutturaHos].use = #usual
-* identifier[strutturaHos].system = "http://terminology.hl7.it/sid/minsan-hsp"
+* identifier[strutturaHos].system = "https://terminology.hl7.it/site/sid/minsan-hsp"
 * identifier[strutturaHos].value = "123456"
 * status = #active
 * name = "Policlinico di Milano"
