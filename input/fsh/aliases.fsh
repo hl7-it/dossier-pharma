@@ -86,5 +86,5 @@ Alias: $sct = http://snomed.info/sct
 Alias: $ndc = http://hl7.org/fhir/sid/ndc
 Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 
-Alias: $mef-ae-comuni = https://terminology.hl7.it/site/CodeSystem/mef-ae-comuni
+Alias: $istat-comuni = https://terminology.hl7.it/site/CodeSystem/istat-comuni
 Alias: $dug = http://registry.geodati.gov.it/dug

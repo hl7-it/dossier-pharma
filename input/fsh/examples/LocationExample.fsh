@@ -1,5 +1,6 @@
 Instance: Location-Dossier-Esempio
 InstanceOf: Location-it-dossierPharma
+Title : "Esempio di Location"
 Usage: #example
 Description: "Esempio di location: struttura ospedaliera di Milano."
 

@@ -6,7 +6,7 @@ Description: "Esempio di Paziente iscritto al SSN"
 * extension.url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension.valueAddress.country = "Italia"
 * extension.valueAddress.country.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-SC-coding"
-* extension.valueAddress.country.extension.valueCoding = $mef-ae-comuni#F979 "NUORO"
+* extension.valueAddress.country.extension.valueCoding = $istat-comuni#091051 "NUORO"
 * identifier.system = "http://hl7.it/sid/codiceFiscale"
 * identifier.value = "VRDMRA89D43F979Y"
 * active = true

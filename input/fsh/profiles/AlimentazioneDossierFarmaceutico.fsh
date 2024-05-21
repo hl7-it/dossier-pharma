@@ -13,7 +13,9 @@ Description: "Profilo AlimentazioneDossierFarmaceutico per Dossier Farmaceutico"
 * entry ^slicing.rules = #open
 * entry contains
     sliceProvenance 0..*  and
-    sliceMedication 1..* and
+    sliceMedication 0..* and
+    sliceMedicationRequest 1..* and
+    sliceMedicationDispense 0..* and
     slicePractitionerRole 0..* and 
     sliceLocation 0..* and
     slicePatient 0..* and 
@@ -25,11 +27,30 @@ Description: "Profilo AlimentazioneDossierFarmaceutico per Dossier Farmaceutico"
 * entry[sliceProvenance].request.method ^short = "POST | PUT | DELETE"
 * entry[sliceProvenance].request.method ^definition = "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
 * entry[sliceMedication].resource 1..
-* entry[sliceMedication].resource only MedicationDispenseItDossierPharma or MedicationRequestItDossierPharma
+* entry[sliceMedication].resource only MedicationItDossierPharma
 * entry[sliceMedication].search ..0
 * entry[sliceMedication].request 1..
 * entry[sliceMedication].request.method ^short = "POST | PUT | DELETE"
 * entry[sliceMedication].request.method ^definition = "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
+* entry[sliceMedicationRequest].resource 1..
+* entry[sliceMedicationRequest].resource only MedicationRequestItDossierPharma
+* entry[sliceMedicationRequest].search ..0
+* entry[sliceMedicationRequest].request 1..
+* entry[sliceMedicationRequest].request.method ^short = "POST | PUT | DELETE"
+* entry[sliceMedicationRequest].request.method ^definition = "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
+* entry[sliceMedicationDispense].resource 1..
+* entry[sliceMedicationDispense].resource only MedicationDispenseItDossierPharma
+* entry[sliceMedicationDispense].search ..0
+* entry[sliceMedicationDispense].request 1..
+* entry[sliceMedicationDispense].request.method ^short = "POST | PUT | DELETE"
+* entry[sliceMedicationDispense].request.method ^definition = "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
+
+
+
+
+
+
+
 * entry[slicePractitionerRole].resource 1..
 * entry[slicePractitionerRole].resource only MedicoPrescrittore
 * entry[slicePractitionerRole].search ..0
