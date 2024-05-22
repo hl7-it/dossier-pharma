@@ -4,7 +4,7 @@ Title: "Medico Titolare (MedicationRequest)"
 Description: "Estensione usata per descrivere il medico titolare in una prescrizione"
 
 * ^experimental = false
-* ^context[+].type = #fhirpath
+* ^context[+].type = #element
 * ^context[=].expression = "MedicationRequest"
 * . ^short = "Medico titolare"
 * . ^definition = "Estensione usata per descrivere il medico titolare in una prescrizione"

@@ -11,7 +11,7 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 === */
 
 * extension contains MedicationDispenseRecorded named recorded 1..1
-* extension[recorded] ^min = 1
+//* extension[recorded] ^min = 1
 
 * identifier 0..1  
 * identifier.system 0..1
