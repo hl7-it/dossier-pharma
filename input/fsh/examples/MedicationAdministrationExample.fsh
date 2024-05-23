@@ -8,9 +8,10 @@ Usage: #example
 * contained[0] = Medication-Dossier-Esempio
 * status = #in-progress
 * medicationReference = Reference(Medication-Dossier-Esempio)
-* subject.identifier
-  * system = $CF
-  * value = "RSSMRT57D12D612R"
+// * subject.identifier
+//   * system = $CF
+//   * value = "RSSMRT57D12D612R"
+* subject = Reference(Patient-Dossier-Esempio)
 * context = Reference(Encounter-Dossier-Esempio) 
 * effectivePeriod.start = "2015-01-15T14:30:00+01:00"
 * performer.actor = Reference(PractitionerExample)
