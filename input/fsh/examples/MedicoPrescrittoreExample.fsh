@@ -11,3 +11,15 @@ Usage: #example
 * organization = Reference(Organization/Organization-Dossier-Esempio)
 * code = CsItRoleCode#MO "medico ospedaliero"
 * specialty.coding = $sct#419192003 "Internal medicine"
+
+
+Instance: MedicoPrescrittoreExample02
+InstanceOf: MedicoPrescrittore
+Title: "Medico di medicina generale"
+Description: "Esempio di medico di medicina generale"
+Usage: #example
+* practitioner = Reference(Practitioner/PractitionerExample02)
+* organization = Reference(Organization/Organization-Dossier-Esempio)
+* code = CsItRoleCode#MMG  "medico medicina generale"
+* specialty.coding = $sct#394802001 "General medicine"
+

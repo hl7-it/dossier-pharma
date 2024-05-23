@@ -51,10 +51,10 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 * subject only Reference(PatientItBase)
 * subject.type 0..
 * subject.type = "Patient" (exactly)
-* subject.identifier 1..
-* subject.identifier.system 1..
-* subject.identifier.system = $CF (exactly)
-* subject.identifier.value 1..
+// * subject.identifier 1..
+// * subject.identifier.system 1..
+// * subject.identifier.system = $CF (exactly)
+// * subject.identifier.value 1..
 * subject.identifier.value ^short = "Codice Fiscale"
 * subject.display 0.. 
 * performer 1..

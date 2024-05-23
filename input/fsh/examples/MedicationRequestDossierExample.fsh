@@ -91,19 +91,18 @@ InstanceOf: MedicationRequestItDossierPharma
 Title: "Esempio di Prescrizione farmaceutica"
 Description: "Esempio di Prescrizione Farmaceutica per AIC"
 Usage: #example
-
-* id = "22571f37-4ac6-4025-a6b7-afa05c2f5f3b"
+* id = "22571f37-4ac6-4025-a6b7-afa05c2f5f3f"
 * status = #active
 * intent = #order
-* medicationCodeableConcept = $aic#020609083 "ISOPTIN*30 cpr riv 80 mg" //TODO: add the content of CodeSystem in Terminology
+* medicationCodeableConcept = $aic#039785050 "AUGMENTIN 875 MG/125 MG COMPRESSE RIVESTITE CON FILM"
 * subject = Reference(Patient/Patient-Dossier-Esempio)
 * subject.identifier.system = $CF
 * subject.identifier.value = "VRDMRA89D43F979Y"
 * authoredOn = "2022-01-31T14:31:22.387Z"
-* requester = Reference(MedicoPrescrittoreExample01)
+* requester = Reference(MedicoPrescrittoreExample02)
 //* reasonCode = $aifa-nota#001
 * groupIdentifier
   * system = $NRE
   * value = "030A05714294325"
 * dispenseRequest.quantity.value = 2
-* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
+* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample02)
