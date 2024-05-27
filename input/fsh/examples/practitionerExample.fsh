@@ -1,6 +1,7 @@
 Instance: PractitionerExample
 InstanceOf: Practitioner
-Description: "Esempio Practitioner"
+Title: "Practitioner femminile"
+Description: "Esempio di Practitioner di sesso femminile"
 * identifier[0].system = "http://hl7.it/sid/codiceFiscale"
 * identifier[0].value = "PLLDSR80E47A462P"
 * name.family = "Pellé"
@@ -11,10 +12,11 @@ Description: "Esempio Practitioner"
 
 Instance: PractitionerExample02
 InstanceOf: Practitioner
-Description: "Esempio Practitioner"
+Title: "Practitioner maschile"
+Description: "Esempio di Practitioner di sesso maschile"
 * identifier[0].system = "http://hl7.it/sid/codiceFiscale"
-* identifier[0].value = "DVDDSR80E47A462P"
+* identifier[0].value = "RSSDVD94D21H501E"
 * name.family = "Davide"
-* name.given = "Désirée"
+* name.given = "Rossi"
 * gender = #male
-* birthDate = "1994-05-20"
+* birthDate = "1994-04-21"

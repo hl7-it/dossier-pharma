@@ -1,6 +1,6 @@
 Instance: MedicoPrescrittoreExample01
 InstanceOf: MedicoPrescrittore
-Title: "Medico ospedaliaro prescrittore"
+Title: "PractitionerRole ospedaliaro - medicina interna"
 Description: "Esempio di medico ospedaliero Prescrittore"
 Usage: #example
 
@@ -15,11 +15,20 @@ Usage: #example
 
 Instance: MedicoPrescrittoreExample02
 InstanceOf: MedicoPrescrittore
-Title: "Medico di medicina generale"
+Title: "PractitionerRole - medico di medicina generale"
 Description: "Esempio di medico di medicina generale"
 Usage: #example
 * practitioner = Reference(Practitioner/PractitionerExample02)
 * organization = Reference(Organization/Organization-Dossier-Esempio)
 * code = CsItRoleCode#MMG  "medico medicina generale"
 * specialty.coding = $sct#394802001 "General medicine"
+
+Instance: MedicoPrescrittore03
+InstanceOf: MedicoPrescrittore
+Title: "PractitionerRole ospedaliaro - cardiologo"
+Description: "Esempio di Medico Prescrittore ospedaliero"
+* id = "90d0fe96-163e-4b25-a96b-9d733a1d59c3"
+* code = CsItRoleCode#MMG "medico medicina generale"
+* specialty.coding = $sct#394579002 "Cardiology"
+
 

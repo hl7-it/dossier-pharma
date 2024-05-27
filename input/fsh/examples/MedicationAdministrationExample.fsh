@@ -1,7 +1,7 @@
 Instance: MedicationAdministration-Dossier-Esempio
 InstanceOf: MedicationAdministrationDossierPharma
-Title: "Esempio di Somministrazione Farmaceutica"
-Description: "Esempio di assunzione di un Farmaco da parte di un paziente "
+Title: "MedicationAdministration somministrazione ISOPTIN"
+Description: "Esempio di assunzione del farmaco Isoptin da parte di un paziente "
 Usage: #example
 * status = #active
 * id = "5bd5129b-15be-4f6b-bbe0-a2dd645d6a6a"
@@ -20,3 +20,6 @@ Usage: #example
 * dosage.text = "Isoptin 80 mg (1cpx3DIE) 8,16,24h"
 * dosage.route = $sct#26643006  "Oral use"
 * dosage.dose = 80 'mg' "mg"
+
+
+// TO DO ADMINISTRATION AUGMENTIN

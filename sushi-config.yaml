@@ -34,7 +34,7 @@ parameters:
   apply-jurisdiction: true
   apply-publisher: true
   special-url: !!seq
-  - "https://terminology.hl7.it/site/CodeSystem/istat-professioni"  
+  - "https://www.hl7.it/fhir/terminology/CodeSystem/istat-professioni"  
   autoload-resources: true
 
 copyrightYear: 2021+

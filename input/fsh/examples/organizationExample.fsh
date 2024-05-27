@@ -1,8 +1,8 @@
 // //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Instance: Organization-Dossier-Esempio
 InstanceOf: Organization
-Title: "Esempio Azienda Sanitaria"
-Description: "Organization: esempio Azienda Sanitaria"
+Title: "Organization ASL Valle D'Aosta"
+Description: "Esempio di organizzazione di Azienda Sanitaria"
 // 2020	
 //-------------------------------------------------------------------------------------------
 * identifier[0].system = "http://hl7.it/sid/fls" 
@@ -14,7 +14,7 @@ Description: "Organization: esempio Azienda Sanitaria"
 * identifier[3].system = "http://hl7.it/sid/codiceFiscale" 
 * identifier[3].value = "91001750073"
 * active = 	true
-* type = https://terminology.hl7.it/site/CodeSystem/it-tipoEntita#asl "Azienda Sanitaria Locale"
+* type = https://www.hl7.it/fhir/terminology/CodeSystem/it-tipoEntita#asl "Azienda Sanitaria Locale"
 * name = "AZIENDA U.S.L. VALLE D'AOSTA"
 
 * telecom[0].system = #phone
@@ -40,3 +40,14 @@ Description: "Organization: esempio Azienda Sanitaria"
 
 
 // //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Instance: Organization-Dossier-Esempio2
+InstanceOf: Organization
+Title: "Organization Regione Valle D'Aosta"
+Description: "Esempio di organizzazione Regione"
+
+* identifier[0].system = $minsan-regione
+* identifier[0].value = "020"
+* active = 	true
+* type = https://www.hl7.it/fhir/terminology/CodeSystem/it-tipoEntita#regione "Regione"
+* name = "Regione VALLE D'AOSTA"

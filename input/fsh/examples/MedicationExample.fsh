@@ -1,7 +1,7 @@
 Instance: Medication-Dossier-Esempio
 InstanceOf: MedicationItDossierPharma
-Title: "Esempio di Farmaco"
-Description: "Esempio di Farmaco"
+Title: "Medication ISOPTIN"
+Description: "Esempio di Farmaco ISOPTIN"
 Usage: #example
 
 * status = #active
@@ -11,8 +11,8 @@ Usage: #example
 
 Instance: Medication-Dossier-Esempio02
 InstanceOf: MedicationItDossierPharma
-Title: "Esempio di Farmaco"
-Description: "Esempio di Farmaco"
+Title: "Medication AUGMENTIN"
+Description: "Esempio di Farmaco AUGMENTIN"
 Usage: #example
 
 * status = #active
