@@ -1,6 +1,6 @@
 Instance: Patient-Dossier-Esempio
 InstanceOf: Patient-it-base
-Title: "Esempio di Paziente"
+Title: "Patient"
 Usage: #example
 Description: "Esempio di Paziente iscritto al SSN"
 * extension.url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"

@@ -1,4 +1,4 @@
-### Contesto di riferimento
+### Contesto Iniziale
 
 Coerentemente con quanto stabilito nel DPCM n.178/2015, il “dossier
 farmaceutico” rappresenta la parte specifica del FSE (Fascicolo

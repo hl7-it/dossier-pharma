@@ -1,6 +1,6 @@
 Instance: ProvenanceDossierExample001
 InstanceOf: ProvenanceDossier
-Title: "Esempio ProvenanceDossier da NRE"
+Title: "ProvenanceDossier da NRE"
 Description: "Esempio ProvenanceDossier da NRE - Risorse prodotte direttamente dai sistemi regionali"
 Usage: #example
 

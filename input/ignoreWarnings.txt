@@ -11,9 +11,9 @@ The link 'StructureDefinition-Paziente.sch' for "Schematron" cannot be resolved
 
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/reason-medication-given|1.0.0
 
-A definition for CodeSystem 'https://terminology.hl7.it/site/CodeSystem/it-tipoEntita' could not be found, so the code cannot be validated (from http://tx.fhir.org/r4)
-A definition for CodeSystem 'https://terminology.hl7.it/site/CodeSystem/mef-ae-comuni' could not be found, so the code cannot be validated
-Error from http://tx.fhir.org/r4: Unable to provide support for code system https://terminology.hl7.it/site/CodeSystem/aifa-ge
-Reference to draft CodeSystem https://terminology.hl7.it/site/CodeSystem/istat-comuni|0.0.1
+A definition for CodeSystem 'https://www.hl7.it/fhir/terminology/CodeSystem/it-tipoEntita' could not be found, so the code cannot be validated (from http://tx.fhir.org/r4)
+A definition for CodeSystem 'https://www.hl7.it/fhir/terminology/CodeSystem/mef-ae-comuni' could not be found, so the code cannot be validated
+Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.hl7.it/fhir/terminology/CodeSystem/aifa-ge
+Reference to draft CodeSystem https://www.hl7.it/fhir/terminology/CodeSystem/istat-comuni|0.0.1
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 The value set expansion is too large, and only a subset has been displayed

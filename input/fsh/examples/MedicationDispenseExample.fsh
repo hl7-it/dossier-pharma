@@ -1,7 +1,7 @@
 Instance: MedicationDispense-Dossier-Esempio
 InstanceOf: MedicationDispenseItDossierPharma
-Title: "Esempio Erogazione Farmaceutica"
-Description: "Esempio di un'Erogazione farmaceutica con farmaco sostituito da un farmaco generico rispetto al prescritto"
+Title: "MedicationDispense per ISOPTIN"
+Description: "Esempio di un'Erogazione farmaceutica del farmaco Isoptin sostituito da un farmaco generico rispetto al prescritto"
 Usage: #example
 * id = "22571f37-4ac6-4025-a6b7-afa05c2f5f3c" 
 * status = #in-progress
@@ -22,3 +22,20 @@ Usage: #example
 * substitution.reason.coding.system = $v3-ActReason
 * substitution.wasSubstituted = true
 * substitution.responsibleParty = Reference(Practitioner/PractitionerExample)
+
+
+Instance: MedicationDispense-Dossier-Esempio02
+InstanceOf: MedicationDispenseItDossierPharma
+Title: "MedicationDispense per AUGMENTIN"
+Description: "Esempio di un'Erogazione farmaceutica per il farmaco AUGMENTIN"
+Usage: #example
+* id = "22571f37-4ac6-4025-a6b7-afa05c2f5f3d" 
+* status = #in-progress
+* extension[recorded].valueDateTime = "2024-05-23T17:13:00+05:00"
+* medicationCodeableConcept.coding[AIC] = $aic#039785050 "AUGMENTIN 875 MG/125 MG COMPRESSE RIVESTITE CON FILM"
+* subject = Reference(Patient-Dossier-Esempio)
+* performer[CFErogatore].actor.identifier.system = "http://hl7.it/sid/codiceFiscale" //TO DO fare il perfomer
+* performer[CFErogatore].actor.identifier.value = "RSSMRT57D12D612R" 
+* authorizingPrescription = Reference(MedicationRequestDossierExample006)
+* quantity.value = 1.0
+* whenHandedOver = "2024-05-23T17:13:00+05:00"

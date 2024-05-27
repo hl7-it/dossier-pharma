@@ -1,6 +1,6 @@
 Instance: Alimentazione-Dossier-Esempio
 InstanceOf: AlimentazioneDossierFarmaceutico
-Title: "Alimentazione Dossier Farmaceutico"
+Title: "Bundle Alimentazione Dossier Farmaceutico"
 Description: "Esempio di Alimentazione del Dossier Farmaceutico."
 Usage: #example
 

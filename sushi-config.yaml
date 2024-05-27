@@ -34,7 +34,7 @@ parameters:
   apply-jurisdiction: true
   apply-publisher: true
   special-url: !!seq
-  - "https://terminology.hl7.it/site/CodeSystem/istat-professioni"  
+  - "https://www.hl7.it/fhir/terminology/CodeSystem/istat-professioni"  
   autoload-resources: true
 
 copyrightYear: 2021+
@@ -58,8 +58,8 @@ pages:
  #   title: Principi e disegno
   methodology.md:
     title: Metodologia
-  contesto.md:
-    title: Contesto di riferimento
+  contestoIniziale.md:
+    title: Contesto Iniziale
   contestoAttuale.md:
     title: Contesto Attuale
   specifiche.md:
@@ -86,8 +86,8 @@ menu:
   IG Home: index.html
   Sommario: toc.html
   Contesto:
-    Contesto Iniziale: contesto.html
     Contesto Attuale: contestoAttuale.html
+    Contesto Iniziale: contestoIniziale.html
   #  Principi e disegno: design.html
     Metodologia: methodology.html
 #  Specifiche Funzionali:
