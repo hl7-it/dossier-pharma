@@ -22,4 +22,22 @@ Usage: #example
 * dosage.dose = 80 'mg' "mg"
 
 
-// TO DO ADMINISTRATION AUGMENTIN
+Instance: MedicationAdministration-Dossier-Esempio2
+InstanceOf: MedicationAdministrationDossierPharma
+Title: "Esempio di Somministrazione Farmaceutica (Augmentin)"
+Description: "Esempio di assunzione di Augmentin da parte di un paziente "
+Usage: #example
+* status = #active
+* id = "5bd5129b-15be-4f6b-bbe0-a2dd645d6a6c"
+* contained[0] = Medication-Dossier-Esempio02
+* status = #in-progress
+* medicationReference = Reference(Medication-Dossier-Esempio02)
+* subject = Reference(Patient-Dossier-Esempio)
+* context = Reference(Encounter-Dossier-Esempio) 
+* effectivePeriod.start = "2010-01-15T14:30:00+01:00"
+* performer.actor = Reference(PractitionerExample)
+* reasonCode = $reason-medication-given#b "Given as Ordered"
+* request = Reference(MedicationRequestDossierExample006)
+* dosage.text = "AUGMENTIN 875 MG/125 MG COMPRESSE RIVESTITE CON FILM"
+* dosage.route = $sct#26643006  "Oral use"
+* dosage.dose = 875 'mg' "mg"
