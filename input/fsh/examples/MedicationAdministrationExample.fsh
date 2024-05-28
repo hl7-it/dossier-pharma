@@ -40,4 +40,5 @@ Usage: #example
 * request = Reference(MedicationRequestDossierExample006)
 * dosage.text = "AUGMENTIN 875 MG/125 MG COMPRESSE RIVESTITE CON FILM"
 * dosage.route = $sct#26643006  "Oral use"
-* dosage.dose = 875 'mg' "mg"
+* dosage.dose = 1 'PILL' "Pill"
+* dosage.dose.system = $odf
