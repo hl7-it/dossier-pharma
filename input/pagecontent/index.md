@@ -1,6 +1,6 @@
 ### Scopo
 
-Questa guida ha lo scopo di definire i profili [HL7 FHIR](http://hl7.org/fhir) da utilizzare per l'implementazione del dossier farmaceutico. Il dossier farmaceutico, che appartiene al nucleo minimo dei documenti del Fascicolo Sanitario Elettronico.
+Questa guida ha lo scopo di definire i profili [HL7 FHIR](http://hl7.org/fhir) da utilizzare per l'implementazione del dossier farmaceutico, il quale appartiene al nucleo minimo dei documenti del Fascicolo Sanitario Elettronico.
 
 ### Definizione del Dossier Farmaceutico
 
