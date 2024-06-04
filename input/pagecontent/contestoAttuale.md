@@ -3,7 +3,7 @@ In questa pagina viene specificato il contesto di riferimento del Fascicolo Sani
 
 Il dossier farmaceutico, come definito da decreto del 7 settembre 2023, è un servizio  reso  disponibile dall'Ecosistema dati sanitari sui dati estratti  dai  documenti  del Fascicolo sanitario elettronico.
 
-In particolare, il decreto del 29 settembre 2015, n. 178 lo definisce come una parte specifica del FSE istituita per favorire la qualita', il monitoraggio, l'appropriatezza nella dispensazione dei medicinali e l'aderenza alla terapia ai fini della sicurezza del paziente, aggiornato a cura della farmacia che effettua la dispensazione.
+In particolare, il decreto del 29 settembre 2015 n. 178 (già considerato per il Contesto Iniziale del dossier farmaceutico) lo definisce come una parte specifica del FSE istituita per favorire la qualita', il monitoraggio, l'appropriatezza nella dispensazione dei medicinali e l'aderenza alla terapia ai fini della sicurezza del paziente, aggiornato a cura della farmacia che effettua la dispensazione.
 
 ### Infrastruttura
 Per poter permettere la visualizzazione e la gestione delle informazioni della terapia farmacologica presenti in diversi documenti, i dati contenuti nel dossier farmaceutico saranno rappresentati secondo lo standard HL7 FHIR v.4.
@@ -25,8 +25,8 @@ Le attuali informazioni utilizzate dal dossier farmaceutico verranno gestite dal
 ### Implementazione
 
 Le più importanti componenti tecnologiche del FSE 2.0 sono:
-- Soluzione tecnologica che ha lo scopo di acquisire i documenti, validarli sintatticamente, semantica e terminologicamente nel rispetto del principio di interoperabilità alimentado il FSE;
-- Infrastruttura Nazionale per l’Interoperabilità (INI) che interopera con il FSE al fine al fine di collezionare, richiedere e trasmettere dati e documenti sanitari attraverso modalità sicure e   nel rispetto dei consensi stabiliti dagli assistiti;
+- Soluzione tecnologica che ha lo scopo acquisire i documenti, validarli (sintatticamente, semanticamente e terminologicamente), estrarre e trasformare i documenti nel rispetto del principio di interoperabilità alimentando il FSE;
+- Infrastruttura Nazionale per l’Interoperabilità (INI) che interopera con il FSE al fine di collezionare, richiedere e trasmettere dati e documenti sanitari attraverso modalità sicure e nel rispetto dei consensi stabiliti dagli assistiti;
 - Registry FSE dove verranno indicizzati i metadati dei documenti del FSE per le Regioni e Province Autonome;
 - Ecosistema dei dati santari (EDS) che contiene i dati clinici dei pazienti.
 
