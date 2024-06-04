@@ -5,6 +5,7 @@ Questa guida ha lo scopo di definire i profili [HL7 FHIR](http://hl7.org/fhir) d
 ### Definizione del Dossier Farmaceutico
 
 Nel DPCM n.178 del 2015 il dossier farmaceutico è definito come “la parte specifica del FSE istituita per favorire la qualità, il monitoraggio, l'appropriatezza nella dispensazione dei medicinali e l'aderenza alla terapia ai fini della sicurezza del paziente, aggiornato a cura della farmacia che effettua la dispensazione.”
+<br>
 Il dossier quindi rappresenta l’insieme delle informazioni farmaceutiche sul singolo paziente, relativamente sia alle terapie SSN, prescritte, somministrate ed erogate, che alle terapie non convenzionali (omeopatia, fitoterapia, integratori…) e alle terapie non SSN (farmaci) acquistate direttamente dal paziente.
 
 <!-- In linea con gli scopi definiti dal DPCM sopra riportato, il dossier farmaceutico ha funzioni esclusivamente cliniche, e in particolare per la valutazione dell'appropriatezza nella dispensazione dei medicinali e dell'aderenza alla terapia ai fini della sicurezza del paziente, è necessario che il dossier rappresenti l’insieme delle informazioni farmaceutiche sul singolo paziente, relativamente sia alle terapie SSN, prescritte, somministrate ed erogate, che alle terapie non convenzionali (omeopatia, fitoterapia, integratori…) e alle terapie non SSN (farmaci) acquistate direttamente dal paziente.
@@ -14,9 +15,9 @@ Per garantire i fini sopra descritti, è necessario prevedere che il dossier far
 ### Funzionalità del Dossier Farmaceutico
 La funzionalità principale del dossier farmaceutico è quella di raccogliere i principali elementi che descrivono il processo di prescrizione, erogazione e somministrazione di un farmaco. In questa IG i profili principali utilizzati sono:
 
-- MedicationRequest: rapprensenta di una prescrizione farmaceutica in standard FHIR, in quanto documento essenziale per ottenere i farmaci che richiedono una prescrizione medica;
+- MedicationRequest: rapprensenta la prescrizione farmaceutica in standard FHIR, in quanto documento essenziale per ottenere i farmaci che richiedono una prescrizione medica;
 - MedicationDispense: rapprensenta un'erogazione farmaceutica in standard FHIR, generata quando la prescrizione viene evasa da parte del professionista autorizzato;
-- MedicationAdministration: documenta l'effettiva somministrazione di un farmaco ad un paziente in standard FHIR 
+- MedicationAdministration: documenta l'effettiva somministrazione di un farmaco ad un paziente in standard FHIR.
 
 <!-- La funzionalità principale del dossier farmaceutico, per evitare che diventi un contenitore di dati poco fruibili per le finalità cliniche ad esso associato, dovrà restituire tramite una funzionalità definita “on demand”, denominata “Medication List”, il riassunto delle informazioni principali inserite all’interno del dossier farmaceutico in un certo arco temporale. L’alimentazione dei contenuti all’interno del dossier farmaceutico e la loro visualizzazione è vincolata alle fasi di implementazione precedentemente descritte.
 
