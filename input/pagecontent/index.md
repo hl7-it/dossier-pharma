@@ -4,6 +4,7 @@ Questa guida ha lo scopo di definire i profili [HL7 FHIR](http://hl7.org/fhir) d
 
 ### Definizione del Dossier Farmaceutico
 
+Il dossier farmaceutico, come definito da decreto del 7 settembre 2023, è un servizio  reso  disponibile dall'Ecosistema dati sanitari sui dati estratti  dai  documenti  del Fascicolo sanitario elettronico.
 Nel DPCM n.178 del 2015 il dossier farmaceutico è definito come “la parte specifica del FSE istituita per favorire la qualità, il monitoraggio, l'appropriatezza nella dispensazione dei medicinali e l'aderenza alla terapia ai fini della sicurezza del paziente, aggiornato a cura della farmacia che effettua la dispensazione.”
 <br>
 Il dossier quindi rappresenta l’insieme delle informazioni farmaceutiche sul singolo paziente, relativamente sia alle terapie SSN, prescritte, somministrate ed erogate, che alle terapie non convenzionali (omeopatia, fitoterapia, integratori…) e alle terapie non SSN (farmaci) acquistate direttamente dal paziente.
