@@ -5,7 +5,7 @@ Questa guida ha lo scopo di definire i profili [HL7 FHIR](http://hl7.org/fhir) d
 ### Definizione del Dossier Farmaceutico
 
 Nel DPCM n.178 del 2015 il dossier farmaceutico è definito come “la parte specifica del FSE istituita per favorire la qualità, il monitoraggio, l'appropriatezza nella dispensazione dei medicinali e l'aderenza alla terapia ai fini della sicurezza del paziente, aggiornato a cura della farmacia che effettua la dispensazione.”
-Il dossier quindi rappresenta l’insieme delle informazioni farmaceutiche sul singolo paziente, relativamente sia alle terapie SSN, prescritte, somministrate ed erogate, che alle terapie non convenzionali (omeopatia, fitoterapia, integratori…) e alle terapie non SSN (farmaci) acquistate direttamente dal paziente.
+Il dossier quindi rappresenta l’insieme delle informazioni farmaceutiche sul singolo paziente, relativamente alle terapie prescritte, somministrate ed erogate.
 
 <!-- In linea con gli scopi definiti dal DPCM sopra riportato, il dossier farmaceutico ha funzioni esclusivamente cliniche, e in particolare per la valutazione dell'appropriatezza nella dispensazione dei medicinali e dell'aderenza alla terapia ai fini della sicurezza del paziente, è necessario che il dossier rappresenti l’insieme delle informazioni farmaceutiche sul singolo paziente, relativamente sia alle terapie SSN, prescritte, somministrate ed erogate, che alle terapie non convenzionali (omeopatia, fitoterapia, integratori…) e alle terapie non SSN (farmaci) acquistate direttamente dal paziente.
 
@@ -68,7 +68,7 @@ Le funzionalità eventualmente implementate dalle singole Regioni saranno dispon
 <tr class="even">
 <td>Autore</td>
 <td>Mario Sicuranza</td>
-<td>HL7 Italia</td>
+<td>CNR ICAR</td>
 <td>mario.sicuranza@icar.cnr.it</td>
 </tr>
 <tr class="odd">
@@ -77,17 +77,23 @@ Le funzionalità eventualmente implementate dalle singole Regioni saranno dispon
 <td>EY Advisory S.p.A.</td>
 <td>davide.spanu@it.ey.com</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Autore</td>
 <td>Valeria Cesarò</td>
 <td>EY Advisory S.p.A.</td>
 <td>valeria.cesaro@it.ey.com</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Autore</td>
 <td>Maria Giovanna Antida Preziosi</td>
 <td>SOGEI</td>
 <td>mpreziosi@sogei.it</td>
+</tr>
+<tr class="even">
+<td>Autore</td>
+<td>Alice Cappello</td>
+<td>EY Advisory S.p.A.</td>
+<td>alice.cappello1@it.ey.com</td>
 </tr>
 <tr class="odd">
 <td>Autore</td>
@@ -95,37 +101,37 @@ Le funzionalità eventualmente implementate dalle singole Regioni saranno dispon
 <td>HL7 Italia</td>
 <td>giorgio.cangioli@gmail.com</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Contributore</td>
 <td>Gregorio Canal</td>
 <td>Arsenàl.IT</td>
 <td>gcanal@consorzioarsenal.it</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Contributore</td>
 <td>Isabella Sgro</td>
 <td>Arsenàl.IT</td>
 <td>isgro@consorzioarsenal.it</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Contributore</td>
 <td>Angela Montesu</td>
 <td>Arsenàl.IT</td>
 <td>amontesu@consorzioarsenal.it</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Contributore</td>
 <td>Samantha De Biasio</td>
 <td>Arsenàl.IT</td>
 <td>sdebiasio@consorzioarsenal.it</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Contributore</td>
 <td>Alessandro Pinton</td>
 <td>Arsenàl.IT</td>
 <td>apinton@consorzioarsenal.it</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Contributore</td>
 <td>Alberto Dessena</td>
 <td>Agid</td>
@@ -145,17 +151,11 @@ Le funzionalità eventualmente implementate dalle singole Regioni saranno dispon
 </tr>
 <tr class="even">
 <td>Contributore</td>
-<td>Mario Sicuranza</td>
-<td>CNR ICAR</td>
-<td>mario.sicuranza@icar.cnr.it</td>
-</tr>
-<tr class="odd">
-<td>Contributore</td>
 <td>Stefano Dalmiani</td>
 <td>FTGM</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Contributore</td>
 <td>Matteo Damiani</td>
 <td>NBS</td>
