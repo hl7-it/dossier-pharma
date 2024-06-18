@@ -32,7 +32,7 @@ Alias: $minsan-regione = https://www.hl7.it/fhir/terminology/sid/minsan-regione
 Alias: $coverage-exceptionStatus = http://hl7.it/fhir/StructureDefinition/coverage-exceptionStatus
 Alias: $dataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 
-Alias: $minsan-esenzioni = http://hl7.it/fhir/dossierPharma/CodeSystem/minsan-esenzioni // TODO: bring it to teminology!!
+Alias: $minsan-esenzioni = http://hl7.it/fhir/dossier-pharma/CodeSystem/minsan-esenzioni // TODO: bring it to teminology!!
 Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
@@ -47,7 +47,7 @@ Alias: $NRE =  http://hl7.it/sid/mef/nre
 Alias: $CF = http://hl7.it/sid/codiceFiscale
 
 //Alias: $aic = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-aic TODO: complete the code system in terminology
-Alias: $aic = http://hl7.it/fhir/dossierPharma/CodeSystem/aifa-aic
+Alias: $aic = http://hl7.it/fhir/dossier-pharma/CodeSystem/aifa-aic
 Alias: $gruppo-equivalenza = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-ge
 Alias: $atc = http://www.whocc.no/atc
 Alias: $v3-substanceAdminSubstitution = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
@@ -55,20 +55,20 @@ Alias: $v3-substanceAdminSubstitution = http://terminology.hl7.org/CodeSystem/v3
 
 Alias: COV_TYP = http://terminology.hl7.org/CodeSystem/v3-ActCode
 //Alias: $vs-aic = https://www.hl7.it/fhir/terminology/ValueSet/aifa-aic 
-Alias: $vs-aic = http://hl7.it/fhir/dossierPharma/ValueSet/aifa-aic 
-Alias: $vs-gruppo-equivalenza = http://hl7.it/fhir/dossierPharma/ValueSet/aifa-ge
+Alias: $vs-aic = http://hl7.it/fhir/dossier-pharma/ValueSet/aifa-aic 
+Alias: $vs-gruppo-equivalenza = http://hl7.it/fhir/dossier-pharma/ValueSet/aifa-ge
 //Alias: $vs-gruppo-equivalenza = https://www.hl7.it/fhir/terminology/ValueSet/aifa-ge //TODO: this VS doesn't exist in terminology
 // for fixing the error i define it in this guide
 Alias: $vs-atc = https://www.hl7.it/fhir/terminology/ValueSet/who-atc
 Alias: $vs-icd9cm = https://www.hl7.it/fhir/terminology/ValueSet/who-icd9cm
 //Alias: $vs-aifa-nota = https://www.hl7.it/fhir/terminology/ValueSet/aifa-nota TODO: insert into terminology, there is in in dossier-pharma
-Alias: $vs-aifa-nota = http://hl7.it/fhir/dossierPharma/ValueSet/vs-aifa-nota
+Alias: $vs-aifa-nota = http://hl7.it/fhir/dossier-pharma/ValueSet/vs-aifa-nota
 
 
 Alias: $icd-9-cm = http://hl7.org/fhir/sid/icd-9-cm
 Alias: $non-sostituibilità = urn:oid:2.16.840.1.113883.2.9.6.1.52
 //Alias: $aifa-nota = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-nota TODO:
-Alias: $aifa-nota = http://hl7.it/fhir/dossierPharma/CodeSystem/aifa-nota
+Alias: $aifa-nota = http://hl7.it/fhir/dossier-pharma/CodeSystem/aifa-nota
 Alias: $DIZ_Sostituzione = urn:oid:2.16.840.1.113883.2.9.6.1.53
 Alias: $specializ-medico = urn:oid:2.16.840.1.113883.2.9.5.1.111
 Alias: $no-esenzione = urn:oid:2.16.840.1.113883.2.9.5.2.2
@@ -80,7 +80,7 @@ Alias: $Organization-it-base = http://hl7.it/fhir/StructureDefinition/Organizati
 Alias: $odf = http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm
 //  Example
 
-Alias: $v3-ActReason = http://hl7.it/fhir/dossierPharma/CodeSystem/motivo-sostituzone
+Alias: $v3-ActReason = http://hl7.it/fhir/dossier-pharma/CodeSystem/motivo-sostituzone
 Alias: $reason-medication-given = http://terminology.hl7.org/CodeSystem/reason-medication-given
 Alias: $sct = http://snomed.info/sct
 Alias: $ndc = http://hl7.org/fhir/sid/ndc

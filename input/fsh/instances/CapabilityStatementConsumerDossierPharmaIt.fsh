@@ -1,7 +1,7 @@
 Instance: CapabilityStatementConsumerDossierPharmaIt
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://hl7.it/fhir/dossierPharma/CapabilityStatement/CapabilityStatementConsumerDossierPharmaIt"
+* url = "http://hl7.it/fhir/dossier-pharma/CapabilityStatement/CapabilityStatementConsumerDossierPharmaIt"
 * name = "DossierFarmaceutico_Consumer"
 * title = "Dossier Farmaceutico - Consumer (client)"
 * status = #draft

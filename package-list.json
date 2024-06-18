@@ -1,7 +1,7 @@
 {
  "package-id" : "hl7.fhir.it.dossierpharma",
  "title" : "HL7 Italia Dossier Farmaceutico FHIR Implementation Guide", 
- "canonical" : "http://hl7.it/fhir/dossierPharma", 
+ "canonical" : "http://hl7.it/fhir/dossier-pharma", 
  "introduction" : "This guide describes a set of FHIR of profiles to be used for the Pharma Dossiers in Italy",
  "list" : [{
   "version" : "current",

@@ -1,8 +1,8 @@
 {
  "name": "HL7ITFhirDossierPharma",
  "version" : "0.1.0",  
- "canonical" : "http://hl7.it/fhir/dossierPharma",
- "url" : "http://hl7.it/fhir/dossierPharma",
+ "canonical" : "http://hl7.it/fhir/dossier-pharma",
+ "url" : "http://hl7.it/fhir/dossier-pharma",
  "title" : "HL7 Italia FHIR Implementation Guide: Pharmaceutical Dossier",
  "description": "HL7 Italia FHIR Implementation Guide: Pharmaceutical Dossier",
  "keywords": [

@@ -1,7 +1,7 @@
 Instance: CapabilityStatementReceiverDossierPharmaIt
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://hl7.it/fhir/dossierPharma/CapabilityStatement/CapabilityStatementReceiverDossierPharmaIt"
+* url = "http://hl7.it/fhir/dossier-pharma/CapabilityStatement/CapabilityStatementReceiverDossierPharmaIt"
 * name = "DossierFarmaceutico_Receiver"
 * title = "Dossier Farmaceutico - Receiver (server)"
 * status = #draft
@@ -21,7 +21,7 @@ Usage: #definition
 // --------------------------
 * rest.resource[0].type = #MedicationDispense
 * rest.resource[=].profile = Canonical(MedicationDispenseItDossierPharma)
-//* rest.resource[=].profile = "http://hl7.it/fhir/dossierPharma/StructureDefinition/MedicationDispenseItDossierPharma"
+//* rest.resource[=].profile = "http://hl7.it/fhir/dossier-pharma/StructureDefinition/MedicationDispenseItDossierPharma"
 * rest.resource[=].interaction[0].code = #search-type
 * rest.resource[=].interaction[+].code = #read
 * rest.resource[=].interaction[+].code = #update
