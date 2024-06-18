@@ -1,7 +1,7 @@
 Instance: getDataByOrder
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "http://hl7.it/fhir/dossierPharma/OperationDefinition/getDataByOrder"
+* url = "http://hl7.it/fhir/dossier-pharma/OperationDefinition/getDataByOrder"
 * name = "GetDataByOrder"
 * title = "Dati per ordine"
 * status = #draft

@@ -11,7 +11,7 @@
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.it.dossierpharma 
-canonical: http://hl7.it/fhir/dossierPharma
+canonical: http://hl7.it/fhir/dossier-pharma
 version: 0.1.0
 name: HL7ITDossierPharma
 title: HL7 FHIR Implementation Guide Dossier Farmaceutico
