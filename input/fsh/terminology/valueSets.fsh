@@ -6,7 +6,7 @@ Title: "Sistemi di identificazione per prescrizioni"
 Description: "Sistemi di identificazione per prescrizioni"
 //-------------------------------------------------------------------------------------------
 * ^experimental = false
-* $uri#http://hl7.it/sid/mef/nre "Numero Ricetta Elettronica"
+* $uri#urn:oid:2.16.840.1.113883.2.9.4.3.9 "Numero Ricetta Elettronica (identificativo ordine)"
 
 
 //======================================================

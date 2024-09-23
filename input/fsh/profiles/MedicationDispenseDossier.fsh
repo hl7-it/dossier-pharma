@@ -2,7 +2,7 @@ Profile: MedicationDispenseItDossierPharma
 Parent: MedicationDispense
 Id:       MedicationDispense-it-dossierPharma
 Title:    "MedicationDispense - Dossier Farmaceutico"
-Description: "Profilo MedicationDispense per Dossier Farmaceutico"
+Description: "Rappresentazione dell'erogazione del farmaco tramite il profilo MedicationDispense."
 //=================================================================
 
 /* === TO DO 
@@ -78,6 +78,7 @@ Description: "Profilo MedicationDispense per Dossier Farmaceutico"
 
 * whenHandedOver 1..
 * whenHandedOver ^short = "Data erogazione ricetta"
+* substitution 0..1
 * substitution.type 1..
 * substitution.type.coding 1..
 * substitution.type.coding from vs-codice-sostituzione-sostanza
