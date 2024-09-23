@@ -1,8 +1,8 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    	xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-	<h3 id="overview">Sequence Diagrams</h3>
-	<h4 id="alimentazione">Overview</h4>
+	<h3 id="sequenceDiagram">Sequence Diagrams</h3>
+	<h4 id="overview">Overview</h4>
 	<p>{% include sequence-0.svg %}</p>
 	<p>Il servizio proposto intende supportare il seguente scenario di uso:</p>
 	<ul>
@@ -32,7 +32,7 @@
 	<p>Questa transazione viene utilizzata per modificare informazioni su risorse FHIR presenti all'interno del dossier farmaceutico.</p>
 	<p>Può essere utilizzata per aggiornare, modificare e cancellare le risorse FHIR associate ad un documento presente nel FSE.</p>
 	<p>Le risorse aggiornate singolarmente saranno tipicamente MedicationRequest o MedicationDispense, anche se altre risorse FHIR potranno essere aggiornate con lo stesso meccanismo.</p>
-	<h4 id="alimentazione">Consultazione del Dossier Farmaceutico</h4>
+	<h4 id="aggiornamento">Consultazione del Dossier Farmaceutico</h4>
 	<p>{% include sequence-3.svg %}</p>
 	<p>Questa transazione viene utilizzata per consultare il dossier farmaceutico per diversi scopi:</p>
 	<ul>
