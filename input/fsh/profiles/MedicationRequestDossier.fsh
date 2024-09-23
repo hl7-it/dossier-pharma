@@ -2,7 +2,7 @@ Profile:  MedicationRequestItDossierPharma
 Parent:   MedicationRequest
 Id:       MedicationRequest-it-dossierPharma
 Title:    "MedicationRequest - Dossier Farmaceutico"
-Description: "Profilo MedicationRequest per Dossier Farmaceutico"
+Description: "Rappresentazione della prescrizione del farmaco tramite il profilo MedicationRequest."
 //=================================================================
 
 /* === TO DO 
@@ -91,7 +91,7 @@ Description: "Profilo MedicationRequest per Dossier Farmaceutico"
 * groupIdentifier 1..1 
   * ^short = "Identificativo della prescrizione (e.g. NRE)"
   * system 1..1 //Definire un Value Set con tutti i system possibili
-  * system from VsGroupIdentifierUri (extensible)
+  * system from VsGroupIdentifierUri (required)
 * groupIdentifier.value ^short = "Identificativo della prescrizione (e.g. NRE)"
 
 * insurance 

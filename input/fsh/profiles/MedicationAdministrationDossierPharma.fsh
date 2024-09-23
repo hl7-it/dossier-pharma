@@ -2,7 +2,7 @@ Profile: MedicationAdministrationDossierPharma
 Parent: MedicationAdministration
 Id: MedicationAdministration-it-dossierPharma
 Title:    "MedicationAdministration - Dossier Farmaceutico"
-Description: "Profilo MedicationAdministration per Dossier Farmaceutico"
+Description: "Rappresentazione della somministrazione del farmaco tramite il profilo MedicationAdministration."
 
 
 * . ^short = "Descrive l'evento in cui il paziente consuma o riceve la somministrazione del farmaco"

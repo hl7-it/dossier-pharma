@@ -43,7 +43,7 @@ Alias: $istat-unitaAmministrativeTerritoriali = https://www.hl7.it/fhir/terminol
 Alias: $Coverage-it-base = http://hl7.it/fhir/StructureDefinition/Coverage-it-base
 Alias: $Patient-it-base = http://hl7.it/fhir/StructureDefinition/Patient-it-base
 
-Alias: $NRE =  http://hl7.it/sid/mef/nre
+Alias: $NRE =  2.16.840.1.113883.2.9.4.3.9
 Alias: $CF = http://hl7.it/sid/codiceFiscale
 
 //Alias: $aic = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-aic TODO: complete the code system in terminology
