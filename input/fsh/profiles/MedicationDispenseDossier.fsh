@@ -2,7 +2,7 @@ Profile: MedicationDispenseItDossierPharma
 Parent: MedicationDispense
 Id:       MedicationDispense-it-dossierPharma
 Title:    "MedicationDispense - Dossier Farmaceutico"
-Description: "Rappresentazione dell'erogazione del farmaco tramite il profilo MedicationDispense."
+Description: "Rappresentazione dell'erogazione del farmaco tramite il profilo MedicationDispense"
 //=================================================================
 
 /* === TO DO 

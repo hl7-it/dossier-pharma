@@ -2,7 +2,7 @@ Instance: Location-Dossier-Esempio
 InstanceOf: Location-it-dossierPharma
 Title : "Location struttura ospedaliera Milanese"
 Usage: #example
-Description: "Esempio di location struttura ospedaliera di Milano."
+Description: "Esempio di location struttura ospedaliera di Milano"
 
 * id = "f148e54a-2046-4534-b9e9-54e7e9632224"
 * identifier[strutturaHos].use = #usual

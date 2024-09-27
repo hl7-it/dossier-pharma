@@ -25,7 +25,7 @@ Usage: #example
 Instance: MedicationAdministration-Dossier-Esempio2
 InstanceOf: MedicationAdministrationDossierPharma
 Title: "MedicationAdministration somministrazione di Augmentin"
-Description: "Esempio di assunzione di Augmentin da parte di un paziente "
+Description: "Esempio di assunzione di Augmentin da parte di un paziente"
 Usage: #example
 * status = #active
 * id = "5bd5129b-15be-4f6b-bbe0-a2dd645d6a6c"

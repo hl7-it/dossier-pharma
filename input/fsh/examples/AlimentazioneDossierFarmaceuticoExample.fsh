@@ -1,7 +1,7 @@
 Instance: Alimentazione-Dossier-Esempio
 InstanceOf: AlimentazioneDossierFarmaceutico
 Title: "Bundle Alimentazione Dossier Farmaceutico"
-Description: "Esempio di Alimentazione del Dossier Farmaceutico."
+Description: "Esempio di Alimentazione del Dossier Farmaceutico"
 Usage: #example
 
 * identifier.system = "urn:ietf:rfc:39861"

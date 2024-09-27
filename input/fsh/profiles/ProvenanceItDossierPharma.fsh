@@ -2,7 +2,7 @@ Profile: ProvenanceDossier
 Parent: Provenance
 Id:       Provenance-it-dossierPharma
 Title:    "Provenance - Dossier Farmaceutico"
-Description: "Rappresentazione dei processi e delle entità coinvolti nella produzione del dossier farmaceutico tramite la risorsa Provenance."
+Description: "Rappresentazione dei processi e delle entità coinvolti nella produzione del dossier farmaceutico tramite la risorsa Provenance"
 
 
 // * ^text.status = #additional

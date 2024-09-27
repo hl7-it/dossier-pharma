@@ -2,7 +2,7 @@ Profile:  MedicationRequestItDossierPharma
 Parent:   MedicationRequest
 Id:       MedicationRequest-it-dossierPharma
 Title:    "MedicationRequest - Dossier Farmaceutico"
-Description: "Rappresentazione della prescrizione del farmaco tramite il profilo MedicationRequest."
+Description: "Rappresentazione della prescrizione del farmaco tramite il profilo MedicationRequest"
 //=================================================================
 
 /* === TO DO 

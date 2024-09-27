@@ -2,7 +2,7 @@ Profile: MedicationItDossierPharma
 Parent: Medication
 Id: Medication-it-dossierPharma
 Title: "Medication - Dossier Farmaceutico"
-Description: "Rappresentazione del farmaco tramite il profilo Medication."
+Description: "Rappresentazione del farmaco tramite il profilo Medication"
 * ^status = #active
 * identifier 0..1  //era obbligatorio
 * code 1..1

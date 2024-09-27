@@ -2,7 +2,7 @@ Profile: CoverageItBase
 Parent: Coverage
 Id: Coverage-it-base
 Title: "Coverage - base"
-Description: "Rappresentazione dell'ASL di residenza e delle esenzioni attraverso il profilo base Coverage."
+Description: "Rappresentazione dell'ASL di residenza e delle esenzioni attraverso il profilo base Coverage"
 * ^version = "0.0.1"
 * ^status = #active
 * ^date = "2020-06-03T11:10:33+02:00"

@@ -2,7 +2,7 @@ Profile: AlimentazioneDossierFarmaceutico
 Parent: Bundle
 Id: AlimentazioneDossierFarmaceutico
 Title:    "AlimentazioneDossierFarmaceutico - Dossier Farmaceutico"
-Description: "Rappresentazione del contenuto informativo del dossier farmaceutico tramite il profilo della risorsa Bundle."
+Description: "Rappresentazione del contenuto informativo del dossier farmaceutico tramite il profilo della risorsa Bundle"
 * ^text.status = #additional
 * ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a>Profilazione del Bundle per l'esecuzione della transazione AlimentazioneDossierFarmaceutico</a></div>"
 //* ^url = "https://example.org/fhir/StructureDefinition/AlimentazioneDossierFarmaceutico"
