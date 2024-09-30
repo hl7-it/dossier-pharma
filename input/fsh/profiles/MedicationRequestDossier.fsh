@@ -11,8 +11,8 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 === */
 
 * ^status = #draft
-* extension contains MedicationRequestMedicoTitolare named medicoTitolare 0..1
-* extension[medicoTitolare].valueReference  only Reference( MedicoPrescrittore )
+* extension contains MedicationRequestMedicoTitolare named medicoTitolare 1..1
+* extension[medicoTitolare].valueReference  only Reference($mmg-pls)
 
 * status 1.. 
 * intent = #order (exactly) // do we really need to constraint to order ?
@@ -22,7 +22,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 
 * medication[x] 
 * medicationReference only Reference ( MedicationItDossierPharma )
-* medicationCodeableConcept 0..1
+* medicationCodeableConcept 1..1
 
 
 * medicationCodeableConcept.coding 1.. 
@@ -57,14 +57,17 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * subject.identifier.value 1..
 * subject.identifier.value ^short = "Codice Fiscale"
 * subject.display 0.. 
-* authoredOn 0.. 
+* authoredOn 1.. 
+* authoredOn ^short = "Data compilazione della ricetta da parte del medico"
 * requester 1.. 
 * requester only Reference(MedicoPrescrittore)
 
 * requester.reference 0..1
-* requester.identifier 0..1
+* requester.identifier 1..1
 * requester.identifier ^short = "Valorizzato con identificativo del medico titolare o sostituto"
 
+* reasonCode 1..1
+* reasonCode.text 1..1
 * reasonCode.text ^short = "Descrizione diagnosi"
 * reasonCode.coding 
   * system 1.. 
@@ -92,6 +95,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
   * ^short = "Identificativo della prescrizione (e.g. NRE)"
   * system 1..1 //Definire un Value Set con tutti i system possibili
   * system from VsGroupIdentifierUri (required)
+* groupIdentifier.value 1..1
 * groupIdentifier.value ^short = "Identificativo della prescrizione (e.g. NRE)"
 
 * insurance 
@@ -120,7 +124,9 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 // * dosageInstruction.timing.repeat.boundsPeriod ^short = "Durata temporale della terapia farmacologica"
 // * dosageInstruction.timing.repeat.boundsPeriod 1..1
 // * dosageInstruction.timing.repeat.boundsPeriod.start 1..1
+* dosageInstruction 1..1
 * dosageInstruction ^short = "Modalità di assunzione del farmaco"
+
 
 // inserire la frequenza di assunzione dosageInstruction.dosage.timing.repeat (non rendere obbligatorio nulla)
 /*--

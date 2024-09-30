@@ -13,11 +13,16 @@ Usage: #example
   * value = "RSSMRT57D12D612R"
 * authoredOn = "2022-01-31T14:31:22.387Z"
 * requester = Reference(MedicoPrescrittoreExample01)
+* requester.identifier
+  * value = "PLLDSR80E47A462P"
 * reasonCode = $aifa-nota#01
+* reasonCode.text = "Esofagite da reflusso"
 * groupIdentifier
   * system = $NRE
   * value = "030A05714294324"
+* dosageInstruction.text = "1 cpr per die"
 * dispenseRequest.quantity.value = 2
+* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
 //* substitution.allowedCodeableConcept = $v3-substanceAdminSubstitution#N 
 
 
@@ -37,12 +42,16 @@ Usage: #example
   * value = "RSSMRT57D12D612R"
 * authoredOn = "2022-01-31T14:31:22.387Z"
 * requester = Reference(MedicoPrescrittoreExample01)
+* requester.identifier
+  * value = "PLLDSR80E47A462P"
 * reasonCode = $aifa-nota#01
+* reasonCode.text = "Esofagite da reflusso"
 * groupIdentifier
   * system = $NRE
   * value = "030A05714294324"
+* dosageInstruction.text = "1 cpr per die"
 * dispenseRequest.quantity.value = 2
-
+* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
 
 Instance: MedicationRequestDossierExample003
 InstanceOf: MedicationRequestItDossierPharma
@@ -60,10 +69,16 @@ Usage: #example
   * value = "RSSMRT57D12D612R"
 * authoredOn = "2022-02-04T10:59:31.234Z"
 * requester = Reference(MedicoPrescrittoreExample01)
+* requester.identifier
+  * value = "PLLDSR80E47A462P"
+* reasonCode = $aifa-nota#01
+* reasonCode.text = "Asma bronchiale"
 * groupIdentifier
   * system = $NRE
   * value = "050A05714294322"
+* dosageInstruction.text = "1 cpr per die"
 * dispenseRequest.quantity.value = 1
+* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
 
 Instance: MedicationRequestDossierExample004
 InstanceOf: MedicationRequestItDossierPharma
@@ -81,10 +96,16 @@ Usage: #example
   * value = "RSSMRT57D12D612R"
 * authoredOn = "2022-02-04T10:59:31.234Z"
 * requester = Reference(MedicoPrescrittoreExample01)
+* requester.identifier
+  * value = "PLLDSR80E47A462P"
+* reasonCode = $aifa-nota#01
+* reasonCode.text = "Faringite"
 * groupIdentifier
   * system = $NRE
   * value = "050A05714294322"
+* dosageInstruction.text = "1 cpr per die"
 * dispenseRequest.quantity.value = 1
+* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
 
 Instance: MedicationRequestDossierExample005
 InstanceOf: MedicationRequestItDossierPharma
@@ -101,10 +122,15 @@ Usage: #example
 * subject.identifier.value = "VRDMRA89D43F979Y"
 * authoredOn = "2022-01-31T14:31:22.387Z"
 * requester = Reference(MedicoPrescrittoreExample01)
-//* reasonCode = $aifa-nota#001
+* requester.identifier
+  * value = "PLLDSR80E47A462P"
+* reasonCode = $aifa-nota#01
+* reasonCode.text = "Ipertensione arteriosa"
 * groupIdentifier
   * system = $NRE
   * value = "030A05714294325"
+* dosageInstruction.text = "1 cpr per die"
+
 * dispenseRequest.quantity.value = 2
 * extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
 
@@ -125,9 +151,13 @@ Usage: #example
 * subject.identifier.value = "VRDMRA89D43F979Y"
 * authoredOn = "2022-01-31T14:31:22.387Z"
 * requester = Reference(MedicoPrescrittoreExample02)
-//* reasonCode = $aifa-nota#001
+* requester.identifier
+  * value = "PLLDSR80E47A462P"
+* reasonCode = $aifa-nota#01
+* reasonCode.text = "Tonsillite"
 * groupIdentifier
   * system = $NRE
   * value = "030A05714294325"
+* dosageInstruction.text = "1 cpr per die"
 * dispenseRequest.quantity.value = 2
 * extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample02)
