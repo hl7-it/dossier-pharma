@@ -3,6 +3,7 @@ Title: "Piano Terapeutico"
 Description: "Informazioni relative al piano terapeutico"
 Characteristics: #can-be-target
 
+* ^status = #active
 * identificativo 1..1 Identifier "Identificativo del piano terapeutico"
 * dataDiCreazione 1..1 dateTime "Data di creazione del piano terapeutico"
 * paziente 1..1 string "Paziente titolare del piano terapeutico"
@@ -11,7 +12,7 @@ Characteristics: #can-be-target
   * AslAppartenenza 0..1 string "Asl di appartenenza del medico prescrittore"
   * specialita 0..1 string "Specialità del medico prescrittore"
 
-* medicoCurante 0..1 Reference(MedicationRequestMedicoTitolare) "Medico curante del paziente"
+* medicoCurante 0..1 Reference(PractitionerRole) "Medico curante del paziente"
 
 * quesitoDiagnostico 0..1 string "Informazioni codificate o testuali riguardanti il quesito diagnostico"
  
