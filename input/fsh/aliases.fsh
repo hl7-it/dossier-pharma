@@ -89,3 +89,5 @@ Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-Particip
 Alias: $istat-comuni = https://www.hl7.it/fhir/terminology/CodeSystem/istat-comuni
 Alias: $dug = http://registry.geodati.gov.it/dug
 Alias: $mmg-pls = http://hl7.it/fhir/StructureDefinition/PractitionerRole-it-mmg
+
+Alias: $unitOfMeasure = http://unitsofmeasure.org

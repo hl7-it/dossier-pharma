@@ -17,14 +17,17 @@ Usage: #example
 * performer.actor = Reference(PractitionerExample)
 * reasonCode = $reason-medication-given#b "Given as Ordered"
 * request = Reference(MedicationRequestDossierExample005)
-* dosage.text = "Isoptin 80 mg (1cpx3DIE) 8,16,24h"
+* dosage.site = $sct#836005
+* dosage.text = "Isoptin 80 mg 8,16,24h"
 * dosage.route = $sct#26643006  "Oral use"
 * dosage.dose = 80 'mg' "mg"
+* dosage.rateRatio.numerator = 1 'PILL' "Pill"
+* dosage.rateRatio.denominator = 3 'd'
 
 
 Instance: MedicationAdministration-Dossier-Esempio2
 InstanceOf: MedicationAdministrationDossierPharma
-Title: "MedicationAdministration somministrazione di Augmentin"
+Title: "MedicationAdministration somministrazione di AUGMENTIN"
 Description: "Esempio di assunzione di Augmentin da parte di un paziente"
 Usage: #example
 * status = #active
@@ -38,7 +41,11 @@ Usage: #example
 * performer.actor = Reference(PractitionerExample)
 * reasonCode = $reason-medication-given#b "Given as Ordered"
 * request = Reference(MedicationRequestDossierExample006)
+* dosage.site = $sct#836005
 * dosage.text = "AUGMENTIN 875 MG/125 MG COMPRESSE RIVESTITE CON FILM"
 * dosage.route = $sct#26643006  "Oral use"
 * dosage.dose = 1 'PILL' "Pill"
 * dosage.dose.system = $odf
+* dosage.rateRatio.numerator = 1 $unitOfMeasure#PILL "Pill"
+* dosage.rateRatio.denominator = 1 'd'
+

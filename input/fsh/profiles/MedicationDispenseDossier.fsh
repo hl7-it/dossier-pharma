@@ -57,6 +57,7 @@ Description: "Rappresentazione dell'erogazione del farmaco tramite il profilo Me
 // * subject.identifier.value 1..
 * subject.identifier.value ^short = "Codice Fiscale"
 * subject.display 0.. 
+
 * performer 1..
 * performer ^slicing.discriminator.type = #type
 * performer ^slicing.discriminator.path = "$this"

@@ -12,7 +12,14 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 
 * ^status = #draft
 * extension contains MedicationRequestMedicoTitolare named medicoTitolare 1..1
-* extension[medicoTitolare].valueReference  only Reference($mmg-pls)
+* extension[medicoTitolare].valueReference  only Reference(MedicoPrescrittore)
+
+* extension contains MedicationRequestFarmacoPerPT named farmacoPerPT 1..1
+* extension[farmacoPerPT].valueBoolean 1..1
+
+* identifier 0..1
+* identifier ^short = "Identificativo del Piano Terapeutico"
+* obeys farmacoPerPT-1
 
 * status 1.. 
 * intent = #order (exactly) // do we really need to constraint to order ?
@@ -84,7 +91,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
     notaAIFA 0..1 and
     codiceDiagnosi 0..1
 
-* reasonCode.coding[notaAIFA] ^short = "Nota AIFA"
+* reasonCode.coding[notaAIFA] ^short = "AIFA"
 * reasonCode.coding[notaAIFA] from $vs-aifa-nota
 * reasonCode.coding[codiceDiagnosi] ^short = "Codice diagnosi"
 * reasonCode.coding[codiceDiagnosi] from $vs-icd9cm
@@ -121,17 +128,11 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * reasonReference ^short = "Condizioni cliniche ed osservazioni che motivano la prescrizione (parametri vitali)" //TODO: only parametri vitali? 
 * dispenseRequest.validityPeriod ^short = "Periodo di tempo per il quale è autorizzata la fornitura"
 
-// * dosageInstruction.timing.repeat.boundsPeriod ^short = "Durata temporale della terapia farmacologica"
-// * dosageInstruction.timing.repeat.boundsPeriod 1..1
-// * dosageInstruction.timing.repeat.boundsPeriod.start 1..1
 * dosageInstruction 1..1
 * dosageInstruction ^short = "Modalità di assunzione del farmaco"
 
 
-// inserire la frequenza di assunzione dosageInstruction.dosage.timing.repeat (non rendere obbligatorio nulla)
-/*--
-* substitution.allowedCodeableConcept.coding 1..1
-* substitution.allowedCodeableConcept.coding.system 1..
-* substitution.allowedCodeableConcept.coding.system = $non-sostituibilità (exactly)
-* substitution.allowedCodeableConcept.coding.code 1..
----*/
+Invariant: farmacoPerPT-1
+Description: "If farmacoPerPT is true, identifier CarePlan must be present."
+Severity: #error
+Expression: "(extension.where(url = 'http://hl7.it/fhir/dossier-pharma/StructureDefinition/medicationRequest-farmacoPerPT').exists() and extension.where(valueBoolean = true).exists()) implies identifier.value.exists()"

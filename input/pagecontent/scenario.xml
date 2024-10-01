@@ -1,7 +1,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
    	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    	xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-	<h3 id="sequenceDiagram">Sequence Diagrams</h3>
+	<h3>Sequence Diagrams</h3>
 	<h4 id="overview">Overview</h4>
 	<p>{% include sequence-0.svg %}</p>
 	<p>Il servizio proposto intende supportare il seguente scenario di uso:</p>
