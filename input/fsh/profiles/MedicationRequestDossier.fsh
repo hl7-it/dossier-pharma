@@ -129,7 +129,15 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * dispenseRequest.validityPeriod ^short = "Periodo di tempo per il quale è autorizzata la fornitura"
 
 * dosageInstruction 1..1
-* dosageInstruction ^short = "Modalità di assunzione del farmaco"
+  * route 1..1
+  * timing 1..1
+  * doseAndRate 1..1
+* dosageInstruction ^short = "Istruzioni per assumere/sommministrare il farmaco"
+* dosageInstruction.route ^short = "Modalità con cui assumere/sommministrare il farmaco"
+* dosageInstruction.timing ^short = "Tempi con cui assumere/sommministrare il farmaco"
+* dosageInstruction.doseAndRate ^short = "Dose per singola assunzione/sommministrazione del farmaco"
+
+
 
 
 Invariant: farmacoPerPT-1
