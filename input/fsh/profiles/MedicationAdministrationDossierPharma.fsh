@@ -46,12 +46,14 @@ Description: "Rappresentazione della somministrazione del farmaco tramite il pro
 * performer 1..1
 * performer.actor ^short = "Persona che somministra il farmaco"
 
+
 * dosage 1..
 * dosage.site 1..
 * dosage.route 1..
 * dosage.dose 1..
 * dosage.rate[x] 1..
 
+//il numero di confezioni è presente nella MedicationRequest
 * dosage
   * site ^short = "Sito di Somministrazione"
   * route ^short = "Via di somministrazione"
@@ -59,6 +61,7 @@ Description: "Rappresentazione della somministrazione del farmaco tramite il pro
   * rate[x] ^short = "Frequenza di erogazione"
 
 * effective[x] ^short = "Inzio e Fine della somministrazione"
+* effectivePeriod.start 1..
 * effectivePeriod.start ^short = "Inizio della somministrazione/infusione del farmaco"
 * effectivePeriod.end ^short = "Fine della somministrazione/infusione del farmaco"
 // TODO - Inserire all'interno del profilo lo start e l'end per la terapia continuativa e non continuativa

@@ -19,6 +19,11 @@ Description: "Rappresentazione del farmaco tramite il profilo Medication"
 * code.coding[atc] from $vs-atc
 * code.coding[aic] from $vs-aic
 
+
+* form ^short = "Forma farmaceutica"
+* amount ^short = "Quantità nella confezione"
+* ingredient.strength ^short = "Grammatura"
+
 * code.coding[gruppoEquivalenza] from  $vs-gruppo-equivalenza
 * code.coding[eccezioni] = $v3-NullFlavor#UNK
 
