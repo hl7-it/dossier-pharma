@@ -35,6 +35,8 @@ parameters:
   apply-publisher: true
   special-url: !!seq
   - "https://www.hl7.it/fhir/terminology/CodeSystem/istat-professioni"  
+  - "http://hl7.it/fhir/StructureDefinition/patient-codeableBirthPlace"
+  - "http://hl7.it/fhir/StructureDefinition/patient-occupation-it"
   autoload-resources: true
 
 copyrightYear: 2021+

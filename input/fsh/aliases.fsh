@@ -42,6 +42,18 @@ Alias: $istat-unitaAmministrativeTerritoriali = https://www.hl7.it/fhir/terminol
 
 Alias: $Coverage-it-base = http://hl7.it/fhir/StructureDefinition/Coverage-it-base
 Alias: $Patient-it-base = http://hl7.it/fhir/StructureDefinition/Patient-it-base
+Alias: $patient-citizenship = http://hl7.org/fhir/StructureDefinition/patient-citizenship
+Alias: $istat-luogoNascita = https://www.hl7.it/fhir/terminology/ValueSet/istat-luogoNascita
+Alias: $istat-cittadinanza = https://www.hl7.it/fhir/terminology/ValueSet/istat-cittadinanza
+Alias: $istat-professione = https://www.hl7.it/fhir/terminology/ValueSet/istat-professione
+Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
+Alias: $cf = http://hl7.it/sid/codiceFiscale
+Alias: $anpr = http://hl7.it/sid/anpr
+Alias: $uri-idRegionali = https://www.hl7.it/fhir/terminology/ValueSet/vs-anagrafi-regionali
+Alias: $uri-idEni = http://hl7.it/fhir/lab-report/ValueSet/uri-idEni 
+Alias: $uri-idStp = https://www.hl7.it/fhir/terminology/ValueSet/URI-idStp
+Alias: $istat-titoloStudio = https://www.hl7.it/fhir/terminology/ValueSet/istat-titoloStudio
+Alias: $tipoIdentificatore = https://www.hl7.it/fhir/terminology/ValueSet/VstipoIdentificatore
 
 Alias: $NRE =  urn:oid:2.16.840.1.113883.2.9.4.3.9
 Alias: $CF = http://hl7.it/sid/codiceFiscale
@@ -51,7 +63,7 @@ Alias: $aic = http://hl7.it/fhir/dossier-pharma/CodeSystem/aifa-aic
 Alias: $gruppo-equivalenza = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-ge
 Alias: $atc = http://www.whocc.no/atc
 Alias: $v3-substanceAdminSubstitution = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
-
+Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab
 
 Alias: COV_TYP = http://terminology.hl7.org/CodeSystem/v3-ActCode
 //Alias: $vs-aic = https://www.hl7.it/fhir/terminology/ValueSet/aifa-aic 
@@ -66,7 +78,7 @@ Alias: $vs-aifa-nota = http://hl7.it/fhir/dossier-pharma/ValueSet/vs-aifa-nota
 
 
 Alias: $icd-9-cm = http://hl7.org/fhir/sid/icd-9-cm
-Alias: $non-sostituibilità = urn:oid:2.16.840.1.113883.2.9.6.1.52
+Alias: $non-sostituibilita = urn:oid:2.16.840.1.113883.2.9.6.1.52
 //Alias: $aifa-nota = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-nota TODO:
 Alias: $aifa-nota = http://hl7.it/fhir/dossier-pharma/CodeSystem/aifa-nota
 Alias: $DIZ_Sostituzione = urn:oid:2.16.840.1.113883.2.9.6.1.53
