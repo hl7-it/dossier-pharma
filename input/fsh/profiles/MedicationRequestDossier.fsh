@@ -14,12 +14,12 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * extension contains MedicationRequestMedicoTitolare named medicoTitolare 1..1
 * extension[medicoTitolare].valueReference  only Reference(MedicoPrescrittore)
 
-* extension contains MedicationRequestFarmacoPerPT named farmacoPerPT 1..1
-* extension[farmacoPerPT].valueBoolean 1..1
+* extension contains MedicationRequestPianoTerapeutico named pianoTerapeutico 0..1
+//* extension[pianoTerapeutico].valueBoolean 1..1
 
 * identifier 0..1
 * identifier ^short = "Identificativo del Piano Terapeutico"
-* obeys farmacoPerPT-1
+* obeys pianoTerapeutico-1
 
 * status 1.. 
 * intent = #order (exactly) // do we really need to constraint to order ?
@@ -138,9 +138,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * dosageInstruction.doseAndRate ^short = "Dose per singola assunzione/sommministrazione del farmaco"
 
 
-
-
-Invariant: farmacoPerPT-1
-Description: "If farmacoPerPT is true, identifier CarePlan must be present."
+Invariant: pianoTerapeutico-1
+Description: "If pianoTerapeutico is true, reference to CarePlan must be present."
 Severity: #error
-Expression: "(extension.where(url = 'http://hl7.it/fhir/dossier-pharma/StructureDefinition/medicationRequest-farmacoPerPT').exists() and extension.where(valueBoolean = true).exists()) implies identifier.value.exists()"
+Expression: "extension.where(url = 'http://hl7.it/fhir/dossier-pharma/StructureDefinition/medicationRequest-pianoTerapeutico').extension.where(url = 'existPt' and value = true).exists() implies extension.where(url = 'http://hl7.it/fhir/dossier-pharma/StructureDefinition/medicationRequest-pianoTerapeutico').extension.where(url = 'PT' and value.exists()).exists()"

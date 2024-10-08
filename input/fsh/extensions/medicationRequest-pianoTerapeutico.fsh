@@ -1,5 +1,5 @@
-Extension: MedicationRequestFarmacoPerPT
-Id: medicationRequest-farmacoPerPT
+Extension: MedicationRequestPianoTerapeutico
+Id: medicationRequest-pianoTerapeutico
 Title: "Farmaco associato al Piano Terapeutico (MedicationRequest)"
 Description: "Estensione usata per descrivere se il farmaco prescritto appartiene ad un Piano Terapeutico"
 
@@ -8,5 +8,10 @@ Description: "Estensione usata per descrivere se il farmaco prescritto appartien
 * ^context[=].expression = "MedicationRequest"
 * . ^short = "L'estensione indica se il farmaco prescritto appartiene ad un Piano Terapeutico"
 * . ^definition = "Estensione usata per descrivere se il farmaco prescritto appartiene ad un Piano Terapeutico"
-* value[x] only boolean
-* value[x] ^short = "true o false"
+
+* extension contains
+    existPt 1..1 and
+    PT 0..1
+* extension[existPt].value[x] only boolean
+* extension[existPt].value[x] ^short = "true o false"
+* extension[PT].value[x] only Reference (CarePlanItDossierPharma)
