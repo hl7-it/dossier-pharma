@@ -6,7 +6,8 @@ Description: "Rappresentazione del piano terapeutico tramite il profilo CarePlan
 //=================================================================
 
 * ^status = #draft
-* identifier 1..1 
+* identifier 1..1
+* identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.13" 
 * identifier ^short = "ID piano terapeutico"
 
 * activity.detail.product[x] 

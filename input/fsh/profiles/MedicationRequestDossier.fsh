@@ -55,7 +55,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 
 
 * subject 
-* subject only Reference(PatientItBase)
+* subject only Reference(PatientDossierPharma)
 * subject.type 0..
 * subject.type = "Patient" (exactly)
 * subject.identifier 1..

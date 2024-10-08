@@ -1,5 +1,5 @@
 Instance: Patient-Dossier-Esempio
-InstanceOf: Patient-it-base
+InstanceOf: PatientDossierPharma
 Title: "Patient"
 Usage: #example
 Description: "Esempio di Paziente iscritto al SSN"

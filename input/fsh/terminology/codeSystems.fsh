@@ -37,6 +37,7 @@ Description: "AIFA - Autorizzazione Immissione in Commercio."
 * #027860042 "ZITROMAX 3CPR RIV 500MG"
 * #020609083 "ISOPTIN*30 cpr riv 80 mg"
 * #039785050 "AUGMENTIN 875 MG/125 MG COMPRESSE RIVESTITE CON FILM"
+* #037568019 "5 MICROGRAMMI SOLUZIONE INETTABILE - USO SOTTOCUTANEO PENNA PRERIEMPITA (VETRO)"
 //-------------------------------------------------------------------------------------------
 
 //======================================================

@@ -1,7 +1,7 @@
 Instance: MedicationRequestDossierExample001
 InstanceOf: MedicationRequestItDossierPharma
 Title: "MedicationRequest per AIC"
-Description: "Esempio di Prescrizione farmaceutica per AIC, con nota, non sostituibile, erogata"
+Description: "Esempio di Prescrizione farmaceutica (Insulina) associata al Piano Terapeutico"
 Usage: #example
  
 * id = "MedicationRequest-it-dossierPharma-ex001"
@@ -9,25 +9,25 @@ Usage: #example
 * intent = #order
 * extension[pianoTerapeutico].extension[existPt].valueBoolean = true
 * extension[pianoTerapeutico].extension[PT].valueReference = Reference (CarePlanExample)
-* medicationCodeableConcept = $aic#031981069 "PANTORC - 28CPR GASTR 20MG" //TODO: add the content of CodeSystem in Terminology
-* subject.identifier
-  * system = $CF
-  * value = "RSSMRT57D12D612R"
+* medicationCodeableConcept = $aic#037568019 "5 MICROGRAMMI SOLUZIONE INETTABILE - USO SOTTOCUTANEO PENNA PRERIEMPITA (VETRO)" 
+* subject = Reference (Patient-Dossier-Esempio)
+* subject.identifier.system = $CF
+* subject.identifier.value = "VRDMRA89D43F979Y"
 * authoredOn = "2022-01-31T14:31:22.387Z"
 * requester = Reference(MedicoPrescrittoreExample01)
-* requester.identifier
-  * value = "PLLDSR80E47A462P"
+* requester.identifier.system = $CF
+* requester.identifier.value = "PLLDSR80E47A462P"
 * reasonCode = $aifa-nota#01
-* reasonCode.text = "Esofagite da reflusso"
+* reasonCode.text = "Diabete Mellito di Tipo 2"
 * groupIdentifier
   * system = $NRE
   * value = "030A05714294324"
-* dosageInstruction.text = "2 compresse al giorno"
-* dosageInstruction.doseAndRate.doseQuantity = 2 $odf#TAB "TAB"
-* dosageInstruction.timing.repeat.frequency = 1
-* dosageInstruction.timing.repeat.period = 1
+* dosageInstruction.text = "2 iniezioni al giorno"
+* dosageInstruction.doseAndRate.doseQuantity = 2 $odf#SOL "Solution"
+* dosageInstruction.timing.repeat.frequency = 2
+* dosageInstruction.timing.repeat.period = 2
 * dosageInstruction.timing.repeat.periodUnit = #d // "d" per giorno
-* dosageInstruction.route = $sct#26643006 "Oral use"
+* dosageInstruction.route = $sct#3876002 "Subcutaneous tissue structure of femoral region"
 * dispenseRequest.quantity.value = 2
 * extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
 
@@ -72,7 +72,7 @@ Usage: #example
 Instance: MedicationRequestDossierExample003
 InstanceOf: MedicationRequestItDossierPharma
 Title: "MedicationRequest per AIC 2"
-Description: "Esempio di  Prescrizione farmaceutica per AIC, farmaco 1 di 2 su NRE"
+Description: "Esempio di  Prescrizione farmaceutica per AIC - AIRCORT"
 Usage: #example
  
 * id = "MedicationRequest-it-dossierPharma-ex003"
@@ -104,7 +104,7 @@ Usage: #example
 Instance: MedicationRequestDossierExample004
 InstanceOf: MedicationRequestItDossierPharma
 Title: "MedicationRequest per AIC 3"
-Description: "Esempio di Prescrizione farmaceutica per AIC, farmaco 2 di 2 su NRE"
+Description: "Esempio di Prescrizione farmaceutica per AIC - ZITROMAX"
 Usage: #example
  
 * id = "MedicationRequest-it-dossierPharma-ex004"
