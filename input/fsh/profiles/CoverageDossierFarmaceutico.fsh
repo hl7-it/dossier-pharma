@@ -10,11 +10,10 @@ Description: "Rappresentazione dell'ASL di residenza e delle esenzioni attravers
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7.it"
 * ^jurisdiction = urn:iso:std:iso:3166#IT
-* beneficiary 
-* costToBeneficiary.value[x].extension contains DataAbsentReason named absenceReason 0..1
-* costToBeneficiary.exception 
-* costToBeneficiary.exception.extension contains $coverage-exceptionStatus named stato-esenzione 0..1
-* costToBeneficiary.exception.type 
+* costToBeneficiary.value[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
+* costToBeneficiary.exception MS
+* costToBeneficiary.exception.extension contains $coverage-exceptionStatus named stato-esenzione 0..1 MS
+* costToBeneficiary.exception.type MS
 //* costToBeneficiary.exception.type from vs-minsan-esenzioni (extensible)
 * costToBeneficiary.exception.type ^short = "codice esensione"
-* costToBeneficiary.exception.period
+* costToBeneficiary.exception.period MS 

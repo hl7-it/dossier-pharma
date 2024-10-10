@@ -15,11 +15,9 @@ Usage: #example
 * reasonCode = $reason-medication-given#b "Given as Ordered"
 * request = Reference(MedicationRequestDossierExample005)
 * dosage.site = $sct#836005
-* dosage.text = "Isoptin 80 mg 8,16,24h"
+* dosage.text = "1 Pillola dopo i pasti"
 * dosage.route = $sct#26643006  "Oral use"
-* dosage.dose = 80 'mg' "mg"
-* dosage.rateRatio.numerator = 1 'PILL' "Pill"
-* dosage.rateRatio.denominator = 3 'd'
+* dosage.dose = 1 'PILL' "Pill"
 
 
 Instance: MedicationAdministration-Dossier-Esempio2
@@ -39,10 +37,8 @@ Usage: #example
 * reasonCode = $reason-medication-given#b "Given as Ordered"
 * request = Reference(MedicationRequestDossierExample006)
 * dosage.site = $sct#836005
-* dosage.text = "AUGMENTIN 875 MG/125 MG COMPRESSE RIVESTITE CON FILM"
+* dosage.text = "2 pillole al giorno"
 * dosage.route = $sct#26643006  "Oral use"
-* dosage.dose = 1 'PILL' "Pill"
+* dosage.dose = 2 'PILL' "Pill"
 * dosage.dose.system = $odf
-* dosage.rateRatio.numerator = 1 $unitOfMeasure#PILL "Pill"
-* dosage.rateRatio.denominator = 1 'd'
 

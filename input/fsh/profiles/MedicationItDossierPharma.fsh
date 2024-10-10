@@ -25,7 +25,7 @@ Description: "Rappresentazione del farmaco tramite il profilo Medication"
 * ingredient.strength ^short = "Grammatura"
 
 * code.coding[gruppoEquivalenza] from  $vs-gruppo-equivalenza
-* code.coding[eccezioni].system from $v3-NullFlavor
+* code.coding[eccezioni] from vs-NullFlavor
 * code.coding[eccezioni].code = #UNK
 
 * batch 0..1

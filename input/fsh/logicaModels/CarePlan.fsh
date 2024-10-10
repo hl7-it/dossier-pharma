@@ -3,7 +3,6 @@ Title: "Piano Terapeutico"
 Description: "Informazioni relative al piano terapeutico"
 Characteristics: #can-be-target
 
-* ^status = #active
 * identificativo 1..1 Identifier "Identificativo del piano terapeutico"
 * dataDiCreazione 1..1 dateTime "Data di creazione del piano terapeutico"
 * paziente 1..1 string "Paziente titolare del piano terapeutico"

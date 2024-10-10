@@ -7,9 +7,11 @@ Description: "Rappresentazione del piano terapeutico tramite il profilo CarePlan
 
 * ^status = #draft
 * identifier 1..1
-* identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.13" 
+* identifier.system from VsOidPT (required)
 * identifier ^short = "ID piano terapeutico"
+* identifier.value ^short = "Identificativo univoco del Piano Terapeutico"
 
+* activity 1..*
 * activity.detail.product[x] 
 * activity.detail.product[x] 1..1
 * activity.detail.productReference only Reference ( MedicationItDossierPharma )

@@ -15,7 +15,10 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * extension[medicoTitolare].valueReference  only Reference(MedicoPrescrittore)
 
 * extension contains MedicationRequestPianoTerapeutico named pianoTerapeutico 0..1
-//* extension[pianoTerapeutico].valueBoolean 1..1
+* extension[pianoTerapeutico].extension[PT].valueReference only Reference (CarePlanItDossierPharma)
+* extension[pianoTerapeutico].extension[existPt].valueBoolean
+
+
 
 * identifier 0..1
 * identifier ^short = "Identificativo del Piano Terapeutico"

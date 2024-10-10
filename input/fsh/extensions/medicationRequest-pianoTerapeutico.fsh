@@ -14,4 +14,4 @@ Description: "Estensione usata per descrivere se il farmaco prescritto appartien
     PT 0..1
 * extension[existPt].value[x] only boolean
 * extension[existPt].value[x] ^short = "true o false"
-* extension[PT].value[x] only Reference (CarePlanItDossierPharma)
+* extension[PT].value[x] only Reference (CarePlan)

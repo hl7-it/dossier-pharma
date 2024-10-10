@@ -22,8 +22,8 @@ Usage: #example
 * groupIdentifier
   * system = $NRE
   * value = "030A05714294324"
-* dosageInstruction.text = "2 iniezioni al giorno"
-* dosageInstruction.doseAndRate.doseQuantity = 2 $odf#SOL "Solution"
+* dosageInstruction.text = "20 unità prima della colazione"
+* dosageInstruction.doseAndRate.doseQuantity = 20 $unitOfMeasure#U
 * dosageInstruction.timing.repeat.frequency = 2
 * dosageInstruction.timing.repeat.period = 2
 * dosageInstruction.timing.repeat.periodUnit = #d // "d" per giorno

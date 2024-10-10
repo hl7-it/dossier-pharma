@@ -51,14 +51,14 @@ Description: "Rappresentazione della somministrazione del farmaco tramite il pro
 * dosage.site 1..
 * dosage.route 1..
 * dosage.dose 1..
-* dosage.rate[x] 1..
+* dosage.rate[x] 0..1
 
 //il numero di confezioni è presente nella MedicationRequest
 * dosage
-  * site ^short = "Sito di Somministrazione"
+  * site ^short = "Sito di somministrazione"
   * route ^short = "Via di somministrazione"
   * dose ^short = "Dose"
-  * rate[x] ^short = "Frequenza di erogazione"
+  * rate[x] ^short = "Frequenza di assunzione"
 
 * effective[x] ^short = "Inzio e Fine della somministrazione"
 * effectivePeriod.start 1..
