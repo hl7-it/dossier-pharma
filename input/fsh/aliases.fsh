@@ -19,12 +19,14 @@ Alias: V3ActStatus = http://terminology.hl7.org/CodeSystem/v3-ActStatus
 Alias: CS_tipoEntita = https://www.hl7.it/fhir/terminology/CodeSystem/it-tipoEntita
 
 
-Alias: $minsan-fls = https://www.hl7.it/fhir/terminology/sid/minsan-fls
-Alias: $minsan-hsp = https://www.hl7.it/fhir/terminology/sid/minsan-hsp
-Alias: $minsan-ria = https://www.hl7.it/fhir/terminology/sid/minsan-ria // https://www.salute.gov.it/portale/documentazione/p6_2_2_1.jsp?lingua=italiano&id=1053
+Alias: $minsan-fls = https://www.hl7.it/fhir/terminology/ValueSet/minsan-idAziendeOspedaliere
+Alias: $minsan-hsp = https://www.hl7.it/fhir/terminology/ValueSet/minsan-idStrutture
+Alias: $minsan-ria = https://www.hl7.it/fhir/terminology/ValueSet/strutturePubbliche // https://www.salute.gov.it/portale/documentazione/p6_2_2_1.jsp?lingua=italiano&id=1053
 
-Alias: $minsan-farmacie = https://www.hl7.it/fhir/terminology/sid/minsan-farmacie
+Alias: $minsan-farmacie = https://www.hl7.it/fhir/terminology/CodeSystem/minsan-farmacie
 Alias: $minsan-minsan-parafarmacie = https://www.hl7.it/fhir/terminology/sid/minsan-parafarmacie
+
+
 
 Alias: $minsan-regione = https://www.hl7.it/fhir/terminology/sid/minsan-regione
 //Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode

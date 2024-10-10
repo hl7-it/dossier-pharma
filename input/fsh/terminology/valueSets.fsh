@@ -112,3 +112,10 @@ Description: "Indicazioni terapeutiche per un determinato farmaco rimborsabile d
 * ^experimental = false
 * codes from system $aifa-nota
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ValueSet: VsFarmacia
+Id: vs-farmacia
+Title: "MDS - Farmacia"
+Description: "Ministero della Salute - Elenco Farmacie"
+* ^experimental = false
+* codes from system $minsan-farmacie
