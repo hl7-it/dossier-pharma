@@ -18,7 +18,7 @@ Usage: #example
 * dosage.text = "1 Pillola dopo i pasti"
 * dosage.route = $sct#26643006  "Oral use"
 * dosage.dose = 1 'PILL' "Pill"
-
+* dosage.dose.system = $odf
 
 Instance: MedicationAdministration-Dossier-Esempio2
 InstanceOf: MedicationAdministrationDossierPharma

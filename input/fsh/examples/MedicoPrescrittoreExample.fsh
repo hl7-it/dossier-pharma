@@ -1,7 +1,7 @@
 Instance: MedicoPrescrittoreExample01
 InstanceOf: MedicoPrescrittore
 Title: "PractitionerRole ospedaliaro - medicina interna"
-Description: "Esempio di medico ospedaliero Prescrittore"
+Description: "Esempio di Medico Prescrittore ospedaliero"
 Usage: #example
 
 // * id = "PractitionerRole-prescrittore-it-dossierPharma-ex001"

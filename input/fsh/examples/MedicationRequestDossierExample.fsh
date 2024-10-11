@@ -24,8 +24,7 @@ Usage: #example
   * value = "030A05714294324"
 * dosageInstruction.text = "20 unità prima della colazione"
 * dosageInstruction.doseAndRate.doseQuantity = 20 $unitOfMeasure#U
-* dosageInstruction.timing.repeat.frequency = 2
-* dosageInstruction.timing.repeat.period = 2
+* dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.periodUnit = #d // "d" per giorno
 * dosageInstruction.route = $sct#3876002 "Subcutaneous tissue structure of femoral region"
 * dispenseRequest.quantity.value = 2
@@ -64,7 +63,6 @@ Usage: #example
 * dosageInstruction.doseAndRate.doseQuantity = 2 $odf#IVSOL "Intravenous Solution"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2022-01-31T15:00:00Z"
 * dosageInstruction.timing.repeat.frequency = 1
-* dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
 * dosageInstruction.route = $sct#47625008 "Intravenous route"
 * dispenseRequest.quantity.value = 10 // Numero di fiale
@@ -128,7 +126,6 @@ Usage: #example
 * dosageInstruction.text = "1 compresse al giorno"
 * dosageInstruction.doseAndRate.doseQuantity = 1 $odf#TAB "Tablet"
 * dosageInstruction.timing.repeat.frequency = 1
-* dosageInstruction.timing.repeat.period = 2
 * dosageInstruction.timing.repeat.periodUnit = #d // "d" per giorno
 * dosageInstruction.route = $sct#26643006 "Oral use"
 * dispenseRequest.quantity.value = 1
@@ -159,7 +156,6 @@ Usage: #example
 * dosageInstruction.text = "1 compresse al giorno"
 * dosageInstruction.doseAndRate.doseQuantity = 1 $odf#TAB "TAB"
 * dosageInstruction.timing.repeat.frequency = 1
-* dosageInstruction.timing.repeat.period = 2
 * dosageInstruction.timing.repeat.periodUnit = #d // "d" per giorno
 * dosageInstruction.route = $sct#26643006 "Oral use"
  
