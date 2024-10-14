@@ -13,10 +13,10 @@ Usage: #example
 * subject = Reference (Patient-Dossier-Esempio)
 
 
-* created = "2024-09-15T14:31:22.387Z"
+* created = "2024-01-15T14:31:22.387Z"
 
-* period.start = "2024-09-16T14:31:22.387Z"
-* period.end = "2024-10-16T14:31:22.387Z"
+* period.start = "2024-01-16T14:31:22.387Z"
+* period.end = "2024-06-16T14:31:22.387Z"
 
 * activity.detail.quantity.value = 1
 * activity.detail.quantity = $sct#422145002 "Inject"

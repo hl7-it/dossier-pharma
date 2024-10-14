@@ -1,7 +1,7 @@
 Instance: MedicationRequestDossierExample001
 InstanceOf: MedicationRequestItDossierPharma
 Title: "MedicationRequest per AIC"
-Description: "Esempio di Prescrizione farmaceutica (Insulina) associata al Piano Terapeutico"
+Description: "Esempio di Prima Prescrizione farmaceutica (Insulina) associata al Piano Terapeutico"
 Usage: #example
  
 * id = "MedicationRequest-it-dossierPharma-ex001"
@@ -13,7 +13,7 @@ Usage: #example
 * subject = Reference (Patient-Dossier-Esempio)
 * subject.identifier.system = $CF
 * subject.identifier.value = "VRDMRA89D43F979Y"
-* authoredOn = "2022-01-31T14:31:22.387Z"
+* authoredOn = "2024-01-31T14:31:22.387Z"
 * requester = Reference(MedicoPrescrittoreExample01)
 * requester.identifier.system = $CF
 * requester.identifier.value = "PLLDSR80E47A462P"
@@ -27,8 +27,10 @@ Usage: #example
 * dosageInstruction.timing.repeat.frequency = 1
 * dosageInstruction.timing.repeat.periodUnit = #d // "d" per giorno
 * dosageInstruction.route = $sct#3876002 "Subcutaneous tissue structure of femoral region"
-* dispenseRequest.quantity.value = 2
+* dispenseRequest.quantity.value = 4
 * extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
+* dispenseRequest.validityPeriod.start = "2024-01-31T14:31:22.387Z"
+* dispenseRequest.validityPeriod.end = "2024-02-28T14:31:22.387Z"
 
 //* substitution.allowedCodeableConcept = $v3-substanceAdminSubstitution#N
  
@@ -194,3 +196,37 @@ Usage: #example
 * dosageInstruction.route = $sct#26643006 "Oral use"
 * dispenseRequest.quantity.value = 2
 * extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample02)
+
+Instance: MedicationRequestDossierExample007
+InstanceOf: MedicationRequestItDossierPharma
+Title: "MedicationRequest per AIC 6"
+Description: "Esempio di Seconda Prescrizione farmaceutica (Insulina) associata al Piano Terapeutico"
+Usage: #example
+ 
+* id = "MedicationRequest-it-dossierPharma-ex007"
+* status = #completed
+* intent = #order
+* extension[pianoTerapeutico].extension[existPt].valueBoolean = true
+* extension[pianoTerapeutico].extension[PT].valueReference = Reference (CarePlanExample)
+* medicationCodeableConcept = $aic#037568019 "5 MICROGRAMMI SOLUZIONE INETTABILE - USO SOTTOCUTANEO PENNA PRERIEMPITA (VETRO)" 
+* subject = Reference (Patient-Dossier-Esempio)
+* subject.identifier.system = $CF
+* subject.identifier.value = "VRDMRA89D43F979Y"
+* authoredOn = "2022-03-01T14:31:22.387Z"
+* requester = Reference(MedicoPrescrittoreExample01)
+* requester.identifier.system = $CF
+* requester.identifier.value = "PLLDSR80E47A462P"
+* reasonCode = $aifa-nota#01
+* reasonCode.text = "Diabete Mellito di Tipo 2"
+* groupIdentifier
+  * system = $NRE
+  * value = "030A05756294325"
+* dosageInstruction.text = "20 unità prima della colazione"
+* dosageInstruction.doseAndRate.doseQuantity = 20 $unitOfMeasure#U
+* dosageInstruction.timing.repeat.frequency = 1
+* dosageInstruction.timing.repeat.periodUnit = #d // "d" per giorno
+* dosageInstruction.route = $sct#3876002 "Subcutaneous tissue structure of femoral region"
+* dispenseRequest.quantity.value = 4
+* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
+* dispenseRequest.validityPeriod.start = "2024-03-01T14:31:22.387Z"
+* dispenseRequest.validityPeriod.end = "2024-04-01T14:31:22.387Z"

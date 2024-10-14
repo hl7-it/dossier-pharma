@@ -61,7 +61,7 @@ Description: "Descrizione delle informazioni del paziente nei documenti FHIR."
 * identifier[codiceFiscale] ^short = "Codice Fiscale."
 * identifier[codiceFiscale].system ^short = "Namespace per il valore dell'identifier."
 * identifier[codiceFiscale].system 1..  
-* identifier[codiceFiscale].system = $cf (exactly)
+* identifier[codiceFiscale].system = $CF (exactly)
 * identifier[codiceFiscale].value ^short = "Valore dell'identifier."
 * identifier[codiceFiscale].value obeys pat-id-cf-1
 * identifier[anpr] ^short = "Identificativo del paziente nell'Anagrafe nazionale della popolazione residente."
