@@ -46,6 +46,7 @@ Alias: $atc = http://www.whocc.no/atc
 Alias: $v3-substanceAdminSubstitution = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
 Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab
 Alias: $istat-luogoNascita = https://www.hl7.it/fhir/terminology/ValueSet/istat-luogoNascita
+Alias: $CS_luogoNascita = https://www.hl7.it/fhir/terminology/CodeSystem/istat-unitaAmministrativeTerritorialiEstere
 
 Alias: $COV_TYP = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $vs-aic = http://hl7.it/fhir/dossier-pharma/ValueSet/aifa-aic 
