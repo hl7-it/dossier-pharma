@@ -75,3 +75,7 @@ Alias: $dug = http://registry.geodati.gov.it/dug
 Alias: $mmg-pls = http://hl7.it/fhir/StructureDefinition/PractitionerRole-it-mmg
 
 Alias: $unitOfMeasure = http://unitsofmeasure.org
+Alias: $cs-statoEsenzione = http://hl7.it/fhir/dossier-pharma/CodeSystem/cs-statoEsenzione
+Alias: $V3ActStatus = http://terminology.hl7.org/CodeSystem/v3-ActStatus
+Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+Alias: $mds-esenzione = http://hl7.it/fhir/dossier-pharma/CodeSystem/mds-esenzioni

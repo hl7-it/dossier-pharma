@@ -131,8 +131,8 @@ Description: "MDS - Codici per l'esezione dal tichet"
 * ^caseSensitive = true 
 
 * #E01 "Cittadini di età inferiore a 6 anni e superiore a 65 anni, appartenenti ad un nucleo familiare con reddito annuo complessivo non superiore a 36.151,98 euro."
-* #EO2 "Disoccupati e loro familiari a carico appartenenti ad un nucleo familiare con un reddito annuo complessivo inferiore a 8.263,31 euro, incrementato fino a 11.362,05 euro in presenza del coniuge ed in ragione di ulteriori 516,46 euro per ogni figlio a carico."
-* #EO3 "Titolari di pensioni sociali e loro familiari a carico."
+* #E02 "Disoccupati e loro familiari a carico appartenenti ad un nucleo familiare con un reddito annuo complessivo inferiore a 8.263,31 euro, incrementato fino a 11.362,05 euro in presenza del coniuge ed in ragione di ulteriori 516,46 euro per ogni figlio a carico."
+* #E03 "Titolari di pensioni sociali e loro familiari a carico."
 * #E04 "Titolari di pensioni al minimo di età superiore a 60 anni e loro familiari a carico, appartenenti ad un nucleo familiare con un reddito annuo complessivo inferiore a 8.263,31 euro, incrementato fino a 11.362,05 euro in presenza del coniuge ed in ragione di ulteriori 516,46 euro per ogni figlio a carico."
 * #E52  "Soggetti sottoposti a trapianto (rene, cuore, polmone, fegato, pancreas, midollo, intestino)"
 * #G01 "Invalidi di guerra appartenenti alle categorie dalla 1° alla 5° titolari di pensione diretta vitalizia e deportati in campi di sterminio (ex art.6 DM 1.2.1991)"
@@ -152,4 +152,20 @@ Description: "MDS - Codici per l'esezione dal tichet"
 * #L04 "Infortunati sul lavoro o affetti da malattie professionali (ex art.6 DM 1.2.1991)"
 * #S03 "Invalidi per servizio appartenenti alla categoria dalla 6° all'8° (ex art.6 DM 1.2.1991)"
 //-------------------------------------------------------------------------------------------
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+CodeSystem: CSStatoEsenzione
+Id: cs-statoEsenzione
+Title: "Stato Esenzioni"
+Description: "Codesystem basato sul vocabolario HL7 V3 ActStatus che descrive lo stato delle esenzioni."
+* ^experimental = false
+* ^status = #active
+* ^caseSensitive = true 
+//-------------------------------------------------------------------------------------------
+* #active "attivo" // "Esenzione in corso di validità"
+* #suspended  "sospeso" // "Esenzione momentaneamente sospesa (ad esempio in attesa del rinnovo di un’iscrizione temporanea)"
+* #aborted  "abortito" // "Esenzione mai stata valida (ad esempio è stata assegnata per errore e il documento corrispondente era già stato prodotto in stato active)"
+* #completed "completato" // "Esenzione non più in corso di validità"
+* #UNK "sconosciuto"
  

@@ -8,3 +8,7 @@ Description: "Esempio di Esenzione a carico del SSN"
 * type = $COV_TYP#PUBLICPOL
 * beneficiary = Reference(Patient/Patient-Dossier-Esempio)
 * payor = Reference(Organization/Organization-Dossier-Esempio2)
+* costToBeneficiary.valueMoney.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* costToBeneficiary.valueMoney.extension.valueCode = #not-applicable
+* costToBeneficiary.exception.extension[StatoEsenzioneCoverage].valueCodeableConcept = $cs-statoEsenzione#active "Attivo"
+* costToBeneficiary.exception.type = $mds-esenzione#E03 "Titolari di pensioni sociali e loro familiari a carico."
