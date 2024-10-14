@@ -9,50 +9,28 @@ Alias: $oid = urn:ietf:rfc:1155
 Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $sct = http://snomed.info/sct
 
-Alias: CS_unitaTerritoriali = https://www.hl7.it/fhir/terminology/sid/istat-unitaAmministrativeTerritoriali
-Alias: CS_Estero = https://www.hl7.it/fhir/terminology/sid/istat-unitaAmministrativeTerritorialiEstere
-
-Alias: CS_ProfessioniIstat = https://www.hl7.it/fhir/terminology/CodeSystem/istat-professioni
-Alias: CS_TitoloStudioIstat = https://www.hl7.it/fhir/terminology/CodeSystem/istat-ctsi03
-
-Alias: V3ActStatus = http://terminology.hl7.org/CodeSystem/v3-ActStatus
-Alias: CS_tipoEntita = https://www.hl7.it/fhir/terminology/CodeSystem/it-tipoEntita
-
+Alias: $CS_unitaTerritoriali = https://www.hl7.it/fhir/terminology/sid/istat-unitaAmministrativeTerritoriali
 
 Alias: $minsan-fls = https://www.hl7.it/fhir/terminology/ValueSet/minsan-idAziendeOspedaliere
 Alias: $minsan-hsp = https://www.hl7.it/fhir/terminology/ValueSet/minsan-idStrutture
 Alias: $minsan-ria = https://www.hl7.it/fhir/terminology/ValueSet/strutturePubbliche // https://www.salute.gov.it/portale/documentazione/p6_2_2_1.jsp?lingua=italiano&id=1053
 
 Alias: $minsan-farmacie = https://www.hl7.it/fhir/terminology/CodeSystem/minsan-farmacie
-Alias: $minsan-minsan-parafarmacie = https://www.hl7.it/fhir/terminology/sid/minsan-parafarmacie
-
-
-
 Alias: $minsan-regione = https://www.hl7.it/fhir/terminology/sid/minsan-regione
-//Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-//Alias: $it-v3RoleCode = https://www.hl7.it/fhir/terminology/CodeSystem/it-v3RoleCode
-Alias: $coverage-exceptionStatus = http://hl7.it/fhir/StructureDefinition/coverage-exceptionStatus
+
+Alias: $statoEsenzione = https://www.hl7.it/fhir/terminology/ValueSet/statoEsenzione
 Alias: $dataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 
-Alias: $minsan-esenzioni = http://hl7.it/fhir/dossier-pharma/CodeSystem/minsan-esenzioni // TODO: bring it to teminology!!
-Alias: $v3-MaritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: $v3-Confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
-Alias: $istat-unitaAmministrativeTerritoriali = https://www.hl7.it/fhir/terminology/sid/istat-unitaAmministrativeTerritoriali
 
 Alias: $Coverage-it-base = http://hl7.it/fhir/StructureDefinition/Coverage-it-base
 Alias: $Patient-it-base = http://hl7.it/fhir/StructureDefinition/Patient-it-base
 Alias: $patient-citizenship = http://hl7.org/fhir/StructureDefinition/patient-citizenship
-Alias: $istat-luogoNascita = https://www.hl7.it/fhir/terminology/ValueSet/istat-luogoNascita
 Alias: $istat-cittadinanza = https://www.hl7.it/fhir/terminology/ValueSet/istat-cittadinanza
 Alias: $istat-professione = https://www.hl7.it/fhir/terminology/ValueSet/istat-professione
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
-Alias: $cf = http://hl7.it/sid/codiceFiscale
 Alias: $anpr = http://hl7.it/sid/anpr
 Alias: $uri-idRegionali = https://www.hl7.it/fhir/terminology/ValueSet/vs-anagrafi-regionali
-Alias: $uri-idEni = http://hl7.it/fhir/lab-report/ValueSet/uri-idEni 
 Alias: $uri-idStp = https://www.hl7.it/fhir/terminology/ValueSet/URI-idStp
 Alias: $istat-titoloStudio = https://www.hl7.it/fhir/terminology/ValueSet/istat-titoloStudio
 Alias: $tipoIdentificatore = https://www.hl7.it/fhir/terminology/ValueSet/VstipoIdentificatore
@@ -60,31 +38,24 @@ Alias: $tipoIdentificatore = https://www.hl7.it/fhir/terminology/ValueSet/Vstipo
 Alias: $NRE =  urn:oid:2.16.840.1.113883.2.9.4.3.9
 Alias: $CF = http://hl7.it/sid/codiceFiscale
 
-//Alias: $aic = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-aic TODO: complete the code system in terminology
 Alias: $aic = http://hl7.it/fhir/dossier-pharma/CodeSystem/aifa-aic
 Alias: $gruppo-equivalenza = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-ge
 Alias: $atc = http://www.whocc.no/atc
 Alias: $v3-substanceAdminSubstitution = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
 Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab
+Alias: $istat-luogoNascita = https://www.hl7.it/fhir/terminology/ValueSet/istat-luogoNascita
 
-Alias: COV_TYP = http://terminology.hl7.org/CodeSystem/v3-ActCode
-//Alias: $vs-aic = https://www.hl7.it/fhir/terminology/ValueSet/aifa-aic 
+Alias: $COV_TYP = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $vs-aic = http://hl7.it/fhir/dossier-pharma/ValueSet/aifa-aic 
 Alias: $vs-gruppo-equivalenza = http://hl7.it/fhir/dossier-pharma/ValueSet/aifa-ge
-//Alias: $vs-gruppo-equivalenza = https://www.hl7.it/fhir/terminology/ValueSet/aifa-ge //TODO: this VS doesn't exist in terminology
-// for fixing the error i define it in this guide
 Alias: $vs-atc = https://www.hl7.it/fhir/terminology/ValueSet/who-atc
 Alias: $vs-icd9cm = https://www.hl7.it/fhir/terminology/ValueSet/who-icd9cm
-//Alias: $vs-aifa-nota = https://www.hl7.it/fhir/terminology/ValueSet/aifa-nota TODO: insert into terminology, there is in in dossier-pharma
-Alias: $vs-aifa-nota = http://hl7.it/fhir/dossier-pharma/ValueSet/vs-aifa-nota
 
 
-Alias: $icd-9-cm = http://hl7.org/fhir/sid/icd-9-cm
-Alias: $non-sostituibilita = urn:oid:2.16.840.1.113883.2.9.6.1.52
-//Alias: $aifa-nota = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-nota TODO:
+
 Alias: $aifa-nota = http://hl7.it/fhir/dossier-pharma/CodeSystem/aifa-nota
+Alias: $vs-aifa-nota = http://hl7.it/fhir/dossier-pharma/ValueSet/vs-aifa-nota
 Alias: $DIZ_Sostituzione = urn:oid:2.16.840.1.113883.2.9.6.1.53
-Alias: $specializ-medico = urn:oid:2.16.840.1.113883.2.9.5.1.111
 Alias: $no-esenzione = urn:oid:2.16.840.1.113883.2.9.5.2.2
 Alias: $esenzion-naz = urn:oid:2.16.840.1.113883.2.9.6.1.22
 Alias: $esenzion-reg = urn:oid:2.16.840.1.113883.2.9.2.[REGIONE].6.22
@@ -92,13 +63,10 @@ Alias: $esenzion-reg = urn:oid:2.16.840.1.113883.2.9.2.[REGIONE].6.22
 Alias: $Organization-it-base = http://hl7.it/fhir/StructureDefinition/Organization-it-base
 
 Alias: $odf = http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm
-//  Example
 
 Alias: $v3-ActReason = http://hl7.it/fhir/dossier-pharma/CodeSystem/motivo-sostituzone
 Alias: $reason-medication-given = http://terminology.hl7.org/CodeSystem/reason-medication-given
 Alias: $sct = http://snomed.info/sct
-Alias: $ndc = http://hl7.org/fhir/sid/ndc
-Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 
 Alias: $istat-comuni = https://www.hl7.it/fhir/terminology/CodeSystem/istat-comuni
 Alias: $dug = http://registry.geodati.gov.it/dug

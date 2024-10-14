@@ -28,7 +28,7 @@ InstanceOf: MedicoPrescrittore
 Title: "PractitionerRole ospedaliaro - cardiologo"
 Description: "Esempio di Medico Prescrittore ospedaliero"
 * id = "90d0fe96-163e-4b25-a96b-9d733a1d59c3"
-* code = CsItRoleCode#MMG "medico medicina generale"
+* code = CsItRoleCode#MO "medico ospedaliero"
 * specialty.coding = $sct#394579002 "Cardiology"
 
 

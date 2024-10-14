@@ -66,13 +66,13 @@ Description: "Motivazioni di non sostituibilità"
 //-------------------------------------------------------------------------------------------
 
 
-// ValueSet: VsMinisteroSaluteEsenzioni
-// Id: vs-minsan-esenzioni
-// Title: "Ministero della Salute - Esenzioni"
-// Description: "Codici Esenzioni Ministero della Salute"
-// * ^experimental = false
-// * ^status = #active
-// * include codes from  system $minsan-esenzioni
+ValueSet: VsMinisteroSaluteEsenzioni
+Id: vs-mds-esenzioni
+Title: "Ministero della Salute - Esenzioni"
+Description: "Codici Esenzioni Ministero della Salute"
+* ^experimental = false
+* ^status = #active
+* include codes from  system mds-esenzioni
 
 //======================================================
 ValueSet: VsMotivoSostituzione
