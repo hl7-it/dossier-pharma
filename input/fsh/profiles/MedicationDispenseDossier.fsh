@@ -48,7 +48,7 @@ Description: "Rappresentazione dell'erogazione del farmaco tramite il profilo Me
 * medicationReference.reference 0..
 
 * subject 
-* subject only Reference(PatientItBase)
+* subject only Reference(PatientDossierPharma)
 * subject.type 0..
 * subject.type = "Patient" (exactly)
 // * subject.identifier 1..
