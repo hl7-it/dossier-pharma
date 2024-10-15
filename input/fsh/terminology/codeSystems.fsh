@@ -162,7 +162,7 @@ Description: "Codesystem basato sul vocabolario HL7 V3 ActStatus che descrive lo
 * ^experimental = false
 * ^status = #active
 * ^caseSensitive = true 
-//-------------------------------------------------------------------------------------------
+
 * #active "attivo" // "Esenzione in corso di validità"
 * #suspended  "sospeso" // "Esenzione momentaneamente sospesa (ad esempio in attesa del rinnovo di un’iscrizione temporanea)"
 * #aborted  "abortito" // "Esenzione mai stata valida (ad esempio è stata assegnata per errore e il documento corrispondente era già stato prodotto in stato active)"

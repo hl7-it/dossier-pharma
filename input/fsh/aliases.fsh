@@ -18,7 +18,7 @@ Alias: $minsan-ria = https://www.hl7.it/fhir/terminology/ValueSet/strutturePubbl
 Alias: $minsan-farmacie = https://www.hl7.it/fhir/terminology/CodeSystem/minsan-farmacie
 Alias: $minsan-regione = https://www.hl7.it/fhir/terminology/sid/minsan-regione
 
-Alias: $statoEsenzione = https://www.hl7.it/fhir/terminology/ValueSet/statoEsenzione
+Alias: $vs-statoEsenzione = https://www.hl7.it/fhir/terminology/ValueSet/statoEsenzione
 Alias: $dataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor

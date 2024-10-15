@@ -7,11 +7,9 @@ Characteristics: #can-be-target
 * dataDiCreazione 1..1 dateTime "Data di creazione del piano terapeutico"
 * paziente 1..1 string "Paziente titolare del piano terapeutico"
 
-* medicoPrescrittore 1..1 Reference(MedicoPrescrittore) "Medico prescrittore del piano terapeutico"
-  * AslAppartenenza 0..1 string "Asl di appartenenza del medico prescrittore"
-  * specialita 0..1 string "Specialità del medico prescrittore"
+* medicoPrescrittore 1..1 Reference (Medico)  "Medico prescrittore del piano terapeutico"
 
-* medicoCurante 0..1 Reference(PractitionerRole) "Medico curante del paziente"
+* medicoCurante 0..1 Reference(Medico) "Medico curante del paziente"
 
 * quesitoDiagnostico 0..1 string "Informazioni codificate o testuali riguardanti il quesito diagnostico"
  
