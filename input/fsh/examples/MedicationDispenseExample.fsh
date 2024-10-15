@@ -8,8 +8,6 @@ Usage: #example
 * extension[recorded].valueDateTime = "2024-07-09T17:13:00+05:00"
 * medicationCodeableConcept.coding[AIC] = $aic#020609083 "ISOPTIN*30 cpr riv 80 mg"
 * subject = Reference(Patient-Dossier-Esempio)
-* subject.identifier.value = "VRDMRA89D43F979Y"
-* identifier.system = "http://hl7.it/sid/codiceFiscale"
 * performer[CFErogatore].actor.identifier.system = "http://hl7.it/sid/codiceFiscale" //TO DO fare il perfomer
 * performer[CFErogatore].actor.identifier.value = "RSSMRT57D12D612R" 
 * authorizingPrescription = Reference(MedicationRequestDossierExample005)

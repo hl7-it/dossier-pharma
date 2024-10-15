@@ -34,7 +34,11 @@ parameters:
   apply-jurisdiction: true
   apply-publisher: true
   special-url: !!seq
-  - "https://www.hl7.it/fhir/terminology/CodeSystem/istat-professioni"  
+  - https://www.hl7.it/fhir/terminology/CodeSystem/istat-professioni  
+  - http://hl7.it/fhir/StructureDefinition/patient-codeableBirthPlace
+  - http://hl7.it/fhir/StructureDefinition/patient-occupation-it
+  - http://hl7.it/fhir/StructureDefinition/patient-qualification-it
+  - http://hl7.it/fhir/StructureDefinition/recordCertification
   autoload-resources: true
 
 copyrightYear: 2021+
@@ -46,7 +50,8 @@ jurisdiction: urn:iso:std:iso:3166#IT "Italy"
  
 dependencies:
   hl7.fhir.it.base: current
-  # hl7.fhir.it.terminology: dev
+  hl7.fhir.it.terminology: current
+  #hl7.fhir.it.terminology: dev
   # hl7.fhir.it.base: 0.1.0
 
 pages:

@@ -30,7 +30,7 @@ Description: "Esempio di organizzazione di Azienda Sanitaria"
 // * address[0].line = "VIA GUIDO REY 1"
 // * address[0].city = "AOSTA"
 // * address[0].city.extension[0].url = ISO_SC_coding
-// * address[0].city.extension[0].valueCoding = CS_unitaTerritoriali#007003 "AOSTA"    
+// * address[0].city.extension[0].valueCoding = $CS_unitaTerritoriali#007003 "AOSTA"    
 // * address[0].district = "AO"
 // * address[0].state = "VALLE D'AOSTA"
 // * address[0].state.extension[0].url = ISO_SC_coding

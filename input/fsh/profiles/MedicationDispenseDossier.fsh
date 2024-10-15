@@ -2,7 +2,7 @@ Profile: MedicationDispenseItDossierPharma
 Parent: MedicationDispense
 Id:       MedicationDispense-it-dossierPharma
 Title:    "MedicationDispense - Dossier Farmaceutico"
-Description: "Rappresentazione dell'erogazione del farmaco tramite il profilo MedicationDispense."
+Description: "Rappresentazione dell'erogazione del farmaco tramite il profilo MedicationDispense"
 //=================================================================
 
 /* === TO DO 
@@ -48,7 +48,7 @@ Description: "Rappresentazione dell'erogazione del farmaco tramite il profilo Me
 * medicationReference.reference 0..
 
 * subject 
-* subject only Reference(PatientItBase)
+* subject only Reference(PatientDossierPharma)
 * subject.type 0..
 * subject.type = "Patient" (exactly)
 // * subject.identifier 1..
@@ -57,6 +57,7 @@ Description: "Rappresentazione dell'erogazione del farmaco tramite il profilo Me
 // * subject.identifier.value 1..
 * subject.identifier.value ^short = "Codice Fiscale"
 * subject.display 0.. 
+
 * performer 1..
 * performer ^slicing.discriminator.type = #type
 * performer ^slicing.discriminator.path = "$this"

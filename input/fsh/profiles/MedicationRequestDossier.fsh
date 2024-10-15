@@ -2,7 +2,7 @@ Profile:  MedicationRequestItDossierPharma
 Parent:   MedicationRequest
 Id:       MedicationRequest-it-dossierPharma
 Title:    "MedicationRequest - Dossier Farmaceutico"
-Description: "Rappresentazione della prescrizione del farmaco tramite il profilo MedicationRequest."
+Description: "Rappresentazione della prescrizione del farmaco tramite il profilo MedicationRequest"
 //=================================================================
 
 /* === TO DO 
@@ -11,8 +11,18 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 === */
 
 * ^status = #draft
-* extension contains MedicationRequestMedicoTitolare named medicoTitolare 0..1
-* extension[medicoTitolare].valueReference  only Reference( MedicoPrescrittore )
+* extension contains MedicationRequestMedicoTitolare named medicoTitolare 1..1
+* extension[medicoTitolare].valueReference  only Reference(MedicoPrescrittore)
+
+* extension contains MedicationRequestPianoTerapeutico named pianoTerapeutico 0..1
+* extension[pianoTerapeutico].extension[PT].valueReference only Reference (CarePlanItDossierPharma)
+* extension[pianoTerapeutico].extension[existPt].valueBoolean
+
+
+
+* identifier 0..1
+* identifier ^short = "Identificativo del Piano Terapeutico"
+* obeys pianoTerapeutico-1
 
 * status 1.. 
 * intent = #order (exactly) // do we really need to constraint to order ?
@@ -22,7 +32,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 
 * medication[x] 
 * medicationReference only Reference ( MedicationItDossierPharma )
-* medicationCodeableConcept 0..1
+* medicationCodeableConcept 1..1
 
 
 * medicationCodeableConcept.coding 1.. 
@@ -48,7 +58,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 
 
 * subject 
-* subject only Reference(PatientItBase)
+* subject only Reference(PatientDossierPharma)
 * subject.type 0..
 * subject.type = "Patient" (exactly)
 * subject.identifier 1..
@@ -57,14 +67,17 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * subject.identifier.value 1..
 * subject.identifier.value ^short = "Codice Fiscale"
 * subject.display 0.. 
-* authoredOn 0.. 
+* authoredOn 1.. 
+* authoredOn ^short = "Data compilazione della ricetta da parte del medico"
 * requester 1.. 
 * requester only Reference(MedicoPrescrittore)
 
 * requester.reference 0..1
-* requester.identifier 0..1
+* requester.identifier 1..1
 * requester.identifier ^short = "Valorizzato con identificativo del medico titolare o sostituto"
 
+* reasonCode 1..1
+* reasonCode.text 1..1
 * reasonCode.text ^short = "Descrizione diagnosi"
 * reasonCode.coding 
   * system 1.. 
@@ -81,7 +94,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
     notaAIFA 0..1 and
     codiceDiagnosi 0..1
 
-* reasonCode.coding[notaAIFA] ^short = "Nota AIFA"
+* reasonCode.coding[notaAIFA] ^short = "AIFA"
 * reasonCode.coding[notaAIFA] from $vs-aifa-nota
 * reasonCode.coding[codiceDiagnosi] ^short = "Codice diagnosi"
 * reasonCode.coding[codiceDiagnosi] from $vs-icd9cm
@@ -92,6 +105,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
   * ^short = "Identificativo della prescrizione (e.g. NRE)"
   * system 1..1 //Definire un Value Set con tutti i system possibili
   * system from VsGroupIdentifierUri (required)
+* groupIdentifier.value 1..1
 * groupIdentifier.value ^short = "Identificativo della prescrizione (e.g. NRE)"
 
 * insurance 
@@ -117,15 +131,17 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * reasonReference ^short = "Condizioni cliniche ed osservazioni che motivano la prescrizione (parametri vitali)" //TODO: only parametri vitali? 
 * dispenseRequest.validityPeriod ^short = "Periodo di tempo per il quale è autorizzata la fornitura"
 
-// * dosageInstruction.timing.repeat.boundsPeriod ^short = "Durata temporale della terapia farmacologica"
-// * dosageInstruction.timing.repeat.boundsPeriod 1..1
-// * dosageInstruction.timing.repeat.boundsPeriod.start 1..1
-* dosageInstruction ^short = "Modalità di assunzione del farmaco"
+* dosageInstruction 1..1
+  * route 1..1
+  * timing 1..1
+  * doseAndRate 1..1
+* dosageInstruction ^short = "Istruzioni per assumere/sommministrare il farmaco"
+* dosageInstruction.route ^short = "Modalità con cui assumere/sommministrare il farmaco"
+* dosageInstruction.timing ^short = "Tempi con cui assumere/sommministrare il farmaco"
+* dosageInstruction.doseAndRate ^short = "Dose per singola assunzione/sommministrazione del farmaco"
 
-// inserire la frequenza di assunzione dosageInstruction.dosage.timing.repeat (non rendere obbligatorio nulla)
-/*--
-* substitution.allowedCodeableConcept.coding 1..1
-* substitution.allowedCodeableConcept.coding.system 1..
-* substitution.allowedCodeableConcept.coding.system = $non-sostituibilità (exactly)
-* substitution.allowedCodeableConcept.coding.code 1..
----*/
+
+Invariant: pianoTerapeutico-1
+Description: "If pianoTerapeutico is true, reference to CarePlan must be present."
+Severity: #error
+Expression: "extension.where(url = 'http://hl7.it/fhir/dossier-pharma/StructureDefinition/medicationRequest-pianoTerapeutico').extension.where(url = 'existPt' and value = true).exists() implies extension.where(url = 'http://hl7.it/fhir/dossier-pharma/StructureDefinition/medicationRequest-pianoTerapeutico').extension.where(url = 'PT' and value.exists()).exists()"

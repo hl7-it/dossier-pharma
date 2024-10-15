@@ -2,11 +2,20 @@
 //======================================================
 ValueSet: VsGroupIdentifierUri
 Id: groupIdentifierUri-it-dossierPharma
-Title: "Sistemi di identificazione per prescrizioni"
-Description: "Sistemi di identificazione per prescrizioni"
+Title: "Sistemi di identificazione per la prescrizione"
+Description: "Sistemi di identificazione per la prescrizione"
 //-------------------------------------------------------------------------------------------
 * ^experimental = false
 * $uri#urn:oid:2.16.840.1.113883.2.9.4.3.9 "Numero Ricetta Elettronica (identificativo ordine)"
+
+//======================================================
+ValueSet: VsOidPT
+Id: oidpt-it-dossierPharma
+Title: "Sistemi di identificazione per il piano terapeutico"
+Description: "Sistemi di identificazione per il piano terapeutico"
+//-------------------------------------------------------------------------------------------
+* ^experimental = false
+* $uri#urn:oid:2.16.840.1.113883.2.9.4.3.13 "Identificativo Piano Terapeutico"
 
 
 //======================================================
@@ -57,13 +66,13 @@ Description: "Motivazioni di non sostituibilità"
 //-------------------------------------------------------------------------------------------
 
 
-// ValueSet: VsMinisteroSaluteEsenzioni
-// Id: vs-minsan-esenzioni
-// Title: "Ministero della Salute - Esenzioni"
-// Description: "Codici Esenzioni Ministero della Salute"
-// * ^experimental = false
-// * ^status = #active
-// * include codes from  system $minsan-esenzioni
+ValueSet: VsMinisteroSaluteEsenzioni
+Id: vs-mds-esenzioni
+Title: "Ministero della Salute - Esenzioni"
+Description: "Codici Esenzioni Ministero della Salute"
+* ^experimental = false
+* ^status = #active
+* include codes from  system mds-esenzioni
 
 //======================================================
 ValueSet: VsMotivoSostituzione
@@ -105,10 +114,26 @@ Description: "AIFA AIC"
 
 //TODO: this VS needs to be in terminology
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-ValueSet: VsNotaAifa
-Id: vs-aifa-nota
-Title: "AIFA Note"
-Description: "Indicazioni terapeutiche per un determinato farmaco rimborsabile dal Servizio Sanitario Nazionale"
-* ^experimental = false
-* codes from system $aifa-nota
+// ValueSet: VsNotaAifa
+// Id: vs-aifa-nota
+// Title: "AIFA Note"
+// Description: "Indicazioni terapeutiche per un determinato farmaco rimborsabile dal Servizio Sanitario Nazionale"
+// * ^experimental = false
+// * codes from system $aifa-nota
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ValueSet: VsFarmacia
+Id: vs-farmacia
+Title: "MDS - Farmacia"
+Description: "Ministero della Salute - Elenco Farmacie"
+* ^experimental = false
+* codes from system $minsan-farmacie
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ValueSet: VsNullflavor
+Id: vs-NullFlavor
+Title: "NullFlavor"
+Description: "COdici che descrivono perchè non è presente un valore valido "
+* ^experimental = false
+* codes from system $v3-NullFlavor

@@ -2,7 +2,7 @@ Profile: MedicationItDossierPharma
 Parent: Medication
 Id: Medication-it-dossierPharma
 Title: "Medication - Dossier Farmaceutico"
-Description: "Rappresentazione del farmaco tramite il profilo Medication."
+Description: "Rappresentazione del farmaco tramite il profilo Medication"
 * ^status = #active
 * identifier 0..1  //era obbligatorio
 * code 1..1
@@ -19,8 +19,14 @@ Description: "Rappresentazione del farmaco tramite il profilo Medication."
 * code.coding[atc] from $vs-atc
 * code.coding[aic] from $vs-aic
 
+
+* form ^short = "Forma farmaceutica"
+* amount ^short = "Quantità nella confezione"
+* ingredient.strength ^short = "Grammatura"
+
 * code.coding[gruppoEquivalenza] from  $vs-gruppo-equivalenza
-* code.coding[eccezioni] = $v3-NullFlavor#UNK
+* code.coding[eccezioni] from vs-NullFlavor
+* code.coding[eccezioni].code = #UNK
 
 * batch 0..1
 * batch.lotNumber 0..1

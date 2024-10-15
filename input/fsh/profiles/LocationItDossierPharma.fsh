@@ -2,7 +2,7 @@ Profile: LocationItDossierPharma
 Parent: Location
 Id: Location-it-dossierPharma
 Title:    "Location - Dossier Farmaceutico"
-Description: "Rappresentazione del luogo dove è avvenuta l'erogazione del farmaco tramite il profilo Location."
+Description: "Rappresentazione del luogo dove è avvenuta l'erogazione del farmaco tramite il profilo Location"
 
 * . ^short = "Luogo di erogazione del farmaco"
 * identifier 1.. 
@@ -21,7 +21,7 @@ Description: "Rappresentazione del luogo dove è avvenuta l'erogazione del farma
 	
 * identifier[farmacia]
   * ^short = "Farmacia"
-  * system = $minsan-farmacie
+  * system = $vs-minsan-farmacie
 * identifier[azienda]
   * ^short = "Azienda Sanitaria ed Ospedaliera"
   * system = $minsan-fls

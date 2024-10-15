@@ -1,9 +1,9 @@
 Instance: Encounter-Dossier-Esempio
 InstanceOf: Encounter
 Title: "Encounter ambulatoriale"
-Description: "Esempio di incontro: informazioni di base per descrivere un incontro ambulatoriale pianificato."
+Description: "Esempio di incontro: informazioni di base per descrivere un incontro ambulatoriale pianificato"
 Usage: #example
-* id = "7b06368c-7089-4f66-acc8-29e1fcbd31f6"
+* id = "7b06368c-7089-4f66-acc8-30e1fcbd31f6"
 * status = #finished
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #AMB
