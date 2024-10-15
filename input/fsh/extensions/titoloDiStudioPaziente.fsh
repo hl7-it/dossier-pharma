@@ -1,6 +1,6 @@
 Extension: ExtTitoloStudioPaziente
 Id: patient-qualification-it
-Title: "Titolo di Studio del paziente"
+Title: "Titolo di Studio del paziente (Patient)"
 Description: "Estensione per gestire il Titolo di studio del paziente come CodeableConcept."
 * ^version = "0.1.1"
 * ^publisher = "HL7 Italia"

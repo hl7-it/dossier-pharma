@@ -114,12 +114,12 @@ Description: "AIFA AIC"
 
 //TODO: this VS needs to be in terminology
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-ValueSet: VsNotaAifa
-Id: vs-aifa-nota
-Title: "AIFA Note"
-Description: "Indicazioni terapeutiche per un determinato farmaco rimborsabile dal Servizio Sanitario Nazionale"
-* ^experimental = false
-* codes from system $aifa-nota
+// ValueSet: VsNotaAifa
+// Id: vs-aifa-nota
+// Title: "AIFA Note"
+// Description: "Indicazioni terapeutiche per un determinato farmaco rimborsabile dal Servizio Sanitario Nazionale"
+// * ^experimental = false
+// * codes from system $aifa-nota
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ValueSet: VsFarmacia

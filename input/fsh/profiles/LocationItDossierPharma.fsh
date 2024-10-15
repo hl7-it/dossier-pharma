@@ -21,7 +21,7 @@ Description: "Rappresentazione del luogo dove è avvenuta l'erogazione del farma
 	
 * identifier[farmacia]
   * ^short = "Farmacia"
-  * system = $minsan-farmacie
+  * system = $vs-minsan-farmacie
 * identifier[azienda]
   * ^short = "Azienda Sanitaria ed Ospedaliera"
   * system = $minsan-fls

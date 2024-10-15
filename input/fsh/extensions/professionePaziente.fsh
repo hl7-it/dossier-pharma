@@ -1,6 +1,6 @@
 Extension: ExtProfessionePaziente
 Id: patient-occupation-it
-Title: "Professione del paziente"
+Title: "Professione del paziente (Patient)"
 Description: "Estensione per gestire la professione del paziente come CodeableConcept."
 * ^version = "0.1.0"
 * ^date = "2020-06-30T18:23:29+02:00"

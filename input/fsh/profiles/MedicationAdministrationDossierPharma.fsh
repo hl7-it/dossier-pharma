@@ -33,7 +33,7 @@ Description: "Rappresentazione della somministrazione del farmaco tramite il pro
 
 
 * subject 
-* subject only Reference(PatientItBase)
+* subject only Reference(PatientDossierPharma)
 * subject.type 0..
 * subject.type = "Patient" (exactly)
 // * subject.identifier 1..

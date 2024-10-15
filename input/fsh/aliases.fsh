@@ -16,6 +16,7 @@ Alias: $minsan-hsp = https://www.hl7.it/fhir/terminology/ValueSet/minsan-idStrut
 Alias: $minsan-ria = https://www.hl7.it/fhir/terminology/ValueSet/strutturePubbliche // https://www.salute.gov.it/portale/documentazione/p6_2_2_1.jsp?lingua=italiano&id=1053
 
 Alias: $minsan-farmacie = https://www.hl7.it/fhir/terminology/CodeSystem/minsan-farmacie
+Alias: $vs-minsan-farmacie = http://hl7.it/fhir/dossier-pharma/ValueSet/vs-farmacia
 Alias: $minsan-regione = https://www.hl7.it/fhir/terminology/sid/minsan-regione
 
 Alias: $vs-statoEsenzione = https://www.hl7.it/fhir/terminology/ValueSet/statoEsenzione
@@ -56,8 +57,8 @@ Alias: $vs-icd9cm = https://www.hl7.it/fhir/terminology/ValueSet/who-icd9cm
 
 
 
-Alias: $aifa-nota = http://hl7.it/fhir/dossier-pharma/CodeSystem/aifa-nota
-Alias: $vs-aifa-nota = http://hl7.it/fhir/dossier-pharma/ValueSet/vs-aifa-nota
+Alias: $aifa-nota = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-nota
+Alias: $vs-aifa-nota = https://www.hl7.it/fhir/terminology/ValueSet/vs-aifa-nota
 Alias: $DIZ_Sostituzione = urn:oid:2.16.840.1.113883.2.9.6.1.53
 Alias: $no-esenzione = urn:oid:2.16.840.1.113883.2.9.5.2.2
 Alias: $esenzion-naz = urn:oid:2.16.840.1.113883.2.9.6.1.22
@@ -80,3 +81,4 @@ Alias: $cs-statoEsenzione = http://hl7.it/fhir/dossier-pharma/CodeSystem/cs-stat
 Alias: $V3ActStatus = http://terminology.hl7.org/CodeSystem/v3-ActStatus
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $mds-esenzione = http://hl7.it/fhir/dossier-pharma/CodeSystem/mds-esenzioni
+Alias: $coverage-exceptionStatus = http://hl7.it/fhir/dossier-pharma/StructureDefinition/coverage-exceptionStatus

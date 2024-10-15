@@ -1,6 +1,6 @@
 Extension:   StatoEsenzioneCoverage
 Id:          coverage-exceptionStatus
-Title:       "Stato Esenzione - Coverage"
+Title:       "Stato Esenzione (Coverage)"
 Description: "Estensione per gestire lo stato di una esenzione"
 //-------------------------------------------------------------------------------------------
 
