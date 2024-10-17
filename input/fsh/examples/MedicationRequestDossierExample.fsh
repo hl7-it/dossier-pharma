@@ -14,7 +14,7 @@ Usage: #example
 * subject.identifier.system = $CF
 * subject.identifier.value = "VRDMRA89D43F979Y"
 * authoredOn = "2024-01-31T14:31:22.387Z"
-* requester = Reference(MedicoPrescrittoreExample01)
+* requester = Reference(MedicoPrescrittoreExample02)
 * requester.identifier.system = $CF
 * requester.identifier.value = "PLLDSR80E47A462P"
 * reasonCode = $aifa-nota#01
@@ -28,7 +28,7 @@ Usage: #example
 * dosageInstruction.timing.repeat.periodUnit = #d // "d" per giorno
 * dosageInstruction.route = $sct#3876002 "Subcutaneous tissue structure of femoral region"
 * dispenseRequest.quantity.value = 4
-* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
+* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample02)
 * dispenseRequest.validityPeriod.start = "2024-01-31T14:31:22.387Z"
 * dispenseRequest.validityPeriod.end = "2024-02-28T14:31:22.387Z"
 
@@ -45,14 +45,14 @@ Usage: #example
 * status = #completed
 * intent = #order
 * extension[pianoTerapeutico].extension[existPt].valueBoolean = false
-* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
+* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample02)
 * medicationCodeableConcept = $atc#A02BC02
 * medicationCodeableConcept.text = "PANTOPRAZOLO soluzione iniettabile"
 * subject.identifier
   * system = $CF
   * value = "RSSMRT57D12D612R"
 * authoredOn = "2022-01-31T14:31:22.387Z"
-* requester = Reference(MedicoPrescrittoreExample01)
+* requester = Reference(MedicoPrescrittoreExample02)
 * requester.identifier
   * value = "PLLDSR80E47A462P"
 * reasonCode = $aifa-nota#01
@@ -213,7 +213,7 @@ Usage: #example
 * subject.identifier.system = $CF
 * subject.identifier.value = "VRDMRA89D43F979Y"
 * authoredOn = "2022-03-01T14:31:22.387Z"
-* requester = Reference(MedicoPrescrittoreExample01)
+* requester = Reference(MedicoPrescrittoreExample02)
 * requester.identifier.system = $CF
 * requester.identifier.value = "PLLDSR80E47A462P"
 * reasonCode = $aifa-nota#01
@@ -227,6 +227,6 @@ Usage: #example
 * dosageInstruction.timing.repeat.periodUnit = #d // "d" per giorno
 * dosageInstruction.route = $sct#3876002 "Subcutaneous tissue structure of femoral region"
 * dispenseRequest.quantity.value = 4
-* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample01)
+* extension[medicoTitolare].valueReference = Reference(MedicoPrescrittoreExample02)
 * dispenseRequest.validityPeriod.start = "2024-03-01T14:31:22.387Z"
 * dispenseRequest.validityPeriod.end = "2024-04-01T14:31:22.387Z"
