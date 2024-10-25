@@ -107,9 +107,12 @@ Description: "AIFA Gruppo di Equivalenza"
 ValueSet: VsAifaAIC
 Id: aifa-aic
 Title: "AIFA AIC"
-Description: "AIFA AIC"
+Description: "AIFA AIC - Valueset relativo ai codici AIC"
 * ^experimental = false
-* codes from system $aic
+
+* codes from system https://www.hl7.it/fhir/terminology/CodeSystem/aifa-aic
+* codes from system $aic 
+
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //TODO: this VS needs to be in terminology
@@ -137,3 +140,4 @@ Title: "NullFlavor"
 Description: "COdici che descrivono perchè non è presente un valore valido "
 * ^experimental = false
 * codes from system $v3-NullFlavor
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

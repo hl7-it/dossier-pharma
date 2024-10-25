@@ -26,7 +26,7 @@ Alias: $dataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-r
 
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 
-Alias: $Coverage-it-base = http://hl7.it/fhir/StructureDefinition/Coverage-it-base
+Alias: $Coverage-it-dossierPharma = http://hl7.it/fhir/StructureDefinition/Coverage-it-dossierPharma
 Alias: $Patient-it-base = http://hl7.it/fhir/StructureDefinition/Patient-it-base
 Alias: $patient-citizenship = http://hl7.org/fhir/StructureDefinition/patient-citizenship
 Alias: $istat-cittadinanza = https://www.hl7.it/fhir/terminology/ValueSet/istat-cittadinanza
@@ -79,8 +79,8 @@ Alias: $dug = http://registry.geodati.gov.it/dug
 Alias: $mmg-pls = http://hl7.it/fhir/StructureDefinition/PractitionerRole-it-mmg
 
 Alias: $unitOfMeasure = http://unitsofmeasure.org
-Alias: $cs-statoEsenzione = http://hl7.it/fhir/dossier-pharma/CodeSystem/cs-statoEsenzione
 Alias: $V3ActStatus = http://terminology.hl7.org/CodeSystem/v3-ActStatus
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+
 Alias: $cs-mds-esenzioni = https://www.hl7.it/fhir/terminology/CodeSystem/mds-esenzioni
-Alias: $coverage-exceptionStatus = http://hl7.it/fhir/StructureDefinition/coverage-exceptionStatus
+Alias: $vs-statoEsenzione = https://www.hl7.it/fhir/terminology/ValueSet/statoEsenzione

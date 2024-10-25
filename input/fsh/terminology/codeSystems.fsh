@@ -27,8 +27,8 @@ Description: "Codice sostituzione sostanza"
 //======================================================
 CodeSystem: CsAifaAic
 Id: aifa-aic
-Title: "AIFA - Autorizzazione Immissione in Commercio"
-Description: "AIFA - Autorizzazione Immissione in Commercio."
+Title: "AIFA - AIC"
+Description: "AIFA - I segueti codici AIC sono utilizzati solo per la IG corrente"
 * ^experimental = false
 * ^status = #active
 * ^caseSensitive = true

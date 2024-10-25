@@ -109,7 +109,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * groupIdentifier.value ^short = "Identificativo della prescrizione (e.g. NRE)"
 
 * insurance 
-* insurance only Reference($Coverage-it-base)
+* insurance only Reference(Coverage-it-dossierPharma)
 
 
 * dispenseRequest 1.. 
