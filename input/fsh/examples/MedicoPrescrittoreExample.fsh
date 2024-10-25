@@ -20,7 +20,7 @@ Description: "Esempio di medico di medicina generale"
 Usage: #example
 * practitioner = Reference(Practitioner/PractitionerExample02)
 * organization = Reference(Organization/Organization-Dossier-Esempio)
-* code = CsItRoleCode#MMG  "medico medicina generale"
+* code = CsItRoleCode#MMG  "medico di medicina generale"
 * specialty.coding = $sct#394802001 "General medicine"
 
 Instance: MedicoPrescrittore03

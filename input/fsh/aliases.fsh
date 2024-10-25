@@ -18,6 +18,8 @@ Alias: $minsan-ria = https://www.hl7.it/fhir/terminology/ValueSet/strutturePubbl
 Alias: $minsan-farmacie = https://www.hl7.it/fhir/terminology/CodeSystem/minsan-farmacie
 Alias: $vs-minsan-farmacie = http://hl7.it/fhir/dossier-pharma/ValueSet/vs-farmacia
 Alias: $minsan-regione = https://www.hl7.it/fhir/terminology/sid/minsan-regione
+Alias: $vs-mds-esenzioni = https://www.hl7.it/fhir/terminology/ValueSet/vs-mds-esenzioni
+
 
 Alias: $vs-statoEsenzione = https://www.hl7.it/fhir/terminology/ValueSet/statoEsenzione
 Alias: $dataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
@@ -80,5 +82,5 @@ Alias: $unitOfMeasure = http://unitsofmeasure.org
 Alias: $cs-statoEsenzione = http://hl7.it/fhir/dossier-pharma/CodeSystem/cs-statoEsenzione
 Alias: $V3ActStatus = http://terminology.hl7.org/CodeSystem/v3-ActStatus
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
-Alias: $mds-esenzione = http://hl7.it/fhir/dossier-pharma/CodeSystem/mds-esenzioni
+Alias: $cs-mds-esenzioni = https://www.hl7.it/fhir/terminology/CodeSystem/mds-esenzioni
 Alias: $coverage-exceptionStatus = http://hl7.it/fhir/StructureDefinition/coverage-exceptionStatus

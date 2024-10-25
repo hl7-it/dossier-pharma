@@ -12,4 +12,4 @@ Description: "Esempio di Esenzione a carico del SSN"
 * costToBeneficiary.valueMoney.extension[0].valueCode = #not-applicable
 * costToBeneficiary.exception.extension[0].url = "http://hl7.it/fhir/StructureDefinition/coverage-exceptionStatus"
 * costToBeneficiary.exception.extension[0].valueCodeableConcept = $V3ActStatus#active
-* costToBeneficiary.exception.type.coding = $mds-esenzione#E03
+* costToBeneficiary.exception.type.coding = $cs-mds-esenzioni#E03

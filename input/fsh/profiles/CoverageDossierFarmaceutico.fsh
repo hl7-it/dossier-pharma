@@ -15,6 +15,6 @@ Description: "Rappresentazione dell'ASL di residenza e delle esenzioni attravers
 * costToBeneficiary.exception MS
 * costToBeneficiary.exception.extension contains $coverage-exceptionStatus named stato-esenzione 0..1 MS
 * costToBeneficiary.exception.type MS
-* costToBeneficiary.exception.type from vs-mds-esenzioni (extensible)
+* costToBeneficiary.exception.type from $vs-mds-esenzioni (extensible)
 * costToBeneficiary.exception.type ^short = "codice esensione"
 * costToBeneficiary.exception.period MS 
