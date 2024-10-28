@@ -40,21 +40,6 @@ Description: "Regole di sostituzione permesse per le prescrizioni inviate al dos
 * codes from system $v3-substanceAdminSubstitution
 
 
-//======================================================
-//TODO: put this CodeSystem in another file
-CodeSystem: CsMotivazioniNonSost
-Id: cs-motivazioni-non-sostituibilita
-Title: "Motivazioni di non sostituibilità"
-Description: "Motivazioni di non sostituibilità"
-* ^experimental = false
-* ^caseSensitive = true 
-
-* #1 "Ipersensibilità, intolleranza, interazione o controindicazione ad eccipienti"
-* #2 "Obiettive difficoltà di assunzione"
-* #3 "Terapia complessa/Problematiche assistenziali"
-* #4 "Non art. 15, comma 11-bis"
-//======================================================
-
 
 //======================================================
 ValueSet: VsMotivazioniNonSost
@@ -64,15 +49,6 @@ Description: "Motivazioni di non sostituibilità"
 * ^experimental = false
 * codes from system CsMotivazioniNonSost
 //-------------------------------------------------------------------------------------------
-
-
-// ValueSet: VsMinisteroSaluteEsenzioni
-// Id: vs-mds-esenzioni
-// Title: "Ministero della Salute - Esenzioni"
-// Description: "Codici Esenzioni Ministero della Salute"
-// * ^experimental = false
-// * ^status = #active
-// * include codes from  system mds-esenzioni
 
 //======================================================
 ValueSet: VsMotivoSostituzione
@@ -85,7 +61,7 @@ Description: "Motivazione di sostituzione"
 //-------------------------------------------------------------------------------------------
 
 //======================================================
-ValueSet: VsCodiceSostituzoneSostanza
+ValueSet: VsCodiceSostituzioneSostanza
 Id: vs-codice-sostituzione-sostanza
 Title: "Codice sostituzione sostanza"
 Description: "Codice sostituzione sostanza"
@@ -125,19 +101,19 @@ Description: "AIFA AIC - Valueset relativo ai codici AIC"
 // * codes from system $aifa-nota
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-ValueSet: VsFarmacia
-Id: vs-farmacia
-Title: "MDS - Farmacia"
-Description: "Ministero della Salute - Elenco Farmacie"
-* ^experimental = false
-* codes from system $minsan-farmacie
+// ValueSet: VsFarmacia
+// Id: vs-farmacia
+// Title: "MDS - Farmacia"
+// Description: "Ministero della Salute - Elenco Farmacie"
+// * ^experimental = false
+// * codes from system $minsan-farmacie
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ValueSet: VsNullflavor
 Id: vs-NullFlavor
 Title: "NullFlavor"
-Description: "COdici che descrivono perchè non è presente un valore valido "
+Description: "Codici che descrivono perchè non è presente un valore valido"
 * ^experimental = false
 * codes from system $v3-NullFlavor
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

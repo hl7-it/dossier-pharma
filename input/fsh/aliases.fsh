@@ -16,7 +16,7 @@ Alias: $minsan-hsp = https://www.hl7.it/fhir/terminology/ValueSet/minsan-idStrut
 Alias: $minsan-ria = https://www.hl7.it/fhir/terminology/ValueSet/strutturePubbliche // https://www.salute.gov.it/portale/documentazione/p6_2_2_1.jsp?lingua=italiano&id=1053
 
 Alias: $minsan-farmacie = https://www.hl7.it/fhir/terminology/CodeSystem/minsan-farmacie
-Alias: $vs-minsan-farmacie = http://hl7.it/fhir/dossier-pharma/ValueSet/vs-farmacia
+Alias: $vs-minsan-farmacie = https://www.hl7.it/fhir/terminology/ValueSet/vs-mds-farmacia
 Alias: $minsan-regione = https://www.hl7.it/fhir/terminology/sid/minsan-regione
 Alias: $vs-mds-esenzioni = https://www.hl7.it/fhir/terminology/ValueSet/vs-mds-esenzioni
 
