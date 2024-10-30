@@ -19,16 +19,6 @@ Description: "Sistemi di identificazione per il piano terapeutico"
 
 
 //======================================================
-ValueSet: VsRuoloPrescrittore
-Id: ruoloPrescrittore-it-dossierPharma
-Title: "Ruolo Prescrittore"
-Description: "Ruolo del prescrittore Basato su 'Estensione del Vocabolario HL7 V3 RoleCode'"
-//-------------------------------------------------------------------------------------------
-* ^experimental = false
-* codes from system CsItRoleCode
-
-
-//======================================================
 ValueSet: VsSubstitutionDossierPharma
 Id: substitution-it-dossierPharma
 Title: "Regole di sostituzione"
@@ -69,15 +59,6 @@ Description: "Codice sostituzione sostanza"
 * ^status = #active
 * include codes from  system codice-sostituzione-sostanza
 
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-ValueSet: VsGruppoEquivalenza
-Id: aifa-ge
-Title: "AIFA Gruppo di Equivalenza"
-Description: "AIFA Gruppo di Equivalenza"
-* ^experimental = false
-* codes from system $gruppo-equivalenza
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 //TODO: this VS needs to be in terminology
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ValueSet: VsAifaAIC
@@ -88,25 +69,6 @@ Description: "AIFA AIC - Valueset relativo ai codici AIC"
 
 * codes from system https://www.hl7.it/fhir/terminology/CodeSystem/aifa-aic
 * codes from system $aic 
-
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-//TODO: this VS needs to be in terminology
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// ValueSet: VsNotaAifa
-// Id: vs-aifa-nota
-// Title: "AIFA Note"
-// Description: "Indicazioni terapeutiche per un determinato farmaco rimborsabile dal Servizio Sanitario Nazionale"
-// * ^experimental = false
-// * codes from system $aifa-nota
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-// ValueSet: VsFarmacia
-// Id: vs-farmacia
-// Title: "MDS - Farmacia"
-// Description: "Ministero della Salute - Elenco Farmacie"
-// * ^experimental = false
-// * codes from system $minsan-farmacie
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

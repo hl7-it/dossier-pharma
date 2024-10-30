@@ -45,6 +45,7 @@ Alias: $CF = http://hl7.it/sid/codiceFiscale
 
 Alias: $aic = http://hl7.it/fhir/dossier-pharma/CodeSystem/aifa-aic
 Alias: $gruppo-equivalenza = https://www.hl7.it/fhir/terminology/CodeSystem/aifa-ge
+Alias: $vs-gruppo-equivalenza = https://www.hl7.it/fhir/terminology/ValueSet/aifa-ge
 Alias: $atc = http://www.whocc.no/atc
 Alias: $v3-substanceAdminSubstitution = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution
 Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab
@@ -53,7 +54,6 @@ Alias: $CS_luogoNascita = https://www.hl7.it/fhir/terminology/CodeSystem/istat-u
 
 Alias: $COV_TYP = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $vs-aic = http://hl7.it/fhir/dossier-pharma/ValueSet/aifa-aic 
-Alias: $vs-gruppo-equivalenza = http://hl7.it/fhir/dossier-pharma/ValueSet/aifa-ge
 Alias: $vs-atc = https://www.hl7.it/fhir/terminology/ValueSet/who-atc
 Alias: $vs-icd9cm = https://www.hl7.it/fhir/terminology/ValueSet/who-icd9cm
 
@@ -84,3 +84,4 @@ Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 
 Alias: $cs-mds-esenzioni = https://www.hl7.it/fhir/terminology/CodeSystem/mds-esenzioni
 Alias: $vs-statoEsenzione = https://www.hl7.it/fhir/terminology/ValueSet/statoEsenzione
+Alias: $vs-csitrole = https://www.hl7.it/fhir/terminology/ValueSet/ruoloPrescrittore-it

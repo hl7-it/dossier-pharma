@@ -9,5 +9,5 @@ Description: "Rappresentazione del ruolo del medico tramite il profilo Practitio
 // e per specialità
 
 * . ^short = "Medico Prescrittore"
-* code from VsRuoloPrescrittore (preferred)
+* code from $vs-csitrole (preferred)
 *  specialty ^short = "Specialità"
