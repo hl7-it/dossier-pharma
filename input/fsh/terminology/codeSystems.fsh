@@ -43,7 +43,7 @@ Description: "AIFA - Identifica i farmaci nella loro forma commerciale."
 CodeSystem: CsMotivazioniNonSost
 Id: cs-motivazioni-non-sostituibilita
 Title: "Motivazioni di non sostituibilità"
-Description: "HL7 Italia - non sostituibilità del farmaco"
+Description: "HL7 Italia - Indica la motivazione di non sostituibilità del farmaco"
 * ^experimental = false
 * ^caseSensitive = true 
 
