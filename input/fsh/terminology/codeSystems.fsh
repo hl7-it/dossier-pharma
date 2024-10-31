@@ -1,7 +1,7 @@
 CodeSystem: MotivoSostituzione
 Id: motivo-sostituzone
 Title: "Motivazione di sostituzione"
-Description: "Motivazione di sostituzione"
+Description: "HL7 Italia - Indica e se il prodotto è stato sostituito ovvero se il farmaco di riferimento non è reperibile"
 * ^experimental = false
 * ^status = #active
 * ^caseSensitive = true
@@ -14,7 +14,7 @@ Description: "Motivazione di sostituzione"
 CodeSystem: CodiceSostituzioneSostanza
 Id: codice-sostituzione-sostanza
 Title: "Codice sostituzione sostanza"
-Description: "Codice sostituzione sostanza"
+Description: "HL7 Italia - Indica la motivazione di una variazione del farmaco erogato"
 * ^experimental = false
 * ^status = #active
 * ^caseSensitive = true
@@ -28,7 +28,7 @@ Description: "Codice sostituzione sostanza"
 CodeSystem: CsAifaAic
 Id: aifa-aic
 Title: "AIFA - AIC"
-Description: "AIFA - I segueti codici AIC sono utilizzati solo per la IG corrente"
+Description: "AIFA - Identifica i farmaci nella loro forma commerciale."
 * ^experimental = false
 * ^status = #active
 * ^caseSensitive = true
@@ -43,7 +43,7 @@ Description: "AIFA - I segueti codici AIC sono utilizzati solo per la IG corrent
 CodeSystem: CsMotivazioniNonSost
 Id: cs-motivazioni-non-sostituibilita
 Title: "Motivazioni di non sostituibilità"
-Description: "Motivazioni di non sostituibilità"
+Description: "HL7 Italia - non sostituibilità del farmaco"
 * ^experimental = false
 * ^caseSensitive = true 
 

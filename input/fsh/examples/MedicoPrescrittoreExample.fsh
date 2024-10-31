@@ -9,7 +9,7 @@ Usage: #example
 * identifier[0].value =  "PLLDSR80E47A462P"
 * practitioner = Reference(Practitioner/PractitionerExample)
 * organization = Reference(Organization/Organization-Dossier-Esempio)
-* code = $vs-csitrole#MO "medico ospedaliero"
+* code = $cs-itroleCode#MO "medico ospedaliero"
 * specialty.coding = $sct#419192003 "Internal medicine"
 
 
@@ -20,7 +20,7 @@ Description: "Esempio di medico di medicina generale"
 Usage: #example
 * practitioner = Reference(Practitioner/PractitionerExample02)
 * organization = Reference(Organization/Organization-Dossier-Esempio)
-* code = $vs-csitrole#MMG  "medico di medicina generale"
+* code = $cs-itroleCode#MMG  "medico di medicina generale"
 * specialty.coding = $sct#394802001 "General medicine"
 
 Instance: MedicoPrescrittore03
@@ -28,7 +28,7 @@ InstanceOf: MedicoPrescrittore
 Title: "PractitionerRole ospedaliaro - cardiologo"
 Description: "Esempio di Medico Prescrittore ospedaliero"
 * id = "90d0fe96-163e-4b25-a96b-9d733a1d59c3"
-* code = $vs-csitrole#MO "medico ospedaliero"
+* code = $cs-itroleCode#MO "medico ospedaliero"
 * specialty.coding = $sct#394579002 "Cardiology"
 
 

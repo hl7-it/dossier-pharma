@@ -84,4 +84,5 @@ Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 
 Alias: $cs-mds-esenzioni = https://www.hl7.it/fhir/terminology/CodeSystem/mds-esenzioni
 Alias: $vs-statoEsenzione = https://www.hl7.it/fhir/terminology/ValueSet/statoEsenzione
-Alias: $vs-csitrole = https://www.hl7.it/fhir/terminology/ValueSet/ruoloPrescrittore-it
+Alias: $vs-itroleCode = https://www.hl7.it/fhir/terminology/ValueSet/vs-V3RoleCode
+Alias: $cs-itroleCode = https://www.hl7.it/fhir/terminology/CodeSystem/it-V3RoleCode
