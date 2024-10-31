@@ -40,7 +40,7 @@ Description: "Rappresentazione dell'erogazione del farmaco tramite il profilo Me
 * medicationCodeableConcept.coding[ATC] from $vs-atc
 * medicationCodeableConcept.coding[AIC] from $vs-aic
 * medicationCodeableConcept.coding[gruppoEquivalenza] from  $vs-gruppo-equivalenza
-* medicationCodeableConcept.coding[eccezioni] = $v3-NullFlavor#UNK
+* medicationCodeableConcept.coding[eccezioni] = $nullFlavor#UNK
 * medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
 
 * medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"

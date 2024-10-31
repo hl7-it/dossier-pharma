@@ -5,6 +5,7 @@ Description: "HL7 Italia - Indica e se il prodotto è stato sostituito ovvero se
 * ^experimental = false
 * ^status = #active
 * ^caseSensitive = true
+//* url = urn:oid:2.16.840.1.113883.3.1937.777.63.11.16
 * #1 "Sostituzione etico con generico"
 * #2 "Sostituzione generico con altro generico"
 * #3 "Generico irreperibile, differenza importo sul Prezzo di Rif. a carico SSN"

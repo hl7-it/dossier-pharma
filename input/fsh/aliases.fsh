@@ -65,6 +65,7 @@ Alias: $DIZ_Sostituzione = urn:oid:2.16.840.1.113883.2.9.6.1.53
 Alias: $no-esenzione = urn:oid:2.16.840.1.113883.2.9.5.2.2
 Alias: $esenzion-naz = urn:oid:2.16.840.1.113883.2.9.6.1.22
 Alias: $esenzion-reg = urn:oid:2.16.840.1.113883.2.9.2.[REGIONE].6.22
+Alias: $nullFlavor = urn:oid:2.16.840.1.113883.5.1008
 
 Alias: $Organization-it-base = http://hl7.it/fhir/StructureDefinition/Organization-it-base
 
