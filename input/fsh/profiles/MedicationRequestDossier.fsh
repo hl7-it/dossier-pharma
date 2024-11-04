@@ -18,10 +18,6 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * extension[pianoTerapeutico].extension[PT].valueReference only Reference (CarePlanItDossierPharma)
 * extension[pianoTerapeutico].extension[existPt].valueBoolean
 
-
-
-* identifier 0..1
-* identifier ^short = "Identificativo del Piano Terapeutico"
 * obeys pianoTerapeutico-1
 
 * status 1.. 
@@ -54,6 +50,8 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * medicationCodeableConcept.coding[AIC] from $vs-aic
 * medicationCodeableConcept.coding[gruppoEquivalenza] from  $vs-gruppo-equivalenza
 * medicationCodeableConcept.coding[eccezioni] = $v3-NullFlavor#UNK
+//* medicationCodeableConcept.coding[eccezioni] = $uri#UNK
+// * medicationCodeableConcept.coding[eccezioni].code = #UNK
 * medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
 
 
@@ -109,7 +107,7 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * groupIdentifier.value ^short = "Identificativo della prescrizione (e.g. NRE)"
 
 * insurance 
-* insurance only Reference($Coverage-it-base)
+* insurance only Reference(Coverage-it-dossierPharma)
 
 
 * dispenseRequest 1.. 

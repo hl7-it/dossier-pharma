@@ -18,4 +18,3 @@ Reference to draft CodeSystem https://www.hl7.it/fhir/terminology/CodeSystem/ist
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 The value set expansion is too large, and only a subset has been displayed
 The html source has duplicate anchor Ids: 1
-ValueSet 'http://terminology.fhir.it/ValueSet/statoEsenzione' not found

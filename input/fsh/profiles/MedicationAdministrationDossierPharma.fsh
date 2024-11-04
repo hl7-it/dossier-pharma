@@ -29,6 +29,8 @@ Description: "Rappresentazione della somministrazione del farmaco tramite il pro
 * medicationCodeableConcept.coding[AIC] from $vs-aic
 * medicationCodeableConcept.coding[gruppoEquivalenza] from  $vs-gruppo-equivalenza
 * medicationCodeableConcept.coding[eccezioni] = $v3-NullFlavor#UNK
+// * medicationCodeableConcept.coding[eccezioni].system = $uri#urn:oid:2.16.840.1.113883.5.1008
+// * medicationCodeableConcept.coding[eccezioni].code = #UNK
 * medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
 
 

@@ -1,20 +1,14 @@
-Profile: CoverageItBase
+Profile: CoverageDossierPharma
 Parent: Coverage
-Id: Coverage-it-base
-Title: "Coverage - base"
-Description: "Rappresentazione dell'ASL di residenza e delle esenzioni attraverso il profilo base Coverage"
-* ^version = "0.0.1"
-* ^status = #active
-* ^date = "2020-06-03T11:10:33+02:00"
-* ^publisher = "HL7 Italia"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://hl7.it"
-* ^jurisdiction = urn:iso:std:iso:3166#IT
+Id: Coverage-it-dossierPharma
+Title: "Coverage - Dossier Farmaceutico"
+Description: "Rappresentazionedelle esenzioni attraverso il profilo Coverage"
+* ^status = #draft
 * beneficiary MS
 * costToBeneficiary.value[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * costToBeneficiary.exception MS
-* costToBeneficiary.exception.extension contains $coverage-exceptionStatus named stato-esenzione 0..1 MS
+* costToBeneficiary.exception.extension contains coverage-exceptionStatus named stato-esenzione 0..1 MS
 * costToBeneficiary.exception.type MS
-* costToBeneficiary.exception.type from vs-mds-esenzioni (extensible)
+* costToBeneficiary.exception.type from $vs-mds-esenzioni (extensible)
 * costToBeneficiary.exception.type ^short = "codice esensione"
 * costToBeneficiary.exception.period MS 
