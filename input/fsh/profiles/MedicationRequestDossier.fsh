@@ -49,7 +49,9 @@ Description: "Rappresentazione della prescrizione del farmaco tramite il profilo
 * medicationCodeableConcept.coding[ATC] from $vs-atc
 * medicationCodeableConcept.coding[AIC] from $vs-aic
 * medicationCodeableConcept.coding[gruppoEquivalenza] from  $vs-gruppo-equivalenza
-* medicationCodeableConcept.coding[eccezioni] = $nullFlavor#UNK
+* medicationCodeableConcept.coding[eccezioni] = $v3-NullFlavor#UNK
+//* medicationCodeableConcept.coding[eccezioni] = $uri#UNK
+// * medicationCodeableConcept.coding[eccezioni].code = #UNK
 * medicationCodeableConcept.text ^short = "Descrizione testuale del farmaco"
 
 

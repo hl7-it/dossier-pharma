@@ -5,7 +5,8 @@ Description: "HL7 Italia - Indica e se il prodotto è stato sostituito ovvero se
 * ^experimental = false
 * ^status = #active
 * ^caseSensitive = true
-//* url = urn:oid:2.16.840.1.113883.3.1937.777.63.11.16
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.system = "urn:oid:2.16.840.1.113883.3.1937.777.63.11.16"
 * #1 "Sostituzione etico con generico"
 * #2 "Sostituzione generico con altro generico"
 * #3 "Generico irreperibile, differenza importo sul Prezzo di Rif. a carico SSN"
@@ -19,6 +20,8 @@ Description: "HL7 Italia - Indica la motivazione di una variazione del farmaco e
 * ^experimental = false
 * ^status = #active
 * ^caseSensitive = true
+* ^identifier.system = "urn:ietf:rfc:3986"
+* ^identifier.system = "urn:oid:2.16.840.1.113883.2.9.6.1.53"
 * #A "Il codice inserito nel campo si riferisce ad un codice AIC, riferito allo stesso farmaco prescritto dal medico, ma che il farmacista ritiene più aggiornato come codice"
 * #S "Il codice AIC inserito nel campo rappresenta una sostituzione di farmaco, prevista per legge, rispetto a quanto indicato dal medico prescrittore"
 * #V "Il codice prestazione inserito nel campo è stato variato dall’erogatore specialistico rispetto a quanto prescritto dal medico"
