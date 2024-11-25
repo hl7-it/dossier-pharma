@@ -4,7 +4,7 @@ Title: "Sistemi di identificazione per la prescrizione"
 Description: "HL7 Italia - Sistemi di identificazione per la prescrizione"
 //-------------------------------------------------------------------------------------------
 * ^experimental = false
-* $uri#urn:oid:2.16.840.1.113883.2.9.4.3.9 "Numero Ricetta Elettronica (identificativo ordine)"
+* $uri#urn:oid:2.16.840.1.113883.2.9.4.3.8 "Numero Ricetta Elettronica (identificativo documento)"
 
 //======================================================
 ValueSet: VsOidPT
