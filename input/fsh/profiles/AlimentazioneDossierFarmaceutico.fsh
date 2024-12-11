@@ -57,7 +57,7 @@ Description: "Rappresentazione del contenuto informativo del dossier farmaceutic
 * entry[sliceLocation].request.method ^short = "POST | PUT | DELETE"
 * entry[sliceLocation].request.method ^definition = "Dev’essere valorizzato con “PUT” nel caso di aggiornamento della risorsa, con “DELETE” nel caso di cancellazione della risorsa. Nel caso in cui nel replace sia necessario aggiungere delle risorse che prima non erano referenziate dalla Provenance deve essere valorizzato con “POST”."
 * entry[slicePatient].resource 1..
-* entry[slicePatient].resource only PatientItBase
+* entry[slicePatient].resource only PatientDossierPharma
 * entry[slicePatient].search ..0
 * entry[slicePatient].request 1..
 * entry[slicePatient].request.method ^short = "POST | PUT | DELETE"

@@ -25,8 +25,7 @@ Le attuali informazioni utilizzate dal dossier farmaceutico verranno gestite dal
 ### Implementazione
 
 Le più importanti componenti tecnologiche del FSE 2.0 sono:
-- Soluzione tecnologica che ha lo scopo di estrarre, validare (sintatticamente, semanticamente e terminologicamente) e trasformare i documenti in dati FHIR nel rispetto del principio di interoperabilità alimentado il FSE;
-- Infrastruttura Nazionale per l’Interoperabilità (INI) che interopera con il FSE al fine di collezionare, richiedere e trasmettere dati e documenti sanitari attraverso modalità sicure e nel rispetto dei consensi stabiliti dagli assistiti;
+- Infrastruttura Nazionale per l’Interoperabilità (INI) che interopera con il FSE e attravero l'interconnessione diretta con il Sistema TS (o Sistemi Regionali), garantisce l'indicizzazione negli FSE regionali dei metadati relativi a prestazioni dematerializzate specialistice, prescrizioni dematerializzate farmaceutiche, prestazioni dematerializzate specialistiche, prescrizioni dematerializzate specialistiche ...
 - Registry FSE dove verranno indicizzati i metadati dei documenti del FSE per le Regioni e Province Autonome;
 - Ecosistema dei dati santari (EDS) che contiene i dati clinici dei pazienti.
 

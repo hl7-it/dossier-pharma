@@ -7,7 +7,7 @@ Description: "Definizione dell'indirizzo base per la descrizione del luogo di na
 
 Extension: ExtCodeableBirthPlace
 Id: patient-codeableBirthPlace
-Title: "Codice comune e/o stato di nascita"
+Title: "Codice comune e/o stato di nascita (Patient)"
 Description: "Codice comune e/o stato di nascita."
 * ^context.type = #element
 * ^context.expression = "Patient"
