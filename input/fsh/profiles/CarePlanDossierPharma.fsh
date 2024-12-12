@@ -36,7 +36,7 @@ Description: "Rappresentazione del piano terapeutico tramite il profilo CarePlan
 * activity.detail.productCodeableConcept.coding[ATC] from $vs-atc
 * activity.detail.productCodeableConcept.coding[AIC] from $vs-aic
 * activity.detail.productCodeableConcept.coding[gruppoEquivalenza] from  $vs-gruppo-equivalenza
-* activity.detail.productCodeableConcept.coding[eccezioni] = $v3-NullFlavor#UNK
+* activity.detail.productCodeableConcept.coding[eccezioni] from $vs-NullFlavor
 * activity.detail.productCodeableConcept.text ^short = "Descrizione testuale del farmaco"
 
 * author 1..1 

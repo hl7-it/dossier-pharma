@@ -25,6 +25,7 @@ Alias: $vs-statoEsenzione = https://www.hl7.it/fhir/terminology/ValueSet/statoEs
 Alias: $dataAbsentReason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+Alias: $vs-NullFlavor = http://terminology.hl7.org/ValueSet/v3-NullFlavor
 
 Alias: $Coverage-it-dossierPharma = http://hl7.it/fhir/StructureDefinition/Coverage-it-dossierPharma
 Alias: $Patient-it-base = http://hl7.it/fhir/StructureDefinition/Patient-it-base
@@ -40,7 +41,7 @@ Alias: $uri-idStp = https://www.hl7.it/fhir/terminology/ValueSet/URI-idStp
 Alias: $istat-titoloStudio = https://www.hl7.it/fhir/terminology/ValueSet/istat-titoloStudio
 Alias: $tipoIdentificatore = https://www.hl7.it/fhir/terminology/ValueSet/VstipoIdentificatore
 
-Alias: $NRE =  urn:oid:2.16.840.1.113883.2.9.4.3.9
+Alias: $NRE =  urn:oid:2.16.840.1.113883.2.9.4.3.8
 Alias: $CF = http://hl7.it/sid/codiceFiscale
 
 Alias: $aic = http://hl7.it/fhir/dossier-pharma/CodeSystem/aifa-aic
@@ -80,7 +81,6 @@ Alias: $mmg-pls = http://hl7.it/fhir/StructureDefinition/PractitionerRole-it-mmg
 
 Alias: $unitOfMeasure = http://unitsofmeasure.org
 Alias: $V3ActStatus = http://terminology.hl7.org/CodeSystem/v3-ActStatus
-Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 
 Alias: $cs-mds-esenzioni = https://www.hl7.it/fhir/terminology/CodeSystem/mds-esenzioni
 Alias: $vs-statoEsenzione = https://www.hl7.it/fhir/terminology/ValueSet/statoEsenzione
